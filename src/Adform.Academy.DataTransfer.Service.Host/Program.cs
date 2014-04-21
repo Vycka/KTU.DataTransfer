@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Adform.Academy.DataTransfer.Service.Host.DI;
 
 namespace Adform.Academy.DataTransfer.Service.Host
 {
@@ -10,6 +6,9 @@ namespace Adform.Academy.DataTransfer.Service.Host
     {
         static void Main(string[] args)
         {
+            var service = Container.Resolve<DataTransferService>();
+
+            service.Run(args);
         }
     }
 }

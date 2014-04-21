@@ -1,21 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using log4net;
+﻿using log4net;
+using log4net.Config;
 
 namespace Adform.Academy.DataTransfer.Logger
 {
-    public interface ILogging
-    {
-        void Log(object logObject);
-        void LogError(object logObject);
-    }
-
     public class Log4NetLogging : ILogging
     {
         private readonly ILog _logger;
+
+        static Log4NetLogging()
+        {
+            XmlConfigurator.Configure();
+        }
+
         public Log4NetLogging(string loggerInstanceName)
         {
             _logger = LogManager.GetLogger(loggerInstanceName); 
