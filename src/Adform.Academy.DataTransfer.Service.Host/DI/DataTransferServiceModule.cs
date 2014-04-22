@@ -11,9 +11,9 @@ namespace Adform.Academy.DataTransfer.Service.Host.DI
             builder.Register(CreateLogger).SingleInstance().AsSelf();
         }
 
-        private ILogging CreateLogger(IComponentContext container)
+        private ILogger CreateLogger(IComponentContext container)
         {
-            return new Log4NetLogging("DataTransferService");
+            return new Log4NetLogger("DataTransferService");
         }
     }
 }

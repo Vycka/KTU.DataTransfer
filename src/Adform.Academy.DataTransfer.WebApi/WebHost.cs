@@ -2,11 +2,9 @@
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Dependencies;
-using System.Web.Http.Routing;
 using System.Web.Http.SelfHost;
 using Adform.Academy.DataTransfer.Logger;
 using Adform.Academy.DataTransfer.WebApi.Formatters;
-using System.Web.Http.Services;
 
 
 namespace Adform.Academy.DataTransfer.WebApi
@@ -15,11 +13,11 @@ namespace Adform.Academy.DataTransfer.WebApi
     {
         private readonly string _baseUrl;
         private readonly IDependencyResolver _dependencyResolver;
-        private readonly ILogging _logging;
+        private readonly ILogger _logging;
 
-        private HttpSelfHostServer _httpSelfHostServer;
+        private readonly HttpSelfHostServer _httpSelfHostServer;
 
-        public WebHost(string baseUrl, IDependencyResolver dependencyResolver, ILogging logging)
+        public WebHost(string baseUrl, IDependencyResolver dependencyResolver, ILogger logging)
         {
             if (baseUrl == null) throw new ArgumentNullException("baseUrl");
             if (dependencyResolver == null) throw new ArgumentNullException("dependencyResolver");

@@ -10,11 +10,11 @@ namespace Adform.Academy.DataTransfer.Service.Host
 {
     public class DataTransferService : ServiceBase
     {
-        private readonly ILogging _logging;
+        private readonly ILogger _logging;
 
         private WebHost _webApiHost;
 
-        public DataTransferService(ILogging logging)
+        public DataTransferService(ILogger logging)
         {
             if (logging == null) throw new ArgumentNullException("logging");
             _logging = logging;
