@@ -11,7 +11,7 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
 {
 
     [RoutePrefix("Adform.Academy.DataTransfer/v1/UserAccount")]
-    public class UserAccountController : ApiController 
+    public class UserAccountRequestController : ApiController 
     {
         [Route("Login")]
         [HttpGet]

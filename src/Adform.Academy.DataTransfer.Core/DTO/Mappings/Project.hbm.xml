@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Adform.Academy.DataTransfer.Core"
+                   namespace="Adform.Academy.DataTransfer.Core.DTO.Models">
+
+  <class name="Project" table="Projects" schema="DataTransfer">
+    <id name="ProjectId" column="ID_Projects">
+      <generator class ="identity" />
+    </id>
+    <property name="ProjectState" column="ID_ProjectState"/>
+    <property name="ExecutionState" column="ID_ExecutionSteps_State"/>
+    <property name="Name"/>
+    
+    <many-to-one name="DatabaseSource" column="ID_Databases_Source" class="Database"/>
+    <many-to-one name="DatabaseDestination" column="ID_Databases_Destination" class="Database"/>
+    <many-to-one name="CreatedBy" class="User" column="ID_CreatedBy"/>
+
+    <!--<many-to-one name="PendingUserAction" column="ID_Projects"/>-->
+    
+    <bag name="Filters" cascade="all-delete-orphan" inverse="true">
+      <key column="ID_Projects" not-null="true" />
+      <one-to-many class="Filter" />
+    </bag>
+
+    <bag name="Logs" cascade="all-delete-orphan" inverse="true">
+      <key column="ID_Projects" not-null="true" />
+      <one-to-many class="Log" />
+    </bag>
+
+    <!--<bag name="ExecutionSteps" cascade="all-delete-orphan" inverse="true">
+      <key column="ID_Projects" not-null="true" />
+      <one-to-many class="ExecutionStep" />
+    </bag>-->
+  </class>
+
+</hibernate-mapping>

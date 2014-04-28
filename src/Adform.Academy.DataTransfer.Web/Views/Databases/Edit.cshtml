@@ -1,0 +1,25 @@
+﻿@model Adform.Academy.DataTransfer.Core.DTO.Models.Database
+@{
+    ViewBag.Title = (Model.DatabaseId != 0 ? "Edit Database" : "Add Database");
+    ViewBag.MenuItem = "databases";
+}
+
+<div class="bCenter">
+    <div class="round bTitle">
+        @ViewBag.Title
+    </div>
+    <div class="round bFull" id="right-panel">
+        
+    </div>
+    <div class="round bFull" id="bottom-panel" style="display:none">
+        <div style="float: left">
+            <button id="back-button" type="button" onclick="document.location.assign('@Url.Action("Index")')">Back</button>
+        </div>
+        <div style="float: right;">
+            <button id="edit-button" onclick="StartProjectClick()" style="display: none">Save</button>
+        </div>
+        <div class="bClear"></div>
+    </div>
+
+    @Html.Partial("ErrorPane")
+</div>

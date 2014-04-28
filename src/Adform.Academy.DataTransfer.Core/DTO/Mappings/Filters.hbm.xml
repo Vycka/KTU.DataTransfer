@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Adform.Academy.DataTransfer.Core"
+                   namespace="Adform.Academy.DataTransfer.Core.DTO.Models">
+
+  <class name="Filter" table="Filters" schema="DataTransfer">
+    <id name="FilterId" column="ID_Filters">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="Project" class="Project" column="ID_Projects"/>
+    <property name="FilterValue" column="Filter"/>
+    <property name="TableName"/>
+
+
+    <bag name="Columns" cascade="all-delete-orphan" inverse="true">
+      <key column="ID_Filters" not-null="true" />
+      <one-to-many class="Column" />
+    </bag>
+    
+    <bag name="Batches" cascade="all-delete-orphan" inverse="true">
+      <key column="ID_Filters" not-null="true" />
+      <one-to-many class="Batch" />
+    </bag>
+  </class>
+
+</hibernate-mapping>

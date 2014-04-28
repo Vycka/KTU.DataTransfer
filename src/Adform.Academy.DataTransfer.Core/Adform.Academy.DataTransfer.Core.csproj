@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\..\packages\Iesi.Collections.3.2.0.1001\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,7 +45,50 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO\Models\Log.cs" />
+    <Compile Include="DTO\Models\PendingUserAction.cs" />
+    <Compile Include="DTO\Models\Batch.cs" />
+    <Compile Include="DTO\Models\Column.cs" />
+    <Compile Include="DTO\Models\Database.cs" />
+    <Compile Include="DTO\Models\Filter.cs" />
+    <Compile Include="DTO\Models\Project.cs" />
+    <Compile Include="DTO\Models\User.cs" />
+    <Compile Include="DTO\NHibernate\SessionFactory.cs" />
+    <Compile Include="DTO\Types\BatchStateTypes.cs" />
+    <Compile Include="DTO\Types\ExecutionStepsTypes.cs" />
+    <Compile Include="DTO\Types\PendingUserActionTypes.cs" />
+    <Compile Include="DTO\Types\ProjectStateTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DTO\Mappings\Databases.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DTO\Mappings\Users.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DTO\Mappings\Batches.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DTO\Mappings\Filters.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DTO\Mappings\Columns.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DTO\Mappings\Project.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DTO\Mappings\ExecutionSteps.---.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DTO\Mappings\PendingUserActions.---.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DTO\Mappings\Logs.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

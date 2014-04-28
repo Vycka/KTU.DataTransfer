@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Adform.Academy.DataTransfer.WebApi.Contracts
+namespace Adform.Academy.DataTransfer.WebApi.Contracts.Databases
 {
-    public class Class1
+    public class RequestBase
     {
+        public int UserId;
     }
 }

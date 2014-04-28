@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>@ViewBag.Title</title>
+        <link href="@Url.Content("~/Media/Blue.css")" rel="stylesheet" type="text/css" />
+        <script src="@Url.Content("~/Scripts/jquery-2.1.0.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/Shared/MenuHighlighter.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/Shared/ErrorModule.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/Shared/PostCommand.js")" type="text/javascript"></script>
+        <script> window.RootUrl = '@Url.Content("~/")'; </script>
+    </head>
+
+<body>
+    @RenderBody()
+</body>
+</html>

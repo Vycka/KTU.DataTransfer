@@ -9,17 +9,24 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
     public class PingController : ApiController
     {
         [Route("Ping")]
-        [HttpGet]
+        [HttpGet, HttpPost]
         public string Ping()
         {
             return "PONG";
         }
 
         [Route("Ping2")]
-        [HttpGet]
+        [HttpGet, HttpPost]
         public HttpResponseMessage Ping2()
         {
             return new HttpResponseMessage(HttpStatusCode.OK);
+        }
+
+        [Route("Ping3")]
+        [HttpGet, HttpPost]
+        public HttpResponseMessage Ping3()
+        {
+            return new HttpResponseMessage(HttpStatusCode.InternalServerError);
         }
     }
 }

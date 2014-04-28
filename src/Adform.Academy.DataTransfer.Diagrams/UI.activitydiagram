@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="60d8abfe-8972-4e07-8e17-73775bd8abe9" name="UI" linkedPackageId="782113d8-8e85-4c59-91ec-c2f80ba8aea1" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="31561189-5c9a-4746-a4ae-4cd8375e8c9f">
+      <profileInstance Id="ff60cc20-7677-4f6e-a0a9-5601f5157e81" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="ae6f9755-13cf-4399-b096-5d1c559f3cea">
+      <profileInstance Id="960f3500-aadf-41aa-a273-30038546cea4" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="f8aa6d6e-a54e-4ef4-98f6-a7a6d1f8f2a0" name="UI" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="cd8cd7d2-7a00-4123-aea0-b4c3923230e0" />
+        <nodes>
+          <objectNode Id="bc913a27-cfe6-49c4-9f11-412946ad94c5" name="Object1" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="74438f7d-63f0-41f8-9a57-695bf8b10077" />
+            <upperBound>
+              <literalInteger Id="d519f4cd-ae8c-4307-92f9-8da2deb3ed2f" name="2147483647" value="2147483647">
+                <elementDefinition Id="3dfe2b2f-c94d-4976-ad2e-b11c3f475f2c" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="d26a2e5b-8942-4f94-af55-fe4480984df5" name="Action1" isLeaf="false">
+            <elementDefinition Id="d6cf47ce-5b67-4816-a920-06096d63cae4" />
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="782113d8-8e85-4c59-91ec-c2f80ba8aea1" name="Adform.Academy.DataTransfer.Diagrams">
+    <elementDefinition Id="de71d15e-79ce-4e7a-945f-f4b93b58e455" />
+  </package>
+</activityRootModel>

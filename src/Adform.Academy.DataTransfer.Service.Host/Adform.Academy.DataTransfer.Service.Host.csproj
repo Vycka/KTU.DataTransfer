@@ -50,11 +50,17 @@
     <Reference Include="Autofac.Integration.WebApi">
       <HintPath>..\..\packages\Autofac.WebApi2.3.2.1\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
     </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\..\packages\Iesi.Collections.3.2.0.1001\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
     <Reference Include="log4net">
       <HintPath>..\..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -77,6 +83,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Adform.Academy.DataTransfer.Core\Adform.Academy.DataTransfer.Core.csproj">
+      <Project>{CB6E0CB6-965A-42DF-93E4-5256FF2CD3E5}</Project>
+      <Name>Adform.Academy.DataTransfer.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Adform.Academy.DataTransfer.Logger\Adform.Academy.DataTransfer.Logger.csproj">
       <Project>{662655CD-EA42-4076-84A0-115947270B11}</Project>
       <Name>Adform.Academy.DataTransfer.Logger</Name>
@@ -85,6 +95,11 @@
       <Project>{1d071418-a856-4491-ad02-d03a10a50b0b}</Project>
       <Name>Adform.Academy.DataTransfer.WebApi</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hibernate.cfg.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,21 @@
+﻿@model Exception
+@{
+    ViewBag.Title = "DataTransfer -> Error!";
+}
+<div class="bCenter" style="width: 100%">
+    <div class="round bFull bErr" style="font-weight:bold">@Model.Message</div>
+    <div id="ErrorPane" class="round bFull bErr" style="text-align: left; font-size: 12px; word-wrap: break-word">
+        <pre>
+            @Model.StackTrace
+        </pre>
+    </div>
+    <div class="round bFull">
+        <div style="float: left;">
+            <button id="back-button" type="button" onclick="history.go(-1)">Back</button>
+        </div>
+        <div style="float: right;">
+            <button id="home-button" type="button" onclick="document.location.assign('@Url.Action(String.Empty,String.Empty)')">Home</button>
+        </div>
+        <div class="bClear"></div>
+    </div>
+</div>

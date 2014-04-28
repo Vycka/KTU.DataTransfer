@@ -1,0 +1,41 @@
+﻿@model Adform.Academy.DataTransfer.Web.Models.DatabaseListModel
+@{
+    ViewBag.Title = "Databases";
+    ViewBag.MenuItem = "databases";
+}
+<script src="@Url.Content("~/Scripts/Project/Databases.js")" type="text/javascript"></script>
+<div class="bCenter">
+    <div class="round bTitle">
+        @ViewBag.Title
+    </div>
+    <div class="round bLeft" id="left-panel">
+        @RenderPage("~/Views/Shared/MenuItems.cshtml")
+    </div>
+    <div class="round bRight" id="right-panel">
+    @for (int x = 0; x < Model.DatabasesList.Count; x++)
+    {
+        var d = Model.DatabasesList[x];
+        <div onclick="DatabaseClick(@d.DatabaseId)" class="menu-item-highlight" >
+            <div id="database-@(d.DatabaseId)" style="float: left">@d.ConnectionName</div>
+            <div class="bClear"></div>
+        </div>
+            if (x + 1 != Model.DatabasesList.Count)
+            {
+                        <hr />
+            }
+    }
+
+    </div>
+    <div class="round bFull" id="bottom-panel">
+        <div style="float: left">
+            <button id="new-button" onclick="EditProjectClick()" style="">New Database</button>
+        </div>
+        <div style="float: right;">
+            <button id="edit-button" onclick="StartProjectClick()" style="display: none">Edit</button>
+            <button id="delete-button" onclick="DeleteClick()" style="display: none">Delete</button>
+        </div>
+        <div class="bClear"></div>
+    </div>
+
+    @Html.Partial("ErrorPane")
+</div>

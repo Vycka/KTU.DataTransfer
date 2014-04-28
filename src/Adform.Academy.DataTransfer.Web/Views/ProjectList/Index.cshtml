@@ -1,0 +1,22 @@
+﻿@model Adform.Academy.DataTransfer.Web.Models.ProjectListModel
+@{
+    ViewBag.Title = "Project List";
+    ViewBag.MenuItem = "project-list";
+}
+
+<div class="bCenter">
+    <div class="round bTitle">
+        @ViewBag.Title
+    </div>
+    <div class="round bLeft" id="left-panel">
+        @RenderPage("~/Views/Shared/MenuItems.cshtml")
+    </div>
+    <div class="round bRight" id="right-panel">
+        @Model.PingResponse
+    </div>
+    <div class="round bFull" id="bottom-panel" style="display:none">
+
+    </div>
+
+    @Html.Partial("ErrorPane")
+</div>

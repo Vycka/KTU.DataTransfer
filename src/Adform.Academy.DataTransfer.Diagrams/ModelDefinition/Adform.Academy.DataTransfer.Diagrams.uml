@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
+  dslVersion="1.0.0.0"
+  Id="de71d15e-79ce-4e7a-945f-f4b93b58e455"
+  name="Adform.Academy.DataTransfer.Diagrams" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="997e341a-900b-4c6c-aea1-76f9397e7c82">
+      <body>* Duomenų suskaldymas į paketus
+* Lentelių sukūrimas
+* Duomenų perkėlimas
+* Perkeltų duomenų vientisumo patikrinimas ir pakartotinis perkėlimas kol patikrinimas praeina
+* Perkeltų duomenų pašalinimas iš pradinės duomenų bazės</body>
+      <annotatedElements>
+        <opaqueActionMoniker
+          Id="a556b8b6-13d2-485f-b8b6-9a11c260b8d8"
+          LastKnownName="Patikrinama ar dar yra neatliktų užduočių"
+          LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <activity
+        Id="cd8cd7d2-7a00-4123-aea0-b4c3923230e0"
+        name="UI"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <objectNode
+            Id="74438f7d-63f0-41f8-9a57-695bf8b10077"
+            name="Object1"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="3dfe2b2f-c94d-4976-ad2e-b11c3f475f2c"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <opaqueAction
+            Id="d6cf47ce-5b67-4816-a920-06096d63cae4"
+            name="Action1"
+            isLeaf="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="73118955-8ba7-49b8-addf-decd2306b500"
+        name="Component1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="29da5703-706b-4f00-862d-a8418372e545"
+        name="Component2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="26c42a98-a214-4db4-a6b0-0980da88df91"
+        name="Interface1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="aa7903dd-52f5-4475-a788-92db8b4cba49"
+        name="Component3"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="6ca00eec-67ce-4b4e-bb16-81b8da294e6f"
+        name="Activity1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="894a1210-82a1-48c2-9476-91b440810068"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d3f579c1-3436-448f-b7f9-1c514f59c667"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="a0200d40-c23f-42b0-91b2-be251fa15473"
+                  LastKnownName="Paleidžiamas vykdymui projektas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="a0200d40-c23f-42b0-91b2-be251fa15473"
+            name="Paleidžiamas vykdymui projektas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="fa5ebce0-d7c0-4400-b7a1-f1777bae07e9"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="a556b8b6-13d2-485f-b8b6-9a11c260b8d8"
+                  LastKnownName="Patikrinama ar dar yra neatliktų užduočių"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="919fb3fe-d025-40ca-9499-bbf508783611"
+            name="Paimama Sekanti vykdymui užduotis"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c36a7088-6ac3-400b-89e1-00ddf7f893b2"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="37092b44-3a73-4f95-8da1-8a071ac8d870"
+                  LastKnownName="Užduotis atliekama"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="37092b44-3a73-4f95-8da1-8a071ac8d870"
+            name="Užduotis atliekama"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="5f909002-7771-4e51-a972-cd1ebb04ed84"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="536556f4-a766-4f6d-973e-03b26d3c82a0"
+                  LastKnownName="Patikrinama ar neivyko automatiškai neišsprendžiamų vykdymo klaidų"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="e3f410b1-ae04-4abc-b2f2-77eb50170312"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="566af080-c896-49e5-84e7-cd4cc8d485d8"
+                guard="Užduočių daugiau nerasta"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="202aed3d-dc62-4576-be91-d8303409510b"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="9cf82032-3368-4bd3-90d7-188bfaa72a3a"
+                guard="Užduočių rasta"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="919fb3fe-d025-40ca-9499-bbf508783611"
+                  LastKnownName="Paimama Sekanti vykdymui užduotis"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="a556b8b6-13d2-485f-b8b6-9a11c260b8d8"
+            name="Patikrinama ar dar yra neatliktų užduočių"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="53140bc0-8dc7-4f89-a1e8-f5eea53c95aa"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="e3f410b1-ae04-4abc-b2f2-77eb50170312"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="202aed3d-dc62-4576-be91-d8303409510b"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="536556f4-a766-4f6d-973e-03b26d3c82a0"
+            name="Patikrinama ar neivyko automatiškai neišsprendžiamų vykdymo klaidų"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="867676c5-bb4c-4c8d-95c2-7dc9a937708c"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="9c31498b-5929-48cc-8ba3-5f7193e7d9ad"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="9c31498b-5929-48cc-8ba3-5f7193e7d9ad"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="61fe21bf-60b5-4e18-b3d7-baa1047b3857"
+                guard="Klaidų neivyko"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="a556b8b6-13d2-485f-b8b6-9a11c260b8d8"
+                  LastKnownName="Patikrinama ar dar yra neatliktų užduočių"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="91b6af7e-f345-42d1-8c87-f6ee8f0261f1"
+                guard="Klaida įvyko"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="fe1529c2-e116-4f9c-a498-e1312fbdec2b"
+                  LastKnownName="Užduoties vykdymo procesas pristabdomas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="fe1529c2-e116-4f9c-a498-e1312fbdec2b"
+            name="Užduoties vykdymo procesas pristabdomas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="8c0ea2aa-13ba-4b1d-91ce-fff3c4aee288"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="202aed3d-dc62-4576-be91-d8303409510b"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Adform.Academy.DataTransfer.Core"
+                   namespace="Adform.Academy.DataTransfer.Core.DTO.Models">
+
+  <class name="ExecutionStep" table="ExecutionSteps" schema="DataTransfer">
+
+    <composite-id>
+      <key-property name="ProjectId" column="ID_Projects"></key-property>
+      <key-property name="StepValue" column="ID_ExecutionSteps"></key-property>
+    </composite-id>
+    
+  </class>
+
+</hibernate-mapping>

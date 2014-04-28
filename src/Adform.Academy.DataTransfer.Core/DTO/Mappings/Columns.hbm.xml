@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Adform.Academy.DataTransfer.Core"
+                   namespace="Adform.Academy.DataTransfer.Core.DTO.Models">
+
+  <class name="Column" table="Columns" schema="DataTransfer">
+    <id name="ColumnId" column="ID_Columns">
+      <generator class ="identity" />
+    </id>
+
+    <many-to-one name="Filter" class="Filter" column="ID_Filters"/>
+    
+    <property name="ColumnName"/>
+  </class>
+
+</hibernate-mapping>

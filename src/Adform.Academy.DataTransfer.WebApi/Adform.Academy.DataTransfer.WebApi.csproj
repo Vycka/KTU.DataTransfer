@@ -30,8 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\..\packages\Iesi.Collections.3.2.0.1001\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -61,16 +67,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\DatabasesRequestController.cs" />
     <Compile Include="Controllers\PingController.cs" />
-    <Compile Include="Controllers\UserAccountController.cs" />
+    <Compile Include="Controllers\UserAccountRequestController.cs" />
     <Compile Include="Formatters\JsonFormatter.cs" />
     <Compile Include="WebHost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Adform.Academy.DataTransfer.Core\Adform.Academy.DataTransfer.Core.csproj">
+      <Project>{CB6E0CB6-965A-42DF-93E4-5256FF2CD3E5}</Project>
+      <Name>Adform.Academy.DataTransfer.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Adform.Academy.DataTransfer.Logger\Adform.Academy.DataTransfer.Logger.csproj">
       <Project>{662655CD-EA42-4076-84A0-115947270B11}</Project>
       <Name>Adform.Academy.DataTransfer.Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Adform.Academy.DataTransfer.WebApi.Contracts\Adform.Academy.DataTransfer.WebApi.Contracts.csproj">
+      <Project>{E0C5848F-60FF-4E60-BCB6-2D8B08AEBD95}</Project>
+      <Name>Adform.Academy.DataTransfer.WebApi.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
