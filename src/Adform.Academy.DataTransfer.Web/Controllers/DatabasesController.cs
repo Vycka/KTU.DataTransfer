@@ -1,15 +1,15 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Runtime.Remoting.Messaging;
+using System.Web.Mvc;
 using Adform.Academy.DataTransfer.Web.Models;
 using Adform.Academy.DataTransfer.Web.Services.DataTransfer;
+using Adform.Academy.DataTransfer.WebApi.Contracts.Databases;
 using Filter = Adform.Academy.DataTransfer.Core.DTO.Models.Filter;
 
 namespace Adform.Academy.DataTransfer.Web.Controllers
 {
     public class DatabasesController : Controller
     {
-        //
-        // GET: /Databases/
-
         public ActionResult Index()
         {
             ViewBag.IsAdmin = true;
@@ -23,69 +23,39 @@ namespace Adform.Academy.DataTransfer.Web.Controllers
             );
         }
 
-        //
-        // GET: /Databases/Details/5
-
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        //
-        // GET: /Databases/Create
-
         public ActionResult Create()
         {
-            return View();
+            return View("Edit", new DatabaseItemModel { Port = "1434" });
         }
-
-        //
-        // POST: /Databases/Create
 
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Save(DatabaseItemModel model)
         {
-            try
-            {
-                // TODO: Add insert logic here
+            if (model.Password == null)
+                model.Password = String.Empty;
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            DatabaseRequests.Save(model);
+
+            return RedirectToAction("Index");
+
         }
-
-        //
-        // GET: /Databases/Edit/5
 
         public ActionResult Edit(int id)
         {
-            return View();
-        }
-
-        //
-        // POST: /Databases/Edit/5
-
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
+            var response = DatabaseRequests.Get(id);
+            var model = new DatabaseItemModel
             {
-                // TODO: Add update logic here
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+                DatabaseId = response.Database.DatabaseId,
+                ConnectionName = response.Database.ConnectionName,
+                Host = response.Database.Host,
+                Port = response.Database.Port,
+                UserName = response.Database.UserName,
+                Password = response.Database.Password,
+                DatabaseName = response.Database.DatabaseName
+            };
+            return View("Edit", model);
         }
-
-
-        //
-        // POST: /Databases/Delete/5
 
         [HttpPost]
         public JsonResult Delete(int databaseId)

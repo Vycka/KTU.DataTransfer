@@ -41,11 +41,21 @@
   <ItemGroup>
     <Compile Include="Databases\DeleteDatabaseRequest.cs" />
     <Compile Include="Databases\DeleteDatabaseResponse.cs" />
+    <Compile Include="Databases\GetDatabaseRequest.cs" />
+    <Compile Include="Databases\GetDatabaseResponse.cs" />
     <Compile Include="Databases\GetDatabasesListRequest.cs" />
     <Compile Include="Databases\GetDatabasesListResponse.cs" />
-    <Compile Include="Databases\RequestBase.cs" />
+    <Compile Include="RequestBase.cs" />
+    <Compile Include="Databases\SaveDatabaseRequest.cs" />
+    <Compile Include="Databases\SaveDatabaseResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResponseBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Adform.Academy.DataTransfer.Core\Adform.Academy.DataTransfer.Core.csproj">
+      <Project>{CB6E0CB6-965A-42DF-93E4-5256FF2CD3E5}</Project>
+      <Name>Adform.Academy.DataTransfer.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

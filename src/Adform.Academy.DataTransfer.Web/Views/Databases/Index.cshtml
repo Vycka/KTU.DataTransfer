@@ -28,10 +28,10 @@
     </div>
     <div class="round bFull" id="bottom-panel">
         <div style="float: left">
-            <button id="new-button" onclick="EditProjectClick()" style="">New Database</button>
+            <button id="new-button" onclick="document.location.assign('@Url.Action("Create")')">New Database</button>
         </div>
         <div style="float: right;">
-            <button id="edit-button" onclick="StartProjectClick()" style="display: none">Edit</button>
+            <button id="edit-button" onclick="document.location.assign('@Url.Action("Edit")/' + window.SelectedDatabaseId)" style="display: none">Edit</button>
             <button id="delete-button" onclick="DeleteClick()" style="display: none">Delete</button>
         </div>
         <div class="bClear"></div>

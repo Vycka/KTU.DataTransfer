@@ -1,4 +1,4 @@
-﻿@model Adform.Academy.DataTransfer.Core.DTO.Models.Database
+﻿@model Adform.Academy.DataTransfer.Web.Models.DatabaseItemModel
 @{
     ViewBag.Title = (Model.DatabaseId != 0 ? "Edit Database" : "Add Database");
     ViewBag.MenuItem = "databases";
@@ -9,14 +9,53 @@
         @ViewBag.Title
     </div>
     <div class="round bFull" id="right-panel">
-        
+        <div class="bCenter" style="margin: auto; text-align: center">
+        @using (Html.BeginForm("Save", "Databases", FormMethod.Post, new { id = "save-form" }))
+        {
+            <div>
+                @Html.LabelFor(x => x.ConnectionName)<br/>
+                @Html.EditorFor(x => x.ConnectionName)
+                <div class="bValidationFloat">@Html.ValidationMessageFor(x => x.ConnectionName)</div>
+            </div>
+
+            <div>
+                @Html.LabelFor(x => x.Host)<br />
+                @Html.EditorFor(x => x.Host)
+                <div class="bValidationFloat">@Html.ValidationMessageFor(x => x.Host)</div>
+            </div>
+
+            <div>
+                @Html.LabelFor(x => x.Port)<br />
+                @Html.EditorFor(x => x.Port)
+                <div class="bValidationFloat">@Html.ValidationMessageFor(x => x.Port)</div>
+            </div>
+
+            <div>
+                @Html.LabelFor(x => x.UserName)<br />
+                @Html.EditorFor(x => x.UserName)
+                <div class="bValidationFloat">@Html.ValidationMessageFor(x => x.UserName)</div>
+            </div>
+
+            <div>
+                @Html.LabelFor(x => x.Password)<br />
+                @Html.PasswordFor(x => x.Password)<br />
+            </div>
+
+            <div>
+                @Html.LabelFor(x => x.DatabaseName)<br />
+                @Html.EditorFor(x => x.DatabaseName)
+                <div class="bValidationFloat">@Html.ValidationMessageFor(x => x.DatabaseName)</div>
+            </div>
+            
+        @Html.HiddenFor(x => x.DatabaseId)
+        }
     </div>
-    <div class="round bFull" id="bottom-panel" style="display:none">
+    <div class="round bFull" id="bottom-panel">
         <div style="float: left">
             <button id="back-button" type="button" onclick="document.location.assign('@Url.Action("Index")')">Back</button>
         </div>
         <div style="float: right;">
-            <button id="edit-button" onclick="StartProjectClick()" style="display: none">Save</button>
+            <button id="save-button" onclick="$('#save-form').submit()">Save</button>
         </div>
         <div class="bClear"></div>
     </div>

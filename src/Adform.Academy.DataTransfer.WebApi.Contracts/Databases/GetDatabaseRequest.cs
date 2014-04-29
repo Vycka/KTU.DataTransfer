@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Adform.Academy.DataTransfer.WebApi.Contracts.Databases
 {
-    public class RequestBase
+    public class GetDatabaseRequest : RequestBase
     {
-        public int UserId;
+        public int DatabaseId;
     }
 }

@@ -174,3 +174,19 @@ select, input[type="button"], input[type="submit"]
     background-color: #FCFCFC;
     cursor: pointer;
 }
+
+.bValidationFloat {
+    position: relative;
+    left: 480px;
+    top: -22px;
+    text-align: left;
+    margin-bottom: -18px;
+    min-height: 18px;
+} 
+
+.input-validation-error, .field-validation-error
+{
+    color: red !important;
+    border-color: red!important;
+    outline-color: red !important;
+}

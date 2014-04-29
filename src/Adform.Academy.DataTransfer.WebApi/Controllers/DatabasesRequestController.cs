@@ -32,6 +32,39 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
             }
         }
 
+        [Route("Get")]
+        [HttpGet, HttpPost]
+        public GetDatabaseResponse Get(GetDatabaseRequest request)
+        {
+            using (ISession session = SessionFactory.OpenSession())
+            {
+                var database = session.Get<Database>(request.DatabaseId);
+
+                session.Flush();
+                return new GetDatabaseResponse
+                {
+                    Database = database
+                };
+            }
+        }
+
+        [Route("Save")]
+        [HttpGet, HttpPost]
+        public SaveDatabaseResponse Save(SaveDatabaseRequest request)
+        {
+            using (ISession session = SessionFactory.OpenSession())
+            {
+                //TODO: Logging
+                session.SaveOrUpdate(request.Database);
+
+                session.Flush();
+                return new SaveDatabaseResponse
+                {
+                    Message = "Success!"
+                };
+            }
+        }
+
         [Route("Delete")]
         [HttpGet, HttpPost]
         public DeleteDatabaseResponse Delete(DeleteDatabaseRequest request)

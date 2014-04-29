@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Adform.Academy.DataTransfer.Core.DTO.Models;
+using Adform.Academy.DataTransfer.Web.Models;
 using Adform.Academy.DataTransfer.WebApi.Contracts.Databases;
 using Newtonsoft.Json;
 
@@ -12,14 +10,42 @@ namespace Adform.Academy.DataTransfer.Web.Services.DataTransfer
         public static GetDatabasesListResponse GetDatabasesList()
         {
             string responseString = ServiceClient.PostRequest("Databases/GetDatabasesList", new GetDatabasesListRequest());
-            GetDatabasesListResponse response = JsonConvert.DeserializeObject<GetDatabasesListResponse>(responseString);
+            var response = JsonConvert.DeserializeObject<GetDatabasesListResponse>(responseString);
+            return response;
+        }
+
+        public static GetDatabaseResponse Get(int databaseId)
+        {
+            string responseString = ServiceClient.PostRequest("Databases/Get", new GetDatabaseRequest { DatabaseId = databaseId});
+            var response = JsonConvert.DeserializeObject<GetDatabaseResponse>(responseString);
+            return response;
+        }
+
+        public static SaveDatabaseResponse Save(DatabaseItemModel database)
+        {
+            var request = new SaveDatabaseRequest
+            {
+                Database = new Database
+                {
+                    DatabaseId = database.DatabaseId,
+                    ConnectionName = database.ConnectionName,
+                    Host = database.Host,
+                    Port = database.Port,
+                    UserName = database.UserName,
+                    Password = database.Password,
+                    DatabaseName = database.DatabaseName
+                }
+            };
+
+            string responseString = ServiceClient.PostRequest("Databases/Save", request);
+            var response = JsonConvert.DeserializeObject<SaveDatabaseResponse>(responseString);
             return response;
         }
 
         public static DeleteDatabaseResponse Delete(int databaseId)
         {
-            string responseString = ServiceClient.PostRequest("Databases/Delete", new DeleteDatabaseRequest { DatabaseId = databaseId});
-            DeleteDatabaseResponse response = JsonConvert.DeserializeObject<DeleteDatabaseResponse>(responseString);
+            string responseString = ServiceClient.PostRequest("Databases/Delete", new DeleteDatabaseRequest { DatabaseId = databaseId });
+            var response = JsonConvert.DeserializeObject<DeleteDatabaseResponse>(responseString);
             return response;
         }
     }

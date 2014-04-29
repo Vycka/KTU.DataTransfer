@@ -10,13 +10,15 @@ function DatabaseClick(databaseId) {
 }
 
 function DeleteClick() {
-    PostCommand(
-        "Databases/Delete",
-        { databaseId: window.SelectedDatabaseId },
-        function (result) {
-            if (result == true)
-                location.reload(true);
-        }
-    );
+    if (confirm('Are you sure you want to delete database: ' + $('#database-' + window.SelectedDatabaseId).html() + '?')) {
+        PostCommand(
+            "Databases/Delete",
+            { databaseId: window.SelectedDatabaseId },
+            function(result) {
+                if (result == true)
+                    location.reload(true);
+            }
+        );
+    }
 }
 
