@@ -1,5 +1,4 @@
-﻿using Adform.Academy.DataTransfer.Core.DTO.Models;
-using Adform.Academy.DataTransfer.Web.Models;
+﻿using Adform.Academy.DataTransfer.Web.Models;
 using Adform.Academy.DataTransfer.WebApi.Contracts.Databases;
 using Newtonsoft.Json;
 
@@ -14,19 +13,17 @@ namespace Adform.Academy.DataTransfer.Web.Services.DataTransfer
             return response;
         }
 
-        public static GetDatabaseResponse Get(int databaseId)
+        public static GetDatabaseResponse GetDatabase(int databaseId)
         {
             string responseString = ServiceClient.PostRequest("Databases/Get", new GetDatabaseRequest { DatabaseId = databaseId});
             var response = JsonConvert.DeserializeObject<GetDatabaseResponse>(responseString);
             return response;
         }
 
-        public static SaveDatabaseResponse Save(DatabaseItemModel database)
+        public static SaveDatabaseResponse SaveDatabase(DatabaseItemModel database)
         {
             var request = new SaveDatabaseRequest
             {
-                Database = new Database
-                {
                     DatabaseId = database.DatabaseId,
                     ConnectionName = database.ConnectionName,
                     Host = database.Host,
@@ -34,7 +31,6 @@ namespace Adform.Academy.DataTransfer.Web.Services.DataTransfer
                     UserName = database.UserName,
                     Password = database.Password,
                     DatabaseName = database.DatabaseName
-                }
             };
 
             string responseString = ServiceClient.PostRequest("Databases/Save", request);

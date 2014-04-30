@@ -1,12 +1,14 @@
 ﻿
 <a href="@Url.Action("Index","ProjectList")" class="menu-item menu-item-highlight" style="width: 89%; display: inline-block" id="menu-project-list">Project List</a><br/>
 <a href="#" class="menu-item menu-item-highlight" style="width: 89%; display: inline-block" id="menu-new-project">New Project</a><br/>
-@if (ViewBag.IsAdmin == true)
+@if (HttpContext.Current.User.IsInRole("admin"))
 {
     <a href="@Url.Action("Index","Databases")" class="menu-item menu-item-highlight" style="width: 89%; display: inline-block" id="menu-databases">Databases</a><br/>
-    <a href="#" class="menu-item menu-item-highlight" style="width: 89%; display: inline-block" id="menu-users">Users</a><br/>
+    <a href="@Url.Action("Index","Users")" class="menu-item menu-item-highlight" style="width: 89%; display: inline-block" id="menu-users">Users</a><br/>
     <a href="#" class="menu-item menu-item-highlight" style="width: 89%; display: inline-block" id="menu-system-log">System Log</a>
 }
+<br /><br />
+<a href="@Url.Action("Logout","Users")" class="menu-item menu-item-highlight" style="width: 89%; display: inline-block" id="menu-logout">Logout</a>
 <script>
     HighlightMenuItemAndRemoveLink('@ViewBag.MenuItem');
 </script>

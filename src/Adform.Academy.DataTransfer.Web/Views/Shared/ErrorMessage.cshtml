@@ -1,0 +1,16 @@
+﻿@model Adform.Academy.DataTransfer.Web.Models.ErrorMessageModel
+@{
+    ViewBag.Title = "Error";
+}
+<div class="bCenter">
+    <div id="ErrorPane" class="round bFull bErr">@Model.Message</div>
+    <div class="round bFull">
+        <div style="float: left;">
+            <button id="BackButton" type="button" onclick="history.go(-1)">Back</button>
+        </div>
+        <div style="float: right;">
+            <button id="HomeButton" type="button" onclick="document.location.assign('@Url.Action(String.Empty,String.Empty)')">Home</button>
+        </div>
+        <div class="bClear"></div>
+    </div>
+</div>

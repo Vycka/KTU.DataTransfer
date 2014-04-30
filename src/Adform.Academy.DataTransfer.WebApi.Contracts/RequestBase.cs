@@ -2,6 +2,7 @@
 {
     public class RequestBase
     {
-        public int UserId;
+        public int InvokerUserId;
+        public string InvokerUserName;
     }
 }

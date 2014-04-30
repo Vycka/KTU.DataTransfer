@@ -1,0 +1,47 @@
+﻿@model Adform.Academy.DataTransfer.Web.Models.UserListModel
+@{
+    ViewBag.Title = "Users";
+    ViewBag.MenuItem = "users";
+}
+<script src="@Url.Content("~/Scripts/Project/UserList.js")" type="text/javascript"></script>
+<div class="bCenter">
+    <div class="round bTitle">
+        @ViewBag.Title
+    </div>
+    <div class="round bLeft" id="left-panel">
+        @RenderPage("~/Views/Shared/MenuItems.cshtml")
+    </div>
+    <div class="round bRight" id="right-panel">
+        @for (int x = 0; x < Model.Users.Count; x++)
+        {
+            var item = Model.Users[x];
+            <div onclick="ItemClick(@item.UserId)" class="menu-item-highlight" id="itemlist-group-@item.UserId">
+                <div id="itemlist-name-@item.UserId" class="bListLeft">@item.UserName</div>
+                @if (item.IsAdmin)
+                {
+                    <div class="bListRight">Admin</div>
+                }
+                @if (!item.IsActive)
+                {
+                    <div class="bListRight">Inactive</div>
+                }
+                <div class="bClear"></div>
+            </div>
+            if (x + 1 != Model.Users.Count)
+            {
+                <hr />
+            }
+        }
+    </div>
+    <div class="round bFull" id="bottom-panel">
+        <div style="float: left">
+            <button id="new-button" onclick="document.location.assign('@Url.Action("Create")')">New User</button>
+        </div>
+        <div style="float: right; display: none" id="selected-item-controls">
+            <button id="edit-button" onclick="document.location.assign('@Url.Action("Edit")/' + window.SelectedItemId)">Edit</button>
+        </div>
+        <div class="bClear"></div>
+    </div>
+
+    @Html.Partial("ErrorPane")
+</div>

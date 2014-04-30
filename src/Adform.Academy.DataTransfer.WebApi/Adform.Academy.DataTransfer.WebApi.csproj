@@ -60,16 +60,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Microsoft.AspNet.WebApi.WebHost.5.1.2\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\DatabasesRequestController.cs" />
     <Compile Include="Controllers\PingController.cs" />
-    <Compile Include="Controllers\UserAccountRequestController.cs" />
+    <Compile Include="Controllers\UserRequestController.cs" />
     <Compile Include="Formatters\JsonFormatter.cs" />
     <Compile Include="WebHost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

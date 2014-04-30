@@ -3,13 +3,15 @@ using System.Configuration;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
+using System.Web;
+using Adform.Academy.DataTransfer.Web.Tools.Authentication;
+using Adform.Academy.DataTransfer.WebApi.Contracts;
 
 namespace Adform.Academy.DataTransfer.Web.Services.DataTransfer
 {
 
     public class ServiceClient
     {
-
         private static HttpClient CreateClient()
         {
             var client = new HttpClient
@@ -22,15 +24,24 @@ namespace Adform.Academy.DataTransfer.Web.Services.DataTransfer
             return client;
         }
 
-
-        private static async Task<string> ExtractResponse(Task<HttpResponseMessage> response)
+        private static string PostAsyncRequest(string relativeUrl, RequestBase request)
         {
-            string responseString = await response.Result.Content.ReadAsStringAsync();
-            return responseString;
+            if (HttpContext.Current.User.Identity.IsAuthenticated)
+            {
 
-        }
-        private static string PostAsyncRequest(string relativeUrl, object request)
-        {
+                var identity = HttpContext.Current.User.Identity as DataTransferUserIdentity;
+                if (identity != null)
+                {
+                    request.InvokerUserName = identity.Name;
+                    request.InvokerUserId = identity.UserId;
+                }
+                else
+                {
+                    request.InvokerUserName = "System";
+                    request.InvokerUserId = -1;
+                }
+            }
+
             using (HttpClient client = CreateClient())
             using (Task<HttpResponseMessage> repsonse = client.PostAsJsonAsync("Adform.Academy.DataTransfer/v1/" + relativeUrl, request))
             {
@@ -40,7 +51,7 @@ namespace Adform.Academy.DataTransfer.Web.Services.DataTransfer
             }
         }
 
-        public static string PostRequest(string relativeUrl, object request)
+        public static string PostRequest(string relativeUrl, RequestBase request)
         {
             var response = PostAsyncRequest(relativeUrl, request);
             return response;

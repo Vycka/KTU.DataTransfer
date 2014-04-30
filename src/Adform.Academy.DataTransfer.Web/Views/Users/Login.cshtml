@@ -1,0 +1,34 @@
+﻿@model string
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="bCenter">
+    <div class="round bTitle">
+        @ViewBag.Title
+    </div>
+    <div class="round bFull" id="right-panel">
+        <div class="bCenter" style="margin: auto; text-align: center">
+            @using (Html.BeginForm("Login","Users", FormMethod.Post, new { id = "login-form" }))
+            {
+                <div>
+                    @Html.Label("User name:")<br />
+                    @Html.Editor("userName")<br />
+                </div>
+
+                <div>
+                    @Html.Label("Password:")<br />
+                    @Html.Password("password")
+                </div>
+                @Html.Hidden("returnUrl",Model)
+                <br /> 
+                <button id="login-button" onclick="$('#login-form').submit()">Login</button>
+            }
+        </div>
+    </div>
+    @Html.Partial("ErrorPane")
+</div>
+
+<script>
+    ShowErrorPane('@ViewBag.Error');
+ </script>

@@ -152,7 +152,7 @@ select, input[type="button"], input[type="submit"]
     clear: both;
 }
     
-.bErr
+.bErr, .validation-summary-errors
 {
     padding-bottom: 5px;
     text-align: center;
@@ -190,3 +190,16 @@ select, input[type="button"], input[type="submit"]
     border-color: red!important;
     outline-color: red !important;
 }
+
+.bListLeft {
+    float: left
+}
+
+.bListRight {
+    float:right;
+    font-size: 10px;
+    padding-top: 2px;
+    color: lightsalmon;
+    padding-right: 4px;
+}
+

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
-using System.Web;
-using System.Web.Services.Description;
+﻿using Adform.Academy.DataTransfer.WebApi.Contracts;
 
 namespace Adform.Academy.DataTransfer.Web.Services.DataTransfer
 {
@@ -12,12 +6,12 @@ namespace Adform.Academy.DataTransfer.Web.Services.DataTransfer
     {
         public static string Ping()
         {
-            return ServiceClient.PostRequest("Ping", string.Empty);
+            return ServiceClient.PostRequest("Ping", new RequestBase());
         }
 
         public static string PingError()
         {
-            return ServiceClient.PostRequest("Ping3", string.Empty);
+            return ServiceClient.PostRequest("Ping3", new RequestBase());
         }
     }
 }

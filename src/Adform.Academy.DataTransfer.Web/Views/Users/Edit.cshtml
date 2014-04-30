@@ -1,0 +1,69 @@
+﻿@model Adform.Academy.DataTransfer.Web.Models.UserItemModel
+@{
+    ViewBag.Title = (Model.UserId != 0 ? "Edit User" : "Add User");
+}
+<div class="bCenter">
+    <div class="round bTitle">
+        @ViewBag.Title
+    </div>
+    <div class="round bFull" id="right-panel">
+        <div class="bCenter" style="margin: auto; text-align: center">
+            @using (Html.BeginForm("Save", "Users", FormMethod.Post, new { id = "save-form" }))
+            {    
+                if (!ViewData.ModelState.IsValid)
+                {
+                    <div class="bErr" style="display: inline-block">@Html.ValidationMessage("ErrorSummary")</div>
+                }
+                 
+                <div>
+                    @Html.LabelFor(x => x.UserName)<br />
+                    @Html.EditorFor(x => x.UserName)
+                    <div class="bValidationFloat">@Html.ValidationMessageFor(x => x.UserName)</div>
+                </div>
+
+                <div>
+                    @Html.LabelFor(x => x.Password)<br />
+                    @Html.PasswordFor(x => x.Password)
+                    <div class="bValidationFloat">@Html.ValidationMessageFor(x => x.Password)</div>
+                    @if (Model.UserId != 0)
+                    {
+                        <script> $("#Password").attr("data-val", "false"); </script>
+                    }
+                </div>
+                
+                <div style="display: inline-block">
+                    <table class="noborder">
+                        <tr>
+                            <td>
+                                @Html.LabelFor(x => x.IsAdmin)
+                            </td>
+                            <td>
+                                @Html.CheckBoxFor(x => x.IsAdmin)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                @Html.LabelFor(x => x.IsActive)
+                            </td>
+                            <td>
+                                @Html.CheckBoxFor(x => x.IsActive)
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                @Html.HiddenFor(x => x.UserId)
+            }
+        </div>
+    </div>
+    <div class="round bFull" id="bottom-panel">
+        <div style="float: left">
+            <button id="back-button" type="button" onclick="history.go(-1)">Back</button>
+        </div>
+        <div style="float: right;">
+            <button id="save-button" onclick="$('#save-form').submit()">Save</button>
+        </div>
+        <div class="bClear"></div>
+    </div>
+
+    @Html.Partial("ErrorPane")
+</div>

@@ -1,19 +1,15 @@
 ﻿using System;
-using System.Runtime.Remoting.Messaging;
 using System.Web.Mvc;
 using Adform.Academy.DataTransfer.Web.Models;
 using Adform.Academy.DataTransfer.Web.Services.DataTransfer;
-using Adform.Academy.DataTransfer.WebApi.Contracts.Databases;
-using Filter = Adform.Academy.DataTransfer.Core.DTO.Models.Filter;
 
 namespace Adform.Academy.DataTransfer.Web.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class DatabasesController : Controller
     {
         public ActionResult Index()
         {
-            ViewBag.IsAdmin = true;
-
             var databases = DatabaseRequests.GetDatabasesList();
             return View(
                 new DatabaseListModel
@@ -34,7 +30,13 @@ namespace Adform.Academy.DataTransfer.Web.Controllers
             if (model.Password == null)
                 model.Password = String.Empty;
 
-            DatabaseRequests.Save(model);
+            var response = DatabaseRequests.SaveDatabase(model);
+
+            if (!response.Success)
+            {
+                ModelState.AddModelError("ErrorSummary", response.Message);
+                return View("Edit", model);
+            }
 
             return RedirectToAction("Index");
 
@@ -42,17 +44,17 @@ namespace Adform.Academy.DataTransfer.Web.Controllers
 
         public ActionResult Edit(int id)
         {
-            var response = DatabaseRequests.Get(id);
+            var response = DatabaseRequests.GetDatabase(id);
             var model = new DatabaseItemModel
             {
 
-                DatabaseId = response.Database.DatabaseId,
-                ConnectionName = response.Database.ConnectionName,
-                Host = response.Database.Host,
-                Port = response.Database.Port,
-                UserName = response.Database.UserName,
-                Password = response.Database.Password,
-                DatabaseName = response.Database.DatabaseName
+                DatabaseId = response.DatabaseId,
+                ConnectionName = response.ConnectionName,
+                Host = response.Host,
+                Port = response.Port,
+                UserName = response.UserName,
+                Password = response.Password,
+                DatabaseName = response.DatabaseName
             };
             return View("Edit", model);
         }
