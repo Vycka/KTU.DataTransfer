@@ -47,6 +47,15 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
         [HttpGet, HttpPost]
         public SaveUserResponse Save(SaveUserRequest request)
         {
+            if (CheckIfRemovingLastAdmin(request))
+            {
+                return new SaveUserResponse
+                {
+                    Success = false,
+                    Message = "Cannot disable or remove administrator rights for last administrator user"
+                };
+            }
+
             var existingUserByName = GetUserByName(request.UserName);
             if (existingUserByName != null)
             {
@@ -158,6 +167,32 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
                 .UniqueResult<User>();
 
             return user;
+        }
+
+        public bool CheckIfRemovingLastAdmin(SaveUserRequest request)
+        {
+            if (request.UserId == 0)
+                return false; // Adding new user.. Whatever
+
+            ISession session = SessionFactory.GetSession();
+
+            // If editing user was admin but after editing its not
+            var user = session.Get<User>(request.UserId);
+            if (user.IsAdmin && user.IsActive)
+            {
+                if (!request.IsAdmin || !request.IsActive)
+                {
+                    int activeAdminsCount = (int)session.CreateCriteria(typeof (User))
+                        .Add(Restrictions.Eq("IsAdmin", true))
+                        .Add(Restrictions.Eq("IsActive", true))
+                        .SetProjection(Projections.CountDistinct("UserId"))
+                        .UniqueResult();
+
+                    if (activeAdminsCount <= 1)
+                        return true;
+                }
+            }
+            return false;
         }
     }
 }

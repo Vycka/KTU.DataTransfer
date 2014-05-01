@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using Adform.Academy.DataTransfer.Core.DTO.Models;
@@ -6,6 +7,7 @@ using Adform.Academy.DataTransfer.Core.DTO.NHibernate;
 using Adform.Academy.DataTransfer.WebApi.Contracts.Databases;
 using NHibernate;
 using NHibernate.Criterion;
+using NHibernate.Mapping;
 using NHibernate.Transform;
 
 namespace Adform.Academy.DataTransfer.WebApi.Controllers
@@ -121,6 +123,70 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
                 Success = false
             };
         }
+
+        [Route("GetDatabaseStructure")]
+        [HttpGet, HttpPost]
+        public GetDatabaseStructureResponse GetDatabaseStructure(GetDatabaseStructureRequest request)
+        {
+            try
+            {
+                var tables = new List<TableInformation>();
+                ISession session = SessionFactory.GetSession();
+                var database = session.Get<Database>(request.DatabaseId);
+
+                using (var connection = SessionFactory.CreateIdbConnection(database))
+                using (var dbSession = SessionFactory.OpenSession(connection))
+                {
+                    connection.Open();
+
+                    IList<TableStructure> tableStructure = dbSession
+                        .CreateCriteria(typeof(TableStructure))
+                        .List<TableStructure>();
+
+                    foreach (var structureItem in tableStructure)
+                    {
+                        int existingTableIndex = FindIndexOfExistingTable(tables, structureItem.TableName);
+                        if (existingTableIndex == -1)
+                        {
+                            tables.Add(new TableInformation { TableName = structureItem.TableName });
+                            existingTableIndex = tables.Count - 1;
+                        }
+                        tables[existingTableIndex].Fields.Add(
+                            new FieldInformation
+                            {
+                                FieldName = structureItem.ColumnName,
+                                FieldType = structureItem.DataType
+                            }
+                        );
+                    }
+
+                    return new GetDatabaseStructureResponse
+                    {
+                        Tables = tables
+                    };
+                }
+
+            }
+            catch (Exception)
+            {
+                return new GetDatabaseStructureResponse
+                {
+                    Success = false,
+                    Message = "Failed to retrieve database information. Is Source connection working right?"
+                };
+            }
+        }
+
+        public int FindIndexOfExistingTable(List<TableInformation> tables, string tableName)
+        {
+            for (int x = 0; x < tables.Count; x++)
+            {
+                if (tables[x].TableName == tableName)
+                    return x;
+            }
+            return -1;
+        }
+
         public Database GetDatabaseByConnectionName(string name)
         {
             ISession session = SessionFactory.GetSession();

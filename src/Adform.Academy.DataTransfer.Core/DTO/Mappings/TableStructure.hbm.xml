@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Adform.Academy.DataTransfer.Core"
+                   namespace="Adform.Academy.DataTransfer.Core.DTO.Models">
+
+  <class name="TableStructure" catalog="INFORMATION_SCHEMA" table="COLUMNS">
+    <composite-id>
+      <key-property name="TableName" column="TABLE_NAME" />
+      <key-property name="ColumnName" column="COLUMN_NAME" />
+    </composite-id>
+    <property name="DataType" column="DATA_TYPE" />
+  </class>
+
+</hibernate-mapping>

@@ -40,6 +40,15 @@
     <Compile Include="Databases\GetDatabaseResponse.cs" />
     <Compile Include="Databases\GetDatabasesListRequest.cs" />
     <Compile Include="Databases\GetDatabasesListResponse.cs" />
+    <Compile Include="Databases\GetDatabaseStructureRequest.cs" />
+    <Compile Include="Databases\GetDatabaseStructureResponse.cs" />
+    <Compile Include="Projects\GetProjectListRequest.cs" />
+    <Compile Include="Projects\GetProjectListResponse.cs" />
+    <Compile Include="Projects\SaveProjectRequest.cs" />
+    <Compile Include="Projects\SaveProjectResponse.cs" />
+    <Compile Include="Projects\Types\BatchStateTypes.cs" />
+    <Compile Include="Projects\Types\ExecutionStepsTypes.cs" />
+    <Compile Include="Projects\Types\ProjectStateTypes.cs" />
     <Compile Include="RequestBase.cs" />
     <Compile Include="Databases\SaveDatabaseRequest.cs" />
     <Compile Include="Databases\SaveDatabaseResponse.cs" />

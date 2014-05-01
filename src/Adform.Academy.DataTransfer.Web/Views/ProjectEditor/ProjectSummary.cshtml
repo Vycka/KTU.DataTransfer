@@ -1,0 +1,54 @@
+﻿@model Adform.Academy.DataTransfer.Web.Models.ProjectEditorModel
+@{
+    ViewBag.Title = (Model.ProjectId != 0 ? "Edit Project" : "New Project");
+}
+<script src="@Url.Content("~/Scripts/Project/EditorSummary.js")" type="text/javascript"></script>
+
+<div class="bCenter">
+    <div class="round bTitle">
+        @ViewBag.Title
+    </div>
+    <div class="round bFull" id="right-panel">
+        <div class="bCenter" style="margin: auto; text-align: center">
+            @using (Html.BeginForm("Columns", "ProjectEditor", FormMethod.Post, new { id = "save-form" }))
+            {
+                if (!ViewData.ModelState.IsValid)
+                {
+                    <div class="bErr" style="display: inline-block">@Html.ValidationMessage("ErrorSummary")</div>
+                }
+
+                <div>
+                    @Html.LabelFor(x => x.ProjectName)<br />
+                    @Html.EditorFor(x => x.ProjectName)
+                    <div class="bValidationFloat">@Html.ValidationMessageFor(x => x.ProjectName)</div>
+                </div>
+                
+                <div>
+                    @Html.LabelFor(x => x.SourceDatabaseId)<br />
+                    @Html.DropDownListFor(x => x.SourceDatabaseId, Model.Databases)
+                    <div class="bValidationFloat">@Html.ValidationMessageFor(x => x.SourceDatabaseId)</div>
+                </div>
+
+                <div>
+                    @Html.LabelFor(x => x.DestinationDatabaseId)<br />
+                    @Html.DropDownListFor(x => x.DestinationDatabaseId, Model.Databases)
+                    <div class="bValidationFloat">@Html.ValidationMessageFor(x => x.DestinationDatabaseId)</div>
+                </div>
+                                
+                @Html.HiddenFor(x => x.ProjectId)
+                @Html.HiddenFor(x => x.FiltersJson)
+            }
+        </div>
+    </div>
+    <div class="round bFull" id="bottom-panel">
+        <div style="float: left">
+            <button id="back-button" type="button" onclick="window.location.href = '@Url.Action("Index", "ProjectList")'">Back</button>
+        </div>
+        <div style="float: right;">
+            <button id="save-button" onclick="$('#save-form').submit()">Next</button>
+        </div>
+        <div class="bClear"></div>
+    </div>
+
+    @Html.Partial("ErrorPane")
+</div>

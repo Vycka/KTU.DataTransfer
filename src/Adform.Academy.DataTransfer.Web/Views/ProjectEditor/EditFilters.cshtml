@@ -1,0 +1,63 @@
+﻿@using Adform.Academy.DataTransfer.Core.DTO.Models
+@model Adform.Academy.DataTransfer.Web.Models.ProjectEditorModel
+@{
+    ViewBag.Title = "Select batches generation data";
+}
+
+<script src="@Url.Content("~/Scripts/Project/EditFilters.js")" type="text/javascript"></script>
+
+<div class="bCenter">
+    <div class="round bTitle">
+        @ViewBag.Title
+    </div>
+    <div class="round bFull" id="right-panel">   
+        @for (int x = 0; x < Model.Filters.Count; x++)
+        {
+            <ul>
+                @{ var filter = Model.Filters[x]; }
+                <li>@filter.TableName
+                    <ul>
+                        <li>
+                            <select id="index-selector-@filter.TableName" onchange="IndexSelected('@filter.TableName')">
+                                @foreach (var column in @filter.Columns)
+                                {
+                                    if (column.ColumnType == "int" || column.ColumnType == "datetime")
+                                    {
+                                        <option data-field-type="@column.ColumnType" value="@column.ColumnName">@column.ColumnName [@column.ColumnType]</option>
+                                    }
+                                }
+                            </select>
+                            &nbsp;&nbsp; Average batch step:
+                            <select data-tableName="@filter.TableName" id="index-range-@filter.TableName"></select>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            if (x + 1 != Model.Filters.Count)
+            {
+                <hr />
+            }
+        }
+    </div>
+    <div class="round bFull" id="bottom-panel">
+        <div style="float: left">
+            <button id="back-button" type="button" onclick="history.go(-1)">Back</button>
+        </div>
+        <div style="float: right;">
+            <button id="next-button" type="button" onclick="SubmitSelections()">Next</button>
+        </div>
+        <div class="bClear"></div>
+    </div>
+
+    @Html.Partial("ErrorPane")
+</div>
+
+@using (Html.BeginForm("Review", "ProjectEditor", FormMethod.Post, new { id = "modelstate-form" }))
+{
+    @Html.HiddenFor(x => x.ProjectId)
+    @Html.HiddenFor(x => x.ProjectName)
+    @Html.HiddenFor(x => x.SourceDatabaseId)
+    @Html.HiddenFor(x => x.DestinationDatabaseId)
+
+    @Html.HiddenFor(x => x.FiltersJson)
+}

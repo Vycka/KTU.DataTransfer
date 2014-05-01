@@ -1,6 +1,6 @@
 ﻿
 <a href="@Url.Action("Index","ProjectList")" class="menu-item menu-item-highlight" style="width: 89%; display: inline-block" id="menu-project-list">Project List</a><br/>
-<a href="#" class="menu-item menu-item-highlight" style="width: 89%; display: inline-block" id="menu-new-project">New Project</a><br/>
+<a href="@Url.Action("Index","ProjectEditor")" class="menu-item menu-item-highlight" style="width: 89%; display: inline-block" id="menu-new-project">New Project</a><br/>
 @if (HttpContext.Current.User.IsInRole("admin"))
 {
     <a href="@Url.Action("Index","Databases")" class="menu-item menu-item-highlight" style="width: 89%; display: inline-block" id="menu-databases">Databases</a><br/>

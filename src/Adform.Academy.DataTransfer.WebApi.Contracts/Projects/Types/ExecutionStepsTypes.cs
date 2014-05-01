@@ -1,5 +1,6 @@
-﻿namespace Adform.Academy.DataTransfer.Core.DTO.Types
+﻿namespace Adform.Academy.DataTransfer.WebApi.Contracts.Projects.Types
 {
+    //WARNING: This enum is also defined in CORE project
     public enum ExecutionStepsTypes
     {
         NotStarted = 0,

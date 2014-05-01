@@ -191,15 +191,22 @@ select, input[type="button"], input[type="submit"]
     outline-color: red !important;
 }
 
-.bListLeft {
-    float: left
-}
-
 .bListRight {
-    float:right;
-    font-size: 10px;
-    padding-top: 2px;
+    float: right;
+    font-size: 11px;
+    padding-top: 1px;
     color: lightsalmon;
     padding-right: 4px;
 }
 
+.bListLeft {
+    float: left;
+}
+
+.bProjectCreator {
+    float: left;
+    font-size: 11px;
+    padding-top: 1px;
+    color: lightgray;
+    padding-right: 4px;
+}

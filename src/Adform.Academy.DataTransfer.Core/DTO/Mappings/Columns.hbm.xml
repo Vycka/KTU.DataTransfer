@@ -11,6 +11,7 @@
     <many-to-one name="Filter" class="Filter" column="ID_Filters"/>
     
     <property name="ColumnName"/>
+    <property name="ColumnType"/>
   </class>
 
 </hibernate-mapping>

@@ -4,6 +4,11 @@
     ViewBag.MenuItem = "project-list";
 }
 
+<script>
+    window.RequestForAllProjects = @(Model.ShowProjectsAll ? "true" : "false" )
+</script>
+<script src="@Url.Content("~/Scripts/Project/ProjectList.js")" type="text/javascript"></script>
+
 <div class="bCenter">
     <div class="round bTitle">
         @ViewBag.Title
@@ -12,11 +17,32 @@
         @RenderPage("~/Views/Shared/MenuItems.cshtml")
     </div>
     <div class="round bRight" id="right-panel">
-        @Model.PingResponse
+        @for (int x = 0; x < Model.Projects.Count; x++)
+        {
+            var item = Model.Projects[x];
+            <div onclick="ItemClick(@item.ProjectId)" class="menu-item-highlight" id="itemlist-group-@item.ProjectId">
+                <div id="itemlist-name-@item.ProjectId" class="bListLeft">@item.Name</div>
+                @if (Model.ShowCreator)
+                {
+                    <div class="bProjectCreator">&nbsp; (@item.CreatedByUserName)</div>
+                }
+                <div id="itemlist-right-state-@item.ProjectId" class="bListRight">Stopped</div>
+                <div id="itemlist-right-step-@item.ProjectId" class="bListRight">Not Started</div>
+                <div class="bClear"></div>
+            </div>
+            if (x + 1 != Model.Projects.Count)
+            {
+                <hr />
+            }
+        }
     </div>
-    <div class="round bFull" id="bottom-panel" style="display:none">
-
+    <div class="round bFull" id="bottom-panel">
+        <div style="float: left">
+            <button id="showall-button" type="button" onclick="">Show all projects</button>
+        </div>
+        <div style="float: right;">
+        </div>
+        <div class="bClear"></div>
     </div>
-
     @Html.Partial("ErrorPane")
 </div>

@@ -44,5 +44,18 @@ namespace Adform.Academy.DataTransfer.Web.Services.DataTransfer
             var response = JsonConvert.DeserializeObject<DeleteDatabaseResponse>(responseString);
             return response;
         }
+
+        public static GetDatabaseStructureResponse GetDatabaseStructure(int databaseId)
+        {
+            string responseString = ServiceClient.PostRequest(
+                "Databases/GetDatabaseStructure",
+                new GetDatabaseStructureRequest
+                {
+                    DatabaseId = databaseId
+                }
+            );
+            var response = JsonConvert.DeserializeObject<GetDatabaseStructureResponse>(responseString);
+            return response;
+        }
     }
 }

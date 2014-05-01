@@ -24,10 +24,14 @@
                 <div>
                     @Html.LabelFor(x => x.Password)<br />
                     @Html.PasswordFor(x => x.Password)
-                    <div class="bValidationFloat">@Html.ValidationMessageFor(x => x.Password)</div>
+                    <div class="bValidationFloat" id="PasswordValidation">@Html.ValidationMessageFor(x => x.Password)</div>
                     @if (Model.UserId != 0)
                     {
-                        <script> $("#Password").attr("data-val", "false"); </script>
+                        <script>
+                            $("#Password").attr("data-val", "false");
+                            $("#Password").removeClass("input-validation-error");
+                            $("#PasswordValidation").css("display","none");
+                        </script>
                     }
                 </div>
                 

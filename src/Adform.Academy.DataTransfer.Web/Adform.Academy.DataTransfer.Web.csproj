@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\DatabasesController.cs" />
+    <Compile Include="Controllers\ProjectEditorController.cs" />
     <Compile Include="Controllers\ProjectListController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
@@ -117,12 +118,14 @@
     <Compile Include="Models\DatabaseItemModel.cs" />
     <Compile Include="Models\DatabaseListModel.cs" />
     <Compile Include="Models\ErrorMessageModel.cs" />
+    <Compile Include="Models\ProjectEditorModel.cs" />
     <Compile Include="Models\ProjectListModel.cs" />
     <Compile Include="Models\UserItemModel.cs" />
     <Compile Include="Models\UserListModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DataTransfer\DatabaseRequests.cs" />
     <Compile Include="Services\DataTransfer\Pinger.cs" />
+    <Compile Include="Services\DataTransfer\ProjectRequests.cs" />
     <Compile Include="Services\DataTransfer\ServiceClient.cs" />
     <Compile Include="Services\DataTransfer\UserRequests.cs" />
     <Compile Include="Tools\Authentication\DataTransferUserIdentity.cs" />
@@ -141,8 +144,12 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\Project\Columns.js" />
     <Content Include="Scripts\Project\Databases.js" />
+    <Content Include="Scripts\Project\EditFilters.js" />
+    <Content Include="Scripts\Project\EditorSummary.js" />
     <Content Include="Scripts\Project\ItemList.js" />
+    <Content Include="Scripts\Project\ProjectList.js" />
     <Content Include="Scripts\Project\UserList.js" />
     <Content Include="Scripts\Shared\ErrorModule.js" />
     <Content Include="Scripts\Shared\MenuHighlighter.js" />
@@ -164,6 +171,10 @@
     <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Shared\ErrorMessage.cshtml" />
     <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\ProjectEditor\ProjectSummary.cshtml" />
+    <Content Include="Views\ProjectEditor\Columns.cshtml" />
+    <Content Include="Views\ProjectEditor\EditFilters.cshtml" />
+    <Content Include="Views\ProjectEditor\Review.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
