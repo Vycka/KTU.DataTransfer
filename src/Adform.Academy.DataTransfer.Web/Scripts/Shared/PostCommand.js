@@ -4,12 +4,12 @@
            if (data.Success == true) { //ok
                ShowErrorPane('');
                if (callback != null)
-                   callback(true);
+                   callback(true, data);
            }
            else if (data.Success == false) { //error
                ShowErrorPane(data.Message);
                if (callback != null)
-                   callback(false);
+                   callback(false, null);
             }
        })
        .fail(function () {

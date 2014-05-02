@@ -89,7 +89,6 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
                 user.Password = existingUser.Password;
             }
             session.Merge(user);
-            //session.SaveOrUpdate(user);
             session.Flush();
 
             return new SaveUserResponse();

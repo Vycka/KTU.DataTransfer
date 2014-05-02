@@ -1,5 +1,5 @@
 ﻿function DeleteClick() {
-    if (confirm('Are you sure you want to delete database: ' + $('#itemlist-item-' + window.SelectedItemId).html() + '?')) {
+    if (confirm('Are you sure you want to delete database: ' + $('#itemlist-name-' + window.SelectedItemId).html() + '?')) {
         PostCommand(
             "Databases/Delete",
             { databaseId: window.SelectedItemId },

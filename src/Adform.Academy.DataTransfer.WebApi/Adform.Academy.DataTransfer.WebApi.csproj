@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="Controllers\DatabasesRequestController.cs" />
     <Compile Include="Controllers\PingController.cs" />
+    <Compile Include="Controllers\ProjectExecutorController.cs" />
     <Compile Include="Controllers\ProjectRequestController.cs" />
     <Compile Include="Controllers\UserRequestController.cs" />
     <Compile Include="Formatters\JsonFormatter.cs" />

@@ -45,6 +45,18 @@ function SetFilterBatchRange(table, column, value, name) {
     $("#FiltersJson").val(JSON.stringify(state));
 }
 
+$(document).ready(function () {
+    var filters = JSON.parse($("#FiltersJson").val());
+
+    $.each(filters, function (index) {
+        var filter = filters[index];
+        var indexDropDown = $("#index-selector-" + filter.TableName);
+        var stepDropDown = $("#index-range-" + filter.TableName);
+        indexDropDown.val(filter.FilterValue.IndexColumn);
+        stepDropDown.val(filter.FilterValue.IndexStep);
+    });
+});
+
 StepsForInt = [];
 StepsForInt.push({ value: "1000", text: "1K" });
 StepsForInt.push({ value: "10000", text: "10K" });

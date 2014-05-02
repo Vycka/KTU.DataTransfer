@@ -27,12 +27,12 @@ namespace Adform.Academy.DataTransfer.Web.Controllers
         [Authorize(Roles = "admin")]
         public ActionResult All()
         {
-            var response = ProjectRequests.GetProjectList(Principal.UserId);
+            var response = ProjectRequests.GetProjectList(null,true);
             var model = new ProjectListModel
             {
                 Projects = response.Projects,
-                ShowCreator = false,
-                ShowProjectsAll = false
+                ShowCreator = true,
+                ShowProjectsAll = true
 
             };
             return View("Index",model);
@@ -48,7 +48,7 @@ namespace Adform.Academy.DataTransfer.Web.Controllers
         [Authorize(Roles = "admin")]
         public JsonResult GetListAllRaw()
         {
-            var response = ProjectRequests.GetProjectList(null);
+            var response = ProjectRequests.GetProjectList(null, true);
             return Json(response.Projects, JsonRequestBehavior.AllowGet);
         }
 

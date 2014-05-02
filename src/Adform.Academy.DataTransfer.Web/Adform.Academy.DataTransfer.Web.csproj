@@ -110,6 +110,7 @@
   <ItemGroup>
     <Compile Include="Controllers\DatabasesController.cs" />
     <Compile Include="Controllers\ProjectEditorController.cs" />
+    <Compile Include="Controllers\ProjectExecutorController.cs" />
     <Compile Include="Controllers\ProjectListController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
@@ -125,6 +126,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DataTransfer\DatabaseRequests.cs" />
     <Compile Include="Services\DataTransfer\Pinger.cs" />
+    <Compile Include="Services\DataTransfer\ProjectExecutorRequests.cs" />
     <Compile Include="Services\DataTransfer\ProjectRequests.cs" />
     <Compile Include="Services\DataTransfer\ServiceClient.cs" />
     <Compile Include="Services\DataTransfer\UserRequests.cs" />
@@ -148,7 +150,7 @@
     <Content Include="Scripts\Project\Databases.js" />
     <Content Include="Scripts\Project\EditFilters.js" />
     <Content Include="Scripts\Project\EditorSummary.js" />
-    <Content Include="Scripts\Project\ItemList.js" />
+    <Content Include="Scripts\Shared\ItemList.js" />
     <Content Include="Scripts\Project\ProjectList.js" />
     <Content Include="Scripts\Project\UserList.js" />
     <Content Include="Scripts\Shared\ErrorModule.js" />
@@ -175,9 +177,11 @@
     <Content Include="Views\ProjectEditor\Columns.cshtml" />
     <Content Include="Views\ProjectEditor\EditFilters.cshtml" />
     <Content Include="Views\ProjectEditor\Review.cshtml" />
+    <Content Include="Views\ProjectEditor\Save.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\ProjectExecutor\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

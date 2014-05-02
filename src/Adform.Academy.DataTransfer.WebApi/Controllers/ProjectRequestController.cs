@@ -3,6 +3,7 @@ using System.Linq;
 using System.Web.Http;
 using Adform.Academy.DataTransfer.Core.DTO.Models;
 using Adform.Academy.DataTransfer.Core.DTO.NHibernate;
+using Adform.Academy.DataTransfer.Core.DTO.Types;
 using Adform.Academy.DataTransfer.WebApi.Contracts.Projects;
 using Newtonsoft.Json;
 using NHibernate;
@@ -28,6 +29,10 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
                 var creatorUser = session.Get<User>(request.CreatedByUserId);
                 criteria = criteria.Add(Restrictions.Eq("CreatedBy", creatorUser));
             }
+            if (request == null || !request.ShowArchived)
+            {
+                criteria = criteria.Add(Restrictions.Not(Restrictions.Eq("ProjectState", ProjectStateTypes.Archived)));
+            }
 
             IList<ProjectListItem> projectList = criteria
                 .CreateAlias("CreatedBy", "u", NHibernate.SqlCommand.JoinType.LeftOuterJoin)
@@ -46,19 +51,46 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
             };
         }
 
+        [Route("GetProject")]
+        [HttpGet, HttpPost]
+        public GetProjectResponse GetProject(GetProjectRequest request)
+        {
+            var session = SessionFactory.GetSession();
+            var project = session.Get<Project>(request.ProjectId);
+            var response = new GetProjectResponse
+            {
+                ProjectId = project.ProjectId,
+                ProjectName = project.Name,
+                SourceDatabaseId = project.DatabaseSource.DatabaseId,
+                DestinationDatabaseId = project.DatabaseDestination.DatabaseId,
+                Filters = project.Filters.Select(f => new FilterItem
+                {
+                    TableName = f.TableName,
+
+                    Columns = f.Columns.Select(
+                        c => new ColumnItem {ColumnName = c.ColumnName, ColumnType = c.ColumnType}
+                    ).ToList(),
+
+                    FilterValue = JsonConvert.DeserializeObject<FilterValueItem>(f.FilterValue)
+                }).ToList()
+            };
+
+            return response;
+        }
+
         [Route("Save")]
         [HttpGet, HttpPost]
         public SaveProjectResponse Save(SaveProjectRequest request)
         {
             var session = SessionFactory.GetSession();
 
-            Project project = request.ProjectId == 0 ? new Project() : session.Get<Project>(request.ProjectId);
+            Project project = request.ProjectId == 0 ? new Project { Filters = new List<Filter>() } : session.Get<Project>(request.ProjectId);
 
             project.Name = request.ProjectName;
             project.DatabaseSource = session.Get<Database>(request.SourceDatabaseId);
             project.DatabaseDestination = session.Get<Database>(request.DestinationDatabaseId);
             project.CreatedBy = session.Get<User>(request.InvokerUserId);
-            project.Filters = new List<Filter>();
+            project.Filters.Clear();
             foreach (FilterItem filter in request.Filters)
             {
                 var filterDto = new Filter
@@ -81,8 +113,21 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
             }
 
             session.Merge(project);
-
+            session.Flush();
             return new SaveProjectResponse();
+        }
+
+        [Route("Delete")]
+        [HttpGet, HttpPost]
+        public DeleteProjectResponse Delete(DeleteProjectRequest request)
+        {
+            var session = SessionFactory.GetSession();
+
+            var project = session.Get<Project>(request.ProjectId);
+            session.Delete(project);
+            session.Flush();
+
+            return new DeleteProjectResponse();
         }
     }
 }

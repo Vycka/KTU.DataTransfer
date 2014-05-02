@@ -1,0 +1,13 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Project Saved Successfully";
+}
+
+
+<div class="bCenter">
+    <div class="round bTitle" style="margin: auto; text-align: center">
+        @ViewBag.Title<br />
+        <button id="showmine-button" type="button" onclick="document.location.assign('@Url.Action("Index","ProjectList")')">Go back to the project list page</button>
+    </div>
+</div>

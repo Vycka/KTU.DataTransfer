@@ -3,5 +3,6 @@
     public class GetProjectListRequest : RequestBase
     {
         public int? CreatedByUserId;
+        public bool ShowArchived;
     }
 }

@@ -14,8 +14,29 @@ namespace Adform.Academy.DataTransfer.Web.Controllers
         // GET: /ProjectEditor/
         public ActionResult Index()
         {
+            ModelState.Clear();
+
             var model = new ProjectEditorModel();
             model.Databases = BuildDatabasesList();
+            return View("ProjectSummary", model);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            ModelState.Clear();
+
+            
+            var response = ProjectRequests.GetProject(id);
+            var model = new ProjectEditorModel
+            {
+                ProjectName = response.ProjectName,
+                ProjectId = response.ProjectId,
+                SourceDatabaseId = response.SourceDatabaseId,
+                DestinationDatabaseId = response.DestinationDatabaseId,
+                Filters = response.Filters,
+                Databases = BuildDatabasesList()
+            };
+
             return View("ProjectSummary", model);
         }
 

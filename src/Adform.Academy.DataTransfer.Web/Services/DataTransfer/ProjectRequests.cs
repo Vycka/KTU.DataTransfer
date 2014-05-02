@@ -6,11 +6,28 @@ namespace Adform.Academy.DataTransfer.Web.Services.DataTransfer
 {
     public class ProjectRequests
     {
-        public static GetProjectListResponse GetProjectList(int? createdByUserId)
+        public static GetProjectListResponse GetProjectList(int? createdByUserId, bool showArchived = false)
         {
-            var request = new GetProjectListRequest {CreatedByUserId = createdByUserId};
+            var request = new GetProjectListRequest
+            {
+                CreatedByUserId = createdByUserId,
+                ShowArchived = showArchived
+            };
             string responseString = ServiceClient.PostRequest("Projects/GetProjectList", request);
             var response = JsonConvert.DeserializeObject<GetProjectListResponse>(responseString);
+            return response;
+        }
+
+        public static GetProjectResponse GetProject(int projectId)
+        {
+            var request = new GetProjectRequest
+            {
+                ProjectId = projectId,
+
+            };
+
+            string responseString = ServiceClient.PostRequest("Projects/GetProject", request);
+            var response = JsonConvert.DeserializeObject<GetProjectResponse>(responseString);
             return response;
         }
 

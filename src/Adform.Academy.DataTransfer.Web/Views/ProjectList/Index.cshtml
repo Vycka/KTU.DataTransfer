@@ -20,29 +20,89 @@
         @for (int x = 0; x < Model.Projects.Count; x++)
         {
             var item = Model.Projects[x];
-            <div onclick="ItemClick(@item.ProjectId)" class="menu-item-highlight" id="itemlist-group-@item.ProjectId">
-                <div id="itemlist-name-@item.ProjectId" class="bListLeft">@item.Name</div>
-                @if (Model.ShowCreator)
+            <div id="itemlist-group-@item.ProjectId">
+                <div onclick="ItemClick(@item.ProjectId)" class="menu-item-highlight">
+                    <div id="itemlist-name-@item.ProjectId" data-state="-1" data-step="-1" class="bListLeft">@item.Name</div>
+                    @if (Model.ShowCreator)
+                    {
+                        <div class="bProjectCreator">&nbsp; (@item.CreatedByUserName)</div>
+                    }
+                    <div id="itemlist-right-state-@item.ProjectId" style="color: paleturquoise" class="bListRight">Getting data...</div>
+
+                    <div class="bClear"></div>
+                </div>
+                @if (x + 1 != Model.Projects.Count)
                 {
-                    <div class="bProjectCreator">&nbsp; (@item.CreatedByUserName)</div>
+                    <hr />
                 }
-                <div id="itemlist-right-state-@item.ProjectId" class="bListRight">Stopped</div>
-                <div id="itemlist-right-step-@item.ProjectId" class="bListRight">Not Started</div>
-                <div class="bClear"></div>
             </div>
-            if (x + 1 != Model.Projects.Count)
-            {
-                <hr />
-            }
         }
     </div>
-    <div class="round bFull" id="bottom-panel">
-        <div style="float: left">
-            <button id="showall-button" type="button" onclick="">Show all projects</button>
+    <div class="round bFull" id="bottom-panel" style="display:none">
+        <div style="float: left" id="bottom-left">
+            <button style="display:none" id="showall-button" type="button" onclick="document.location.assign('@Url.Action("All")')">Show All Projects</button>
+            <button style="display:none" id="showmine-button" type="button" onclick="document.location.assign('@Url.Action("Index")')">Show Only Mine Projects</button>
         </div>
-        <div style="float: right;">
+        <div style="float: right;" id="selected-item-controls">
+            <button id="pcontrol-start-button" onclick="StartProjectClick()" style="display:none; color: limegreen;">Start</button>
+            <button id="pcontrol-edit-button" onclick="document.location.assign('@Url.Action("Edit","ProjectEditor")' + '/' + window.SelectedItemId)" style="display:none">Edit</button>
+            <button id="pcontrol-continue-button" onclick="ContinueProjectClick()" style="display: none; color: limegreen;">Continue</button>
+            <button id="pcontrol-cancel-button" onclick="CancelProjectClick()" style="display:none; color: orangered">Cancel</button>
+            <button id="pcontrol-pause-button" onclick="PauseProjectClick()" style="display:none; color: orange">Pause</button>
+            <button id="pcontrol-details-button" onclick="ProjectDetailsClick()" style="display:none">View Details</button>
+            <button id="pcontrol-archive-button" onclick="ArchiveProjectClick()" style="display: none; color: darkred">Archive Project</button>
+            <button id="pcontrol-delete-button" onclick="DeleteProjectClick()" style="display: none; color: red">Delete Project</button>
+            <button id="pcontrol-logs-button" onclick="LogsProjectClick()" style="display: none">Logs</button>
         </div>
         <div class="bClear"></div>
     </div>
     @Html.Partial("ErrorPane")
+    <div id="project-details-pane" class="round bFull" style="display: none">
+        <div id="ProgressBar">
+            <p style="text-align: right; margin-top: 0; margin-bottom: -2px">
+                <span id="PB_Batches_Completed">0</span>/<span id="PB_Batches_Total">0</span> Batches completed
+            </p>
+            <table style="width:100%; height: 20px; border-collapse:collapse; border: 0; vertical-align: middle; text-align: center; margin-bottom: 3px">
+                <tbody id="ProgressBarTBody">
+                    <tr>
+                        <td style="width: 30%" class="PB_Checked" id="PB_Checked"></td>
+                        <td style="width: 20%" class="PB_Copied" id="PB_Copied"></td>
+                        <td style="width: 10%" class="PB_NotCopied" id="PB_NotCopied"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table style="width:100%; border-collapse:collapse; border: 0; vertical-align: middle; text-align: center">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="PB_LegendItem">
+                                <div class="pb_rect PB_NotCopied"></div>
+                                <div class="pb_val">Not Copied <span id="PB_Val_NotCopied">0</span>%</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="PB_LegendItem">
+                                <div class="pb_rect PB_Copied"></div>
+                                <div class="pb_val">Copied <span id="PB_Val_Copied">0</span>%</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="PB_LegendItem">
+                                <div class="pb_rect PB_Checked"></div>
+                                <div class="pb_val">Verified/Done <span id="PB_Val_Checked">0</span>%</div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr />
+        </div>
+        <div id="FilterDetails"></div>
+        <div id="AuditLog">
+            <hr />
+            <table class="noborder" id="AuditLogTable">
+                <tbody id="AuditLogTBody"></tbody>
+            </table>
+        </div>
+    </div>
 </div>

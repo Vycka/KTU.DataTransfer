@@ -7,7 +7,6 @@ using Adform.Academy.DataTransfer.Core.DTO.NHibernate;
 using Adform.Academy.DataTransfer.WebApi.Contracts.Databases;
 using NHibernate;
 using NHibernate.Criterion;
-using NHibernate.Mapping;
 using NHibernate.Transform;
 
 namespace Adform.Academy.DataTransfer.WebApi.Controllers
@@ -39,7 +38,6 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
             ISession session = SessionFactory.GetSession();
             var database = session.Get<Database>(request.DatabaseId);
 
-            session.Flush();
             return new GetDatabaseResponse
             {
                 DatabaseId = database.DatabaseId,
@@ -82,8 +80,8 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
             };
             //TODO: Logging
             session.Merge(database);
-
             session.Flush();
+
             return new SaveDatabaseResponse
             {
                 Message = "Success!"

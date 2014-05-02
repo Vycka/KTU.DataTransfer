@@ -1,4 +1,40 @@
-﻿
+﻿.PB_NotCopied {
+    background-color: #e2e2e2;
+}
+
+.PB_Copied {
+    background-color: #59ff59;
+}
+
+.PB_Checked {
+    background-color: #59feff;
+}
+
+.PB_Done {
+    background-color: #b1dffc;
+}
+
+.PB_Error {
+    background-color: #ff5959;
+}
+
+.PB_LegendItem {
+    display: inline-block;
+    margin-bottom: -4px;
+}
+
+.pb_rect {
+    width: 18px;
+    height: 18px;
+    border: 0;
+    float: left;
+    margin-right: 2px;
+}
+
+.pb_val {
+    float: left;
+}
+
 body
 {
     font-size: .85em;

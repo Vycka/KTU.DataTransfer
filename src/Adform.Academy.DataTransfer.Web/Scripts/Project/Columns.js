@@ -1,4 +1,4 @@
-﻿window.SelectedTableName = "";
+﻿window.SelectedTableName = "tutorial-table------";
 
 function TableClick(tableName) {
     if (SelectedTableName == tableName)
@@ -11,6 +11,19 @@ function TableClick(tableName) {
 
     window.SelectedTableName = tableName;
 }
+
+$(document).ready(function () {
+    var filters = JSON.parse($("#FiltersJson").val());
+
+    $.each(filters, function (index) {
+        var filter = filters[index];
+        var columns = filter.Columns;
+        $.each(columns, function(cIndex) {
+            $("#fieldcheckbox-" + filter.TableName + "-" + columns[cIndex].ColumnName).prop('checked', true);
+        });
+        ValidateTable(filter.TableName);
+    });
+});
 
 function FieldClick(tableName, fieldName) {
     ValidateTable(tableName);
