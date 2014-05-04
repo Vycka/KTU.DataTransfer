@@ -1,8 +1,10 @@
-﻿namespace Adform.Academy.DataTransfer.Logger
+﻿using Adform.Academy.DataTransfer.Logger.Events;
+
+namespace Adform.Academy.DataTransfer.Logger
 {
     public interface ILogger
     {
-        void Log(object logObject);
-        void LogError(object logObject);
+        void Log(LogEvent logObject);
+        void LogError(LogErrorEvent logObject);
     }
 }

@@ -6,6 +6,7 @@ using System.Text;
 using System.Web.Http;
 using Adform.Academy.DataTransfer.Core.DTO.Models;
 using Adform.Academy.DataTransfer.Core.DTO.NHibernate;
+using Adform.Academy.DataTransfer.Logger.Events;
 using Adform.Academy.DataTransfer.WebApi.Contracts.Users;
 using NHibernate;
 using NHibernate.Criterion;
@@ -14,7 +15,7 @@ using NHibernate.Transform;
 namespace Adform.Academy.DataTransfer.WebApi.Controllers
 {
     [RoutePrefix("Adform.Academy.DataTransfer/v1/Users")]
-    public class UserRequestController : ApiController
+    public class UserRequestController : ControllerBase
     {
         [Route("Get")]
         [HttpGet, HttpPost]
@@ -66,6 +67,10 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
                         Message = "Another user with that name already exists"
                     };
             }
+            else
+            {
+                Logger.Log(new UserCreatedEvent(request.InvokerUserId, request.UserName));
+            }
             
 
             ISession session = SessionFactory.GetSession();
@@ -86,6 +91,9 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
             else
             {
                 var existingUser = session.Get<User>(request.UserId);
+
+                Logger.Log(new UserModifiedEvent(existingUser, request.UserName, request.InvokerUserId));
+
                 user.Password = existingUser.Password;
             }
             session.Merge(user);

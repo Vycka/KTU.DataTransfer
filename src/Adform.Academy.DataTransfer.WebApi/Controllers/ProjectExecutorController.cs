@@ -2,6 +2,7 @@
 using Adform.Academy.DataTransfer.Core.DTO.Models;
 using Adform.Academy.DataTransfer.Core.DTO.NHibernate;
 using Adform.Academy.DataTransfer.Core.DTO.Types;
+using Adform.Academy.DataTransfer.Logger.Events;
 using Adform.Academy.DataTransfer.WebApi.Contracts.ProjectExecutor;
 using Adform.Academy.DataTransfer.WebApi.Contracts.Projects;
 using ExecutionStepsTypes = Adform.Academy.DataTransfer.WebApi.Contracts.Projects.Types.ExecutionStepsTypes;
@@ -9,7 +10,7 @@ using ExecutionStepsTypes = Adform.Academy.DataTransfer.WebApi.Contracts.Project
 namespace Adform.Academy.DataTransfer.WebApi.Controllers
 {
     [RoutePrefix("Adform.Academy.DataTransfer/v1/ProjectExecutor")]
-    public class ProjectExecutorController : ApiController
+    public class ProjectExecutorController : ControllerBase
     {
         [Route("Start")]
         [HttpGet, HttpPost]
@@ -59,6 +60,8 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
             
             project.ProjectState = ProjectStateTypes.Archived;
 
+            Logger.Log(new LogEvent("Archived project", project.ProjectId, request.InvokerUserId));
+
             session.Merge(project);
             session.Flush();
 
@@ -90,6 +93,9 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
                     Message = "Cannot delete project while it's running!"
                 };
             }
+
+            Logger.Log(new ProjectDeleted(project, request.InvokerUserId));
+
             session.Delete(project);
             session.Flush();
 

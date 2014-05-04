@@ -2,6 +2,7 @@
 using System.Configuration;
 using System.ServiceProcess;
 using Adform.Academy.DataTransfer.Logger;
+using Adform.Academy.DataTransfer.Logger.Events;
 using Adform.Academy.DataTransfer.WebApi;
 using Autofac.Integration.WebApi;
 
@@ -47,7 +48,7 @@ namespace Adform.Academy.DataTransfer.Service.Host
             _webApiHost = new WebHost(url, dependencyResolver, _logging);
             _webApiHost.Start();
 
-            _logging.Log("Service Started");
+            _logging.Log(new LogEvent("Service Started"));
 
             base.OnStart(args);
         }
@@ -56,7 +57,7 @@ namespace Adform.Academy.DataTransfer.Service.Host
         {
             _webApiHost.Dispose();
 
-            _logging.Log("Service Stopped!");
+            _logging.Log(new LogEvent("Service Stopped!"));
             base.OnStop();
         }
 
@@ -71,7 +72,7 @@ namespace Adform.Academy.DataTransfer.Service.Host
         {
             var exception = args.ExceptionObject as Exception;
 
-            _logging.LogError(exception);
+            _logging.LogError(new LogErrorEvent(exception));
         }
 
         protected override void Dispose(bool disposing)

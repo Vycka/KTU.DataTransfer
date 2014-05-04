@@ -1,4 +1,5 @@
-﻿using log4net;
+﻿using Adform.Academy.DataTransfer.Logger.Events;
+using log4net;
 using log4net.Config;
 
 namespace Adform.Academy.DataTransfer.Logger
@@ -17,12 +18,12 @@ namespace Adform.Academy.DataTransfer.Logger
             _logger = LogManager.GetLogger(loggerInstanceName); 
         }
 
-        public void Log(object logObject)
+        public void Log(LogEvent logObject)
         {
             _logger.Info(logObject);
         }
 
-        public void LogError(object logObject)
+        public void LogError(LogErrorEvent logObject)
         {
             _logger.Error(logObject);
         }

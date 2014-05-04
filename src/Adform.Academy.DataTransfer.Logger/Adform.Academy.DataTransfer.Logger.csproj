@@ -35,13 +35,19 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataTransferNHibernateAppender.cs" />
+    <Compile Include="Events\DatabaseChangedEvent.cs" />
+    <Compile Include="Events\DatabaseDeleteEvent.cs" />
+    <Compile Include="Events\LogErrorEvent.cs" />
+    <Compile Include="Events\LogEvent.cs" />
+    <Compile Include="Events\UserModifiedEvent.cs" />
+    <Compile Include="Events\ProjectCreatedEvent.cs" />
+    <Compile Include="Events\ProjectDeleted.cs" />
+    <Compile Include="Events\ProjectModified.cs" />
+    <Compile Include="Events\UserCreatedEvent.cs" />
     <Compile Include="ILogger.cs" />
     <Compile Include="Log4NetLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -50,7 +56,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Events\" />
+    <ProjectReference Include="..\Adform.Academy.DataTransfer.Core\Adform.Academy.DataTransfer.Core.csproj">
+      <Project>{CB6E0CB6-965A-42DF-93E4-5256FF2CD3E5}</Project>
+      <Name>Adform.Academy.DataTransfer.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

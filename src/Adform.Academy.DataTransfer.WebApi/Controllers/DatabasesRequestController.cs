@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web.Http;
 using Adform.Academy.DataTransfer.Core.DTO.Models;
 using Adform.Academy.DataTransfer.Core.DTO.NHibernate;
+using Adform.Academy.DataTransfer.Logger.Events;
 using Adform.Academy.DataTransfer.WebApi.Contracts.Databases;
 using NHibernate;
 using NHibernate.Criterion;
@@ -12,7 +13,7 @@ using NHibernate.Transform;
 namespace Adform.Academy.DataTransfer.WebApi.Controllers
 {
     [RoutePrefix("Adform.Academy.DataTransfer/v1/Databases")]
-    public class DatabasesRequestController : ApiController
+    public class DatabasesRequestController : ControllerBase
     {
         [Route("GetDatabasesList")]
         [HttpGet, HttpPost]
@@ -78,7 +79,10 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
                 Password = request.Password,
                 DatabaseName = request.DatabaseName
             };
-            //TODO: Logging
+
+            var existingDatabaseById = session.Get<Database>(database.DatabaseId);
+            Logger.Log(new DatabaseChangedEvent(database, existingDatabaseById, request.InvokerUserId));
+            
             session.Merge(database);
             session.Flush();
 
@@ -105,9 +109,11 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
 
             if (result.Count == 0)
             {
-                //TODO: Logging
+                Logger.Log(new DatabaseDeleteEvent(databaseToDelete, request.InvokerUserId));
+
                 session.Delete(databaseToDelete);
                 session.Flush();
+
                 return new DeleteDatabaseResponse
                 {
                     Message = "Success!"

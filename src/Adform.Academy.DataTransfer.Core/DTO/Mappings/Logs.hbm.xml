@@ -7,7 +7,11 @@
     <id name="LogId" column="ID_Logs">
       <generator class ="identity" />
     </id>
-    <many-to-one name="Project" class="Project" column="ID_Projects"/>
+    
+    <many-to-one name="Project" class="Project" column="ID_Projects" not-null="false"/>
+    <many-to-one name="User" class="User" column="ID_Users" not-null="false"/>
+    
+    <property name="TimeStamp"/>
     <property name="LogMessage"/>
   </class>
 

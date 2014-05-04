@@ -6,7 +6,7 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
 {
 
     [RoutePrefix("Adform.Academy.DataTransfer/v1")]
-    public class PingController : ApiController
+    public class PingController : ControllerBase
     {
         [Route("Ping")]
         [HttpGet, HttpPost]

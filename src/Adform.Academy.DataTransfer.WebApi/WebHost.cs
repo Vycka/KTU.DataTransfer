@@ -4,6 +4,7 @@ using System.Web.Http;
 using System.Web.Http.Dependencies;
 using System.Web.Http.SelfHost;
 using Adform.Academy.DataTransfer.Logger;
+using Adform.Academy.DataTransfer.Logger.Events;
 using Adform.Academy.DataTransfer.WebApi.Formatters;
 
 
@@ -53,10 +54,10 @@ namespace Adform.Academy.DataTransfer.WebApi
 
         public void Start()
         {
-            _logging.Log("DataTransferService starting... " + _baseUrl);
+            _logging.Log(new LogEvent("Service host started"));
 
             _httpSelfHostServer.OpenAsync()
-                .ContinueWith(t => _logging.LogError(t.Exception), TaskContinuationOptions.OnlyOnFaulted);
+                .ContinueWith(t => _logging.LogError(new LogErrorEvent(t.Exception)), TaskContinuationOptions.OnlyOnFaulted);
         }
 
         public void Dispose()

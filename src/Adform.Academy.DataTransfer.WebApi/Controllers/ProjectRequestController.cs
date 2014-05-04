@@ -4,6 +4,7 @@ using System.Web.Http;
 using Adform.Academy.DataTransfer.Core.DTO.Models;
 using Adform.Academy.DataTransfer.Core.DTO.NHibernate;
 using Adform.Academy.DataTransfer.Core.DTO.Types;
+using Adform.Academy.DataTransfer.Logger.Events;
 using Adform.Academy.DataTransfer.WebApi.Contracts.Projects;
 using Newtonsoft.Json;
 using NHibernate;
@@ -13,7 +14,7 @@ using NHibernate.Transform;
 namespace Adform.Academy.DataTransfer.WebApi.Controllers
 {
     [RoutePrefix("Adform.Academy.DataTransfer/v1/Projects")]
-    public class ProjectRequestController : ApiController
+    public class ProjectRequestController : ControllerBase
     {
         [Route("GetProjectList")]
         [HttpGet, HttpPost]
@@ -114,7 +115,15 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
 
             session.Merge(project);
             session.Flush();
+
+            if (request.ProjectId == 0)
+                Logger.Log(new ProjectCreatedEvent(project, request.InvokerUserId));
+            else
+                Logger.Log(new ProjectModified(project, request.InvokerUserId));
+            
             return new SaveProjectResponse();
+
+
         }
 
         [Route("Delete")]
@@ -122,8 +131,10 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
         public DeleteProjectResponse Delete(DeleteProjectRequest request)
         {
             var session = SessionFactory.GetSession();
-
             var project = session.Get<Project>(request.ProjectId);
+
+            Logger.Log(new ProjectDeleted(project, request.InvokerUserId));
+
             session.Delete(project);
             session.Flush();
 
