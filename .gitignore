@@ -173,16 +173,16 @@ UpgradeLog*.htm
 # Microsoft Fakes
 FakesAssemblies/
 
-*/Scripts/jquery-2.1.0.intellisense.js
-*/Scripts/jquery-2.1.0.js
-*/Scripts/jquery-2.1.0.min.js
-*/Scripts/jquery-2.1.0.min.map
-*/Scripts/jquery.validate-vsdoc.js
-*/Scripts/jquery.validate.js
-*/Scripts/jquery.validate.min.js
-*/Scripts/jquery.validate.unobtrusive.js
-*/Scripts/jquery.validate.unobtrusive.min.js
-*/Scripts/moment-with-langs.js
-*/Scripts/moment-with-langs.min.js
-*/Scripts/moment.js
-*/Scripts/moment.min.js
+/src/Adform.Academy.DataTransfer.Web/Scripts/jquery-2.1.0.intellisense.js
+/src/Adform.Academy.DataTransfer.Web/Scripts/jquery-2.1.0.js
+/src/Adform.Academy.DataTransfer.Web/Scripts/jquery-2.1.0.min.js
+/src/Adform.Academy.DataTransfer.Web/Scripts/jquery-2.1.0.min.map
+/src/Adform.Academy.DataTransfer.Web/Scripts/jquery.validate-vsdoc.js
+/src/Adform.Academy.DataTransfer.Web/Scripts/jquery.validate.js
+/src/Adform.Academy.DataTransfer.Web/Scripts/jquery.validate.min.js
+/src/Adform.Academy.DataTransfer.Web/Scripts/jquery.validate.unobtrusive.js
+/src/Adform.Academy.DataTransfer.Web/Scripts/jquery.validate.unobtrusive.min.js
+/src/Adform.Academy.DataTransfer.Web/Scripts/moment-with-langs.js
+/src/Adform.Academy.DataTransfer.Web/Scripts/moment-with-langs.min.js
+/src/Adform.Academy.DataTransfer.Web/Scripts/moment.js
+/src/Adform.Academy.DataTransfer.Web/Scripts/moment.min.js
