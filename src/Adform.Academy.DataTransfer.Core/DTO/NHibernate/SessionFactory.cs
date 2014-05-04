@@ -10,7 +10,6 @@ namespace Adform.Academy.DataTransfer.Core.DTO.NHibernate
     public class SessionFactory
     {
         private static readonly ISessionFactory InitializedSessionFactory;
-        private static ISession _activeSession;
 
         static SessionFactory()
         {
@@ -29,18 +28,10 @@ namespace Adform.Academy.DataTransfer.Core.DTO.NHibernate
             return baseConfiguration.BuildSessionFactory();
         }
 
-        public static ISession GetSession()
+        public static ISession OpenSession()
         {
-            if (_activeSession == null)
-                _activeSession = InitializedSessionFactory.OpenSession();
-            else if (!_activeSession.IsConnected)
-            {
-                _activeSession.Dispose();
-                _activeSession = InitializedSessionFactory.OpenSession();
-            }
-            return _activeSession;
+            return InitializedSessionFactory.OpenSession();
         }
-
 
         public static IDbConnection CreateIdbConnection(Database database)
         {

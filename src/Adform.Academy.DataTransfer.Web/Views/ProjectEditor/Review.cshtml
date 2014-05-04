@@ -1,5 +1,4 @@
-﻿@using Adform.Academy.DataTransfer.WebApi.Contracts.Projects
-@model Adform.Academy.DataTransfer.Web.Models.ProjectEditorModel
+﻿@model Adform.Academy.DataTransfer.Web.Models.ProjectEditorModel
 @{
     ViewBag.Title = "Review project settings";
 }
@@ -9,26 +8,7 @@
         @ViewBag.Title
     </div>
     <div class="round bFull" id="right-panel">
-        <ul>
-            <li><b>Project Name:</b> @Model.ProjectName</li>
-            <li><b>Source Database:</b> @Model.SourceDatabaseName</li>
-            <li><b>Target Database:</b> @Model.DestinationDatabaseName</li>
-        </ul>
-        
-        <hr />
-        @foreach (FilterItem filter in Model.Filters)
-        {
-            <ul>
-                <li>
-                    <b>@filter.TableName</b>
-                    <ul>
-                        <li style="color: darkgray"><b>Index Field:</b> @filter.FilterValue.IndexColumn [@filter.Columns.First(c => c.ColumnName == filter.FilterValue.IndexColumn).ColumnType]</li>
-                        <li style ="color: darkgray"><b>Step Size:</b> @filter.FilterValue.IndexStepName</li>
-                        <li style ="color: darkgray"><b>Selected Fields:</b> @String.Join(", ", filter.Columns.Select(c => c.ColumnName))</li>
-                    </ul>
-                </li>
-            </ul>
-        }
+        @Html.Partial("ReviewFiltersFrame", Model)
     </div>
     <div class="round bFull" id="bottom-panel">
         <div style="float: left">
@@ -42,8 +22,6 @@
 
     @Html.Partial("ErrorPane")
 </div>
-
-
 
 @using (Html.BeginForm("Save", "ProjectEditor", FormMethod.Post, new { id = "modelstate-form" }))
 {

@@ -42,6 +42,8 @@
     <Compile Include="Databases\GetDatabasesListResponse.cs" />
     <Compile Include="Databases\GetDatabaseStructureRequest.cs" />
     <Compile Include="Databases\GetDatabaseStructureResponse.cs" />
+    <Compile Include="Logs\GetLogsRequest.cs" />
+    <Compile Include="Logs\GetLogsResponse.cs" />
     <Compile Include="ProjectExecutor\ArchiveRequest.cs" />
     <Compile Include="ProjectExecutor\ArchiveResponse.cs" />
     <Compile Include="ProjectExecutor\DeleteRequest.cs" />

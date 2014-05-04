@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web.Mvc;
 using Adform.Academy.DataTransfer.Web.Models;
 using Adform.Academy.DataTransfer.Web.Services.DataTransfer;
+using Adform.Academy.DataTransfer.WebApi.Contracts.Projects;
 
 namespace Adform.Academy.DataTransfer.Web.Controllers
 {
@@ -27,15 +28,9 @@ namespace Adform.Academy.DataTransfer.Web.Controllers
 
             
             var response = ProjectRequests.GetProject(id);
-            var model = new ProjectEditorModel
-            {
-                ProjectName = response.ProjectName,
-                ProjectId = response.ProjectId,
-                SourceDatabaseId = response.SourceDatabaseId,
-                DestinationDatabaseId = response.DestinationDatabaseId,
-                Filters = response.Filters,
-                Databases = BuildDatabasesList()
-            };
+            var model = new ProjectEditorModel(response);
+
+            model.Databases = BuildDatabasesList();
 
             return View("ProjectSummary", model);
         }
@@ -61,6 +56,12 @@ namespace Adform.Academy.DataTransfer.Web.Controllers
 
             model.Tables = DatabaseRequests.GetDatabaseStructure(model.SourceDatabaseId).Tables;
             return View(model);
+        }
+
+        public ActionResult Details(int projectId)
+        {
+            var  model = new ProjectEditorModel(ProjectRequests.GetProject(projectId));
+            return View("ReviewFiltersFrame", model);
         }
 
         private IEnumerable<SelectListItem> BuildDatabasesList()

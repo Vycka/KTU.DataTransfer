@@ -4,17 +4,31 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web.Mvc;
-using Adform.Academy.DataTransfer.Core.DTO.Models;
 using Adform.Academy.DataTransfer.WebApi.Contracts.Databases;
 using Adform.Academy.DataTransfer.WebApi.Contracts.Projects;
 using Newtonsoft.Json;
-using Filter = Adform.Academy.DataTransfer.Core.DTO.Models.Filter;
 
 namespace Adform.Academy.DataTransfer.Web.Models
 {
     public class ProjectEditorModel
     {
         public ProjectEditorModel()
+        {
+            Init();
+        }
+
+        public ProjectEditorModel(GetProjectResponse response)
+        {
+            Init();
+
+            ProjectName = response.ProjectName;
+            ProjectId = response.ProjectId;
+            SourceDatabaseId = response.SourceDatabaseId;
+            DestinationDatabaseId = response.DestinationDatabaseId;
+            Filters = response.Filters;
+        }
+
+        private void Init()
         {
             Filters = new List<FilterItem>();
             Tables = new List<TableInformation>();

@@ -20,125 +20,132 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
         [HttpGet, HttpPost]
         public GetProjectListResponse GetProjectList(GetProjectListRequest request)
         {
-            ISession session = SessionFactory.GetSession();
-                
-            var criteria = session.CreateCriteria(typeof(Project));
-
-            // request != null to be able to see request from web browser for debugging
-            if (request != null && request.CreatedByUserId.HasValue)
+            using (var session = SessionFactory.OpenSession())
             {
-                var creatorUser = session.Get<User>(request.CreatedByUserId);
-                criteria = criteria.Add(Restrictions.Eq("CreatedBy", creatorUser));
+                var criteria = session.CreateCriteria(typeof (Project));
+
+                // request != null to be able to see request from web browser for debugging
+                if (request != null && request.CreatedByUserId.HasValue)
+                {
+                    var creatorUser = session.Get<User>(request.CreatedByUserId);
+                    criteria = criteria.Add(Restrictions.Eq("CreatedBy", creatorUser));
+                }
+                if (request == null || !request.ShowArchived)
+                {
+                    criteria =
+                        criteria.Add(Restrictions.Not(Restrictions.Eq("ProjectState", ProjectStateTypes.Archived)));
+                }
+
+                IList<ProjectListItem> projectList = criteria
+                    .CreateAlias("CreatedBy", "u", NHibernate.SqlCommand.JoinType.LeftOuterJoin)
+                    .SetProjection(Projections.ProjectionList()
+                        .Add(Projections.Property("ProjectId"), "ProjectId")
+                        .Add(Projections.Property("Name"), "Name")
+                        .Add(Projections.Property("ExecutionState"), "ExecutionStep")
+                        .Add(Projections.Property("ProjectState"), "ProjectState")
+                        .Add(Projections.Property("u.UserName"), "CreatedByUserName")
+                    ).SetResultTransformer(Transformers.AliasToBean<ProjectListItem>()
+                    ).List<ProjectListItem>();
+
+                return new GetProjectListResponse
+                {
+                    Projects = projectList.ToList()
+                };
             }
-            if (request == null || !request.ShowArchived)
-            {
-                criteria = criteria.Add(Restrictions.Not(Restrictions.Eq("ProjectState", ProjectStateTypes.Archived)));
-            }
-
-            IList<ProjectListItem> projectList = criteria
-                .CreateAlias("CreatedBy", "u", NHibernate.SqlCommand.JoinType.LeftOuterJoin)
-                .SetProjection(Projections.ProjectionList()
-                    .Add(Projections.Property("ProjectId"), "ProjectId")
-                    .Add(Projections.Property("Name"), "Name")
-                    .Add(Projections.Property("ExecutionState"), "ExecutionStep")
-                    .Add(Projections.Property("ProjectState"), "ProjectState")
-                    .Add(Projections.Property("u.UserName"), "CreatedByUserName")
-                ).SetResultTransformer(Transformers.AliasToBean<ProjectListItem>()
-            ).List<ProjectListItem>();
-
-            return new GetProjectListResponse
-            {
-                Projects = projectList.ToList()
-            };
         }
 
         [Route("GetProject")]
         [HttpGet, HttpPost]
         public GetProjectResponse GetProject(GetProjectRequest request)
         {
-            var session = SessionFactory.GetSession();
-            var project = session.Get<Project>(request.ProjectId);
-            var response = new GetProjectResponse
+            using (var session = SessionFactory.OpenSession())
             {
-                ProjectId = project.ProjectId,
-                ProjectName = project.Name,
-                SourceDatabaseId = project.DatabaseSource.DatabaseId,
-                DestinationDatabaseId = project.DatabaseDestination.DatabaseId,
-                Filters = project.Filters.Select(f => new FilterItem
+                var project = session.Get<Project>(request.ProjectId);
+                var response = new GetProjectResponse
                 {
-                    TableName = f.TableName,
+                    ProjectId = project.ProjectId,
+                    ProjectName = project.Name,
+                    SourceDatabaseId = project.DatabaseSource.DatabaseId,
+                    DestinationDatabaseId = project.DatabaseDestination.DatabaseId,
+                    Filters = project.Filters.Select(f => new FilterItem
+                    {
+                        TableName = f.TableName,
 
-                    Columns = f.Columns.Select(
-                        c => new ColumnItem {ColumnName = c.ColumnName, ColumnType = c.ColumnType}
-                    ).ToList(),
+                        Columns = f.Columns.Select(
+                            c => new ColumnItem {ColumnName = c.ColumnName, ColumnType = c.ColumnType}
+                            ).ToList(),
 
-                    FilterValue = JsonConvert.DeserializeObject<FilterValueItem>(f.FilterValue)
-                }).ToList()
-            };
+                        FilterValue = JsonConvert.DeserializeObject<FilterValueItem>(f.FilterValue)
+                    }).ToList()
+                };
 
-            return response;
+                return response;
+            }
         }
 
         [Route("Save")]
         [HttpGet, HttpPost]
         public SaveProjectResponse Save(SaveProjectRequest request)
         {
-            var session = SessionFactory.GetSession();
-
-            Project project = request.ProjectId == 0 ? new Project { Filters = new List<Filter>() } : session.Get<Project>(request.ProjectId);
-
-            project.Name = request.ProjectName;
-            project.DatabaseSource = session.Get<Database>(request.SourceDatabaseId);
-            project.DatabaseDestination = session.Get<Database>(request.DestinationDatabaseId);
-            project.CreatedBy = session.Get<User>(request.InvokerUserId);
-            project.Filters.Clear();
-            foreach (FilterItem filter in request.Filters)
+            using (var session = SessionFactory.OpenSession())
             {
-                var filterDto = new Filter
-                {
-                    Batches = new List<Batch>(),
-                    Columns = new List<Column>(),
-                    FilterValue = JsonConvert.SerializeObject(filter.FilterValue),
-                    Project = project,
-                    TableName = filter.TableName
-                };
+                Project project = request.ProjectId == 0
+                    ? new Project {Filters = new List<Filter>()}
+                    : session.Get<Project>(request.ProjectId);
 
-                filterDto.Columns = filter.Columns.Select(c => new Column
+                project.Name = request.ProjectName;
+                project.DatabaseSource = session.Get<Database>(request.SourceDatabaseId);
+                project.DatabaseDestination = session.Get<Database>(request.DestinationDatabaseId);
+                project.CreatedBy = session.Get<User>(request.InvokerUserId);
+                project.Filters.Clear();
+                foreach (FilterItem filter in request.Filters)
                 {
-                    ColumnName = c.ColumnName,
-                    ColumnType = c.ColumnType,
-                    Filter = filterDto
-                }).ToList();
+                    var filterDto = new Filter
+                    {
+                        Batches = new List<Batch>(),
+                        Columns = new List<Column>(),
+                        FilterValue = JsonConvert.SerializeObject(filter.FilterValue),
+                        Project = project,
+                        TableName = filter.TableName
+                    };
 
-                project.Filters.Add(filterDto);
+                    filterDto.Columns = filter.Columns.Select(c => new Column
+                    {
+                        ColumnName = c.ColumnName,
+                        ColumnType = c.ColumnType,
+                        Filter = filterDto
+                    }).ToList();
+
+                    project.Filters.Add(filterDto);
+                }
+
+                session.Merge(project);
+                session.Flush();
+
+                if (request.ProjectId == 0)
+                    Logger.Log(new ProjectCreatedEvent(project, request.InvokerUserId));
+                else
+                    Logger.Log(new ProjectModified(project, request.InvokerUserId));
+
+                return new SaveProjectResponse();
             }
-
-            session.Merge(project);
-            session.Flush();
-
-            if (request.ProjectId == 0)
-                Logger.Log(new ProjectCreatedEvent(project, request.InvokerUserId));
-            else
-                Logger.Log(new ProjectModified(project, request.InvokerUserId));
-            
-            return new SaveProjectResponse();
-
-
         }
 
         [Route("Delete")]
         [HttpGet, HttpPost]
         public DeleteProjectResponse Delete(DeleteProjectRequest request)
         {
-            var session = SessionFactory.GetSession();
-            var project = session.Get<Project>(request.ProjectId);
+            using (var session = SessionFactory.OpenSession())
+            {
+                var project = session.Get<Project>(request.ProjectId);
 
-            Logger.Log(new ProjectDeleted(project, request.InvokerUserId));
+                Logger.Log(new ProjectDeleted(project, request.InvokerUserId));
 
-            session.Delete(project);
-            session.Flush();
+                session.Delete(project);
+                session.Flush();
 
-            return new DeleteProjectResponse();
+                return new DeleteProjectResponse();
+            }
         }
     }
 }

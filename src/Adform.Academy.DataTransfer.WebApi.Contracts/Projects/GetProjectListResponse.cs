@@ -3,7 +3,7 @@ using Adform.Academy.DataTransfer.WebApi.Contracts.Projects.Types;
 
 namespace Adform.Academy.DataTransfer.WebApi.Contracts.Projects
 {
-    public class GetProjectListResponse
+    public class GetProjectListResponse : ResponseBase
     {
         public List<ProjectListItem> Projects;
     }

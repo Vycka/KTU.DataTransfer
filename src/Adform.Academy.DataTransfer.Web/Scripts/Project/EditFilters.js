@@ -53,6 +53,7 @@ $(document).ready(function () {
         var indexDropDown = $("#index-selector-" + filter.TableName);
         var stepDropDown = $("#index-range-" + filter.TableName);
         indexDropDown.val(filter.FilterValue.IndexColumn);
+        indexDropDown.change();
         stepDropDown.val(filter.FilterValue.IndexStep);
     });
 });

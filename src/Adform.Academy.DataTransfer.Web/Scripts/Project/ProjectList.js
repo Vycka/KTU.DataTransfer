@@ -9,18 +9,18 @@ function RefreshProjectStates() {
         return;
 
     window.ProjectListPostActive = true;
-    $.post(
-        window.RootUrl + 'ProjectList/' + ProjectListRawUrl,
-        {  },
-        function (data) {
+
+    PostCommand('ProjectList/' + ProjectListRawUrl, {}, function (result, data) {
+        if (result == true) {
+            data = data.Projects;
             $.each(data, function(index) {
                 UpdateProjectState(data[index]);
             });
-            UpdateContextButtons();
-        })
-        .always(function () {
-            window.ProjectListPostActive = false;
-        });
+        }
+        UpdateContextButtons();
+    });
+
+    window.ProjectListPostActive = false;
 }
 
 function UpdateProjectState(stateInfo) {
@@ -117,6 +117,16 @@ function HideProjectDetails() {
 }
 
 function ShowProjectDetails() {
+
+    var detailsPane = $("#project-details-filters");
+    detailsPane.css("display", "none");
+    PostCommand('ProjectEditor/Details', { projectId: window.SelectedItemId }, function(result, data) {
+        if (result == true) {
+            detailsPane.html(data);
+            detailsPane.css("display", "");
+        }
+    });
+
     window.DetailsAreShown = true;
     $("#project-details-pane").css("display", "");
 }

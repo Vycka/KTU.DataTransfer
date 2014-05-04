@@ -246,3 +246,20 @@ select, input[type="button"], input[type="submit"]
     color: lightgray;
     padding-right: 4px;
 }
+
+.td1 {
+    width: 16%;
+}
+
+.td2 {
+    width: 15%;
+    text-align: center;
+}
+
+.td3 {
+    width: 69%;
+}
+
+.logrow:hover {
+    background-color: #FCFCFC;
+}

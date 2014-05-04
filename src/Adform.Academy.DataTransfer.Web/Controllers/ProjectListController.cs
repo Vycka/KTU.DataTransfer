@@ -42,14 +42,14 @@ namespace Adform.Academy.DataTransfer.Web.Controllers
         public JsonResult GetListRaw()
         {
             var response = ProjectRequests.GetProjectList(Principal.UserId);
-            return Json(response.Projects, JsonRequestBehavior.AllowGet);
+            return Json(response, JsonRequestBehavior.AllowGet);
         }
 
         [Authorize(Roles = "admin")]
         public JsonResult GetListAllRaw()
         {
             var response = ProjectRequests.GetProjectList(null, true);
-            return Json(response.Projects, JsonRequestBehavior.AllowGet);
+            return Json(response, JsonRequestBehavior.AllowGet);
         }
 
         private DataTransferUserIdentity Principal

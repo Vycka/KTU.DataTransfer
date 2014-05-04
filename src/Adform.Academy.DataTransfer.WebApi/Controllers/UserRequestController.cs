@@ -21,27 +21,28 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
         [HttpGet, HttpPost]
         public GetUserResponse Get(GetUserRequest request)
         {
-            ISession session = SessionFactory.GetSession();
-            
-            var user = session.Get<User>(request.UserId);
-
-            if (user == null)
+            using (ISession session = SessionFactory.OpenSession())
             {
+                var user = session.Get<User>(request.UserId);
+
+                if (user == null)
+                {
+                    return new GetUserResponse
+                    {
+                        IsActive = false,
+                        Success = false,
+                        Message = "User not found"
+                    };
+                }
+
                 return new GetUserResponse
                 {
-                    IsActive = false,
-                    Success = false,
-                    Message = "User not found"
+                    UserId = user.UserId,
+                    IsActive = user.IsActive,
+                    IsAdmin = user.IsAdmin,
+                    UserName = user.UserName
                 };
             }
-
-            return new GetUserResponse
-            {
-                UserId = user.UserId,
-                IsActive = user.IsActive,
-                IsAdmin = user.IsAdmin,
-                UserName = user.UserName
-            };
         }
 
         [Route("Save")]
@@ -71,56 +72,57 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
             {
                 Logger.Log(new UserCreatedEvent(request.InvokerUserId, request.UserName));
             }
-            
 
-            ISession session = SessionFactory.GetSession();
-            
-            //TODO: Do Some Logging
-            var user = new User
-            {
-                UserId = request.UserId,
-                IsActive = request.IsActive,
-                IsAdmin = request.IsAdmin,
-                UserName = request.UserName
-            };
 
-            if (request.UserId == 0 || !String.IsNullOrEmpty(request.Password))
+            using (ISession session = SessionFactory.OpenSession())
             {
-                user.Password = ComputeSha256(request.Password);
+                var user = new User
+                {
+                    UserId = request.UserId,
+                    IsActive = request.IsActive,
+                    IsAdmin = request.IsAdmin,
+                    UserName = request.UserName
+                };
+
+                if (request.UserId == 0 || !String.IsNullOrEmpty(request.Password))
+                {
+                    user.Password = ComputeSha256(request.Password);
+                }
+                else
+                {
+                    var existingUser = session.Get<User>(request.UserId);
+
+                    Logger.Log(new UserModifiedEvent(existingUser, request.UserName, request.InvokerUserId));
+
+                    user.Password = existingUser.Password;
+                }
+                session.Merge(user);
+                session.Flush();
+
+                return new SaveUserResponse();
             }
-            else
-            {
-                var existingUser = session.Get<User>(request.UserId);
-
-                Logger.Log(new UserModifiedEvent(existingUser, request.UserName, request.InvokerUserId));
-
-                user.Password = existingUser.Password;
-            }
-            session.Merge(user);
-            session.Flush();
-
-            return new SaveUserResponse();
-            
         }
 
         [Route("GetUserList")]
         [HttpGet, HttpPost]
         public GetUserListResponse GetUserList(GetUserRequest request)
         {
-           ISession session = SessionFactory.GetSession();
-
-            IList<UserListItem> userList = session.CreateCriteria(typeof(User)).SetProjection(Projections.ProjectionList()
-                .Add(Projections.Property("UserId"), "UserId")
-                .Add(Projections.Property("UserName"), "UserName")
-                .Add(Projections.Property("IsActive"), "IsActive")
-                .Add(Projections.Property("IsAdmin"), "IsAdmin"))
-                .SetResultTransformer(Transformers.AliasToBean<UserListItem>())
-                .List<UserListItem>();
-
-            return new GetUserListResponse
+            using (ISession session = SessionFactory.OpenSession())
             {
-                Users = userList.ToList()
-            };
+                IList<UserListItem> userList =
+                    session.CreateCriteria(typeof (User)).SetProjection(Projections.ProjectionList()
+                        .Add(Projections.Property("UserId"), "UserId")
+                        .Add(Projections.Property("UserName"), "UserName")
+                        .Add(Projections.Property("IsActive"), "IsActive")
+                        .Add(Projections.Property("IsAdmin"), "IsAdmin"))
+                        .SetResultTransformer(Transformers.AliasToBean<UserListItem>())
+                        .List<UserListItem>();
+
+                return new GetUserListResponse
+                {
+                    Users = userList.ToList()
+                };
+            }
         }
 
         [Route("CheckLogin")]
@@ -167,13 +169,14 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
 
         public User GetUserByName(string name)
         {
-            ISession session = SessionFactory.GetSession();
-            
-            var user = session.CreateCriteria(typeof(User))
-                .Add(Restrictions.Eq("UserName", name))
-                .UniqueResult<User>();
+            using (ISession session = SessionFactory.OpenSession())
+            {
+                var user = session.CreateCriteria(typeof (User))
+                    .Add(Restrictions.Eq("UserName", name))
+                    .UniqueResult<User>();
 
-            return user;
+                return user;
+            }
         }
 
         public bool CheckIfRemovingLastAdmin(SaveUserRequest request)
@@ -181,25 +184,26 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
             if (request.UserId == 0)
                 return false; // Adding new user.. Whatever
 
-            ISession session = SessionFactory.GetSession();
-
-            // If editing user was admin but after editing its not
-            var user = session.Get<User>(request.UserId);
-            if (user.IsAdmin && user.IsActive)
+            using (ISession session = SessionFactory.OpenSession())
             {
-                if (!request.IsAdmin || !request.IsActive)
+                // If editing user was admin but after editing its not
+                var user = session.Get<User>(request.UserId);
+                if (user.IsAdmin && user.IsActive)
                 {
-                    int activeAdminsCount = (int)session.CreateCriteria(typeof (User))
-                        .Add(Restrictions.Eq("IsAdmin", true))
-                        .Add(Restrictions.Eq("IsActive", true))
-                        .SetProjection(Projections.CountDistinct("UserId"))
-                        .UniqueResult();
+                    if (!request.IsAdmin || !request.IsActive)
+                    {
+                        int activeAdminsCount = (int) session.CreateCriteria(typeof (User))
+                            .Add(Restrictions.Eq("IsAdmin", true))
+                            .Add(Restrictions.Eq("IsActive", true))
+                            .SetProjection(Projections.CountDistinct("UserId"))
+                            .UniqueResult();
 
-                    if (activeAdminsCount <= 1)
-                        return true;
+                        if (activeAdminsCount <= 1)
+                            return true;
+                    }
                 }
+                return false;
             }
-            return false;
         }
     }
 }

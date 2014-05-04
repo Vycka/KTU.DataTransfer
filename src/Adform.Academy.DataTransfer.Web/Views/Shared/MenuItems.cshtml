@@ -5,7 +5,7 @@
 {
     <a href="@Url.Action("Index","Databases")" class="menu-item menu-item-highlight" style="width: 89%; display: inline-block" id="menu-databases">Databases</a><br/>
     <a href="@Url.Action("Index","Users")" class="menu-item menu-item-highlight" style="width: 89%; display: inline-block" id="menu-users">Users</a><br/>
-    <a href="#" class="menu-item menu-item-highlight" style="width: 89%; display: inline-block" id="menu-system-log">System Log</a>
+    <a href="#" onclick="OpenWindow('@Url.Action("Index","SystemLog")', 'Project logs')" class="menu-item menu-item-highlight" style="width: 89%; display: inline-block" id="menu-system-log">System Log</a>
 }
 <br /><br />
 <a href="@Url.Action("Logout","Users")" class="menu-item menu-item-highlight" style="width: 89%; display: inline-block" id="menu-logout">Logout</a>

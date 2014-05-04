@@ -52,7 +52,7 @@
             <button id="pcontrol-details-button" onclick="ProjectDetailsClick()" style="display:none">View Details</button>
             <button id="pcontrol-archive-button" onclick="ArchiveProjectClick()" style="display: none; color: darkred">Archive Project</button>
             <button id="pcontrol-delete-button" onclick="DeleteProjectClick()" style="display: none; color: red">Delete Project</button>
-            <button id="pcontrol-logs-button" onclick="LogsProjectClick()" style="display: none">Logs</button>
+            <button id="pcontrol-logs-button" onclick="OpenWindow('@Url.Action("Index","SystemLog")?ProjectId=' + window.SelectedItemId,'Project logs')" style="display: none">Logs</button>
         </div>
         <div class="bClear"></div>
     </div>
@@ -97,12 +97,6 @@
             </table>
             <hr />
         </div>
-        <div id="FilterDetails"></div>
-        <div id="AuditLog">
-            <hr />
-            <table class="noborder" id="AuditLogTable">
-                <tbody id="AuditLogTBody"></tbody>
-            </table>
-        </div>
+        <div id="project-details-filters"></div>
     </div>
 </div>

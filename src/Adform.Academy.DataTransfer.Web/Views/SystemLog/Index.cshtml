@@ -1,0 +1,22 @@
+﻿@model Adform.Academy.DataTransfer.Web.Models.SystemLogModel
+
+@{
+    ViewBag.Title = "Logs";
+}
+
+<script>
+    window.ProjectId = @(Model.ProjectId.HasValue ? Model.ProjectId.ToString() : "null");
+</script>
+<script src="@Url.Content("~/Scripts/Project/LogList.js")" type="text/javascript"></script>
+
+<div class="bCenter">
+    <div class="round bTitle">
+        @ViewBag.Title
+    </div>
+    <div class="round bFull" id="right-panel">
+        <table class="noborder" style="width: 100%">
+            <tbody id="log-body"></tbody>
+        </table>
+    </div>
+    @Html.Partial("ErrorPane")
+</div>

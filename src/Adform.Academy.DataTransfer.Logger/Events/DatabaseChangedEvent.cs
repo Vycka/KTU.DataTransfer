@@ -7,14 +7,14 @@ namespace Adform.Academy.DataTransfer.Logger.Events
         public DatabaseChangedEvent(Database newDatabase, Database existingDatabase, int userId) : base("", null, userId)
         {
             if (newDatabase.DatabaseId == 0)
-                Message = string.Format("Database connection added: [{0}]", newDatabase.DatabaseName);
+                Message = string.Format("Database connection added: [{0}]", newDatabase.ConnectionName);
             else
             {
                 if (existingDatabase.ConnectionName != newDatabase.ConnectionName)
                 {
                     Message = string.Format(
                         "Database connection modified: [{0}] -> [{1}]",
-                        existingDatabase.DatabaseName,
+                        existingDatabase.ConnectionName,
                         newDatabase.ConnectionName
                     );
                 }

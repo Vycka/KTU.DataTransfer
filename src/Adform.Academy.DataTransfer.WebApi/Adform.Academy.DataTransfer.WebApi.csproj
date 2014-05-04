@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="Controllers\ControllerBase.cs" />
     <Compile Include="Controllers\DatabasesRequestController.cs" />
+    <Compile Include="Controllers\LogRequestController.cs" />
     <Compile Include="Controllers\PingController.cs" />
     <Compile Include="Controllers\ProjectExecutorController.cs" />
     <Compile Include="Controllers\ProjectRequestController.cs" />
