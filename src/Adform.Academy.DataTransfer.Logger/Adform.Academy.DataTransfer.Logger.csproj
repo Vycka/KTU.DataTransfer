@@ -57,12 +57,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Adform.Academy.DataTransfer.Core\Adform.Academy.DataTransfer.Core.csproj">
-      <Project>{CB6E0CB6-965A-42DF-93E4-5256FF2CD3E5}</Project>
-      <Name>Adform.Academy.DataTransfer.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
   dslVersion="1.0.0.0"
   Id="de71d15e-79ce-4e7a-945f-f4b93b58e455"
   name="Adform.Academy.DataTransfer.Diagrams" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -15,6 +15,20 @@
         <opaqueActionMoniker
           Id="a556b8b6-13d2-485f-b8b6-9a11c260b8d8"
           LastKnownName="Patikrinama ar dar yra neatliktų užduočių"
+          LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="97948792-0dc4-4900-8f40-504e5c3a32f2">
+      <body>Priklausomai nuo situacijos galimi veiksmai:
+* Paleisti projektą.
+* Pristabdytį projektą su galimybe pratesti.
+* Pratesti projekto vykdymą.
+* Visiškai atšaukti projekto vykdymą.</body>
+      <annotatedElements>
+        <opaqueActionMoniker
+          Id="d1ea6b5f-790d-4306-9e86-d4d45996b354"
+          LastKnownName="Pasirenkamas norimas įvykdyti veiksmas"
           LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
       </annotatedElements>
     </comment>
@@ -266,6 +280,2158 @@
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="923d66e0-7e59-44c2-9bc1-7cc11693d1ce"
+        name="Internetinė sąsaja / WebApi"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a28ba5bd-61e4-42cc-8586-e306799a931b"
+        name="1. Prisijungimas prie sistemos"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="923d66e0-7e59-44c2-9bc1-7cc11693d1ce"
+            LastKnownName="Internetinė sąsaja / WebApi"
+            LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a7fa7f01-153b-42ba-b714-174fe3c68124"
+        name="2.Vartotojo paskyrų kūrimas ir redagavimas"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="923d66e0-7e59-44c2-9bc1-7cc11693d1ce"
+            LastKnownName="Internetinė sąsaja / WebApi"
+            LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="791a7fa6-657f-4fc2-a276-2e09eb8dc676"
+        name="3.Duomenų bazių kūrimas ir redagavimas"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="923d66e0-7e59-44c2-9bc1-7cc11693d1ce"
+            LastKnownName="Internetinė sąsaja / WebApi"
+            LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="aae93801-df1e-401e-be50-25f3f33d2c67"
+        name="4. Perkėlimo užduočių kūrimas ir redagavimas"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="923d66e0-7e59-44c2-9bc1-7cc11693d1ce"
+            LastKnownName="Internetinė sąsaja / WebApi"
+            LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e10d0c32-034b-4fcd-accc-579ff0362710"
+        name="5. Perkėlimo užduočių vykdymo paleidimas ar sustabdymas"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="923d66e0-7e59-44c2-9bc1-7cc11693d1ce"
+            LastKnownName="Internetinė sąsaja / WebApi"
+            LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="13a91f2c-93d1-480a-b4c3-caaf4c21c81d"
+        name="6. Perkėlimo užduočių vykdymo nutrauk"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="31206b0c-5585-4a81-aa78-3e07ebf154a5"
+        name="6. Perkėlimo užduoties visiškas pašalinimas iš sistemos"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="923d66e0-7e59-44c2-9bc1-7cc11693d1ce"
+            LastKnownName="Internetinė sąsaja / WebApi"
+            LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="5e50057e-a491-44d6-adb4-dde7a8abe729"
+        name="Neprisijungęs vartotojas (Svečias)"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="90bbaca4-0275-41f8-82d5-4ef85b5c7368"
+            isDerived="false"
+            sourceEndRoleName="Neprisijungęs vartotojas"
+            targetEndRoleName="1. Prisijungimas prie sistemos"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a28ba5bd-61e4-42cc-8586-e306799a931b"
+              LastKnownName="1. Prisijungimas prie sistemos"
+              LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="23bbd017-e836-4ef4-a4f4-78833e419a5d"
+                  name="Neprisijungęs vartotojas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a2304673-096b-4cae-b422-2c71be4a3381"
+                  name="1. Prisijungimas prie sistemos"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="c887d117-8ae3-437e-b428-65381f59278d"
+        name="Prisijungęs vartotojas"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="ee794500-652e-4286-96f2-1c92b546ff94"
+            isDerived="false"
+            sourceEndRoleName="Prisijungęs vartotojas"
+            targetEndRoleName="4. Perkėlimo užduočių kūrimas ir redagavimas"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="aae93801-df1e-401e-be50-25f3f33d2c67"
+              LastKnownName="4. Perkėlimo užduočių kūrimas ir redagavimas"
+              LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a8208144-5415-4929-954a-d02eae4c33f9"
+                  name="Prisijungęs vartotojas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="49c1aca4-b256-4602-8063-b53a49271d68"
+                  name="4. Perkėlimo užduočių kūrimas ir redagavimas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d08b1927-0c90-4c69-a45c-22b2b4794ae9"
+            isDerived="false"
+            sourceEndRoleName="Prisijungęs vartotojas"
+            targetEndRoleName="5. Perkėlimo užduočių vykdymo paleidimas ar sustabdymas"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e10d0c32-034b-4fcd-accc-579ff0362710"
+              LastKnownName="5. Perkėlimo užduočių vykdymo paleidimas ar sustabdymas"
+              LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7359e9c4-7dc3-449d-ab79-7d15e33aad96"
+                  name="Prisijungęs vartotojas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3af25e13-dc2c-4718-8f60-622da3b1cd4e"
+                  name="5. Perkėlimo užduočių vykdymo paleidimas ar sustabdymas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="86bc8080-b2ab-4874-b485-1c19529f3967"
+        name="Prisijungęs Administratorius"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="0382af92-5a74-4971-aec2-3d1e79098a21"
+            isDerived="false"
+            sourceEndRoleName="Prisijungęs Administratorius"
+            targetEndRoleName="3.Duomenų bazių kūrimas ir redagavimas"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="791a7fa6-657f-4fc2-a276-2e09eb8dc676"
+              LastKnownName="3.Duomenų bazių kūrimas ir redagavimas"
+              LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e14e197f-ab23-444d-b57d-1640aa8c0bc2"
+                  name="Prisijungęs Administratorius"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9b92a627-ca0a-4db2-bdbd-996353786d4d"
+                  name="3.Duomenų bazių kūrimas ir redagavimas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ac8a021c-1794-4e6a-b851-4a0eeeaf547b"
+            isDerived="false"
+            sourceEndRoleName="Prisijungęs Administratorius"
+            targetEndRoleName="4. Perkėlimo užduočių kūrimas ir redagavimas"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="aae93801-df1e-401e-be50-25f3f33d2c67"
+              LastKnownName="4. Perkėlimo užduočių kūrimas ir redagavimas"
+              LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="add614de-3391-490d-9e6f-87bb65a4c613"
+                  name="Prisijungęs Administratorius"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d6f6e849-e50e-482a-ada0-fce0b13d79c9"
+                  name="4. Perkėlimo užduočių kūrimas ir redagavimas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="89ccf70c-11e1-4180-9cbd-f8b88abb52df"
+            isDerived="false"
+            sourceEndRoleName="Prisijungęs Administratorius"
+            targetEndRoleName="4. Perkėlimo užduočių kūrimas ir redagavimas"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="aae93801-df1e-401e-be50-25f3f33d2c67"
+              LastKnownName="4. Perkėlimo užduočių kūrimas ir redagavimas"
+              LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="824e7e0f-5e3f-4473-ab0e-3c247fe51bd5"
+                  name="Prisijungęs Administratorius"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9860e675-a14d-42b5-be95-d14477c83144"
+                  name="4. Perkėlimo užduočių kūrimas ir redagavimas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8404b33e-41f6-4a8a-859b-94dcc5316f6e"
+            isDerived="false"
+            sourceEndRoleName="Prisijungęs Administratorius"
+            targetEndRoleName="5. Perkėlimo užduočių vykdymo paleidimas ar sustabdymas"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e10d0c32-034b-4fcd-accc-579ff0362710"
+              LastKnownName="5. Perkėlimo užduočių vykdymo paleidimas ar sustabdymas"
+              LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4efb2b2a-bfea-4252-b73f-4d0d3319047b"
+                  name="Prisijungęs Administratorius"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d6b145d1-c0f9-4a6d-be9a-4e727be93f64"
+                  name="5. Perkėlimo užduočių vykdymo paleidimas ar sustabdymas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="315e9a9b-6c58-46e1-9dff-932227eb4341"
+            isDerived="false"
+            sourceEndRoleName="Prisijungęs Administratorius"
+            targetEndRoleName="2.Vartotojo paskyrų kūrimas ir redagavimas"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a7fa7f01-153b-42ba-b714-174fe3c68124"
+              LastKnownName="2.Vartotojo paskyrų kūrimas ir redagavimas"
+              LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8e5a85d6-f162-449f-aa31-774b6574cd93"
+                  name="Prisijungęs Administratorius"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="38ed8e5c-9428-4ead-a27c-653e70257b99"
+                  name="2.Vartotojo paskyrų kūrimas ir redagavimas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="84d79293-cf63-4d95-8162-566b6465a560"
+            isDerived="false"
+            sourceEndRoleName="Prisijungęs Administratorius"
+            targetEndRoleName="6. Perkėlimo užduoties visiškas pašalinimas iš sistemos"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="31206b0c-5585-4a81-aa78-3e07ebf154a5"
+              LastKnownName="6. Perkėlimo užduoties visiškas pašalinimas iš sistemos"
+              LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="423ce079-1e6a-43bf-bc37-1a0e0da6d154"
+                  name="Prisijungęs Administratorius"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ed939528-a00e-48de-a4d3-f521f618dd65"
+                  name="6. Perkėlimo užduoties visiškas pašalinimas iš sistemos"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="cbc9dfb0-c673-4d28-9395-4312680a1722"
+        name="Activity1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="5f0d6feb-8a9f-4b03-bdea-210a2da6614f"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="46943e3f-f960-4755-9e83-a9279acb2e53"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="74166f1a-665f-4f7a-85ef-d70268d050d6"
+                  LastKnownName="Prisijungimas prie sistemos"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="74166f1a-665f-4f7a-85ef-d70268d050d6"
+            name="Prisijungimas prie sistemos"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b970f8b2-000a-42ce-a35a-3ee741b19f07"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="e1104e72-089e-4a9b-adbf-4d5458024108"
+                  LastKnownName="Vartotojo vardo ir slaptažodžio įvedimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="e1104e72-089e-4a9b-adbf-4d5458024108"
+            name="Vartotojo vardo ir slaptažodžio įvedimas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ee6324fe-0eef-4550-b129-634ec0fbbee4"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="1e3dce35-45cd-45b5-9806-40595330b438"
+                  LastKnownName="Įvestų duomenų patikrinimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="1e3dce35-45cd-45b5-9806-40595330b438"
+            name="Įvestų duomenų patikrinimas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="5a3ccae5-2130-4760-b928-272acc9ee371"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="ab7a07f1-dea8-498c-85e1-b63766861545"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="ab7a07f1-dea8-498c-85e1-b63766861545"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="45aa1e28-7afa-426f-ad30-4c6b2e0d33f9"
+                guard="Duomenys teisingi"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="ad04a301-ac00-405b-87bb-69daf673f4ed"
+                  LastKnownName="Vartotojo paskyros aktyvumo patikrinimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="f959b22d-ff92-49ac-9acf-081f01551ba0"
+                guard="Duomenys neteisingi"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="e1104e72-089e-4a9b-adbf-4d5458024108"
+                  LastKnownName="Vartotojo vardo ir slaptažodžio įvedimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="ad04a301-ac00-405b-87bb-69daf673f4ed"
+            name="Vartotojo paskyros aktyvumo patikrinimas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="95bbf83c-c2cc-4fd4-999b-d136d51a7bad"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="32e3646e-9409-47f3-b50d-02e111d19865"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="32e3646e-9409-47f3-b50d-02e111d19865"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="a16f8570-c888-432d-a720-6c6a71bd9545"
+                guard="Paskyra aktyvi"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8dcb4f59-387d-4591-91c9-0c7aa3ba19ef"
+                  LastKnownName="Vartotojas prijungiamas prie sistemos"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="10568731-336e-420e-b857-0676bdbd96be"
+                guard="Paskyra neaktyvi"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="e1104e72-089e-4a9b-adbf-4d5458024108"
+                  LastKnownName="Vartotojo vardo ir slaptažodžio įvedimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <activityFinalNode
+            Id="b64db85e-63f1-4a1f-b6e1-6797a44f5ee2"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="8dcb4f59-387d-4591-91c9-0c7aa3ba19ef"
+            name="Vartotojas prijungiamas prie sistemos"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="464fc3bf-1201-49e6-9126-2afa99fea3d4"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="b64db85e-63f1-4a1f-b6e1-6797a44f5ee2"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="ea17cdbc-2b5b-4fff-aec8-4c8cc5d88ab2"
+        name="Activity2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="a3f44ef8-45ff-4d9f-8a63-c0adf1744ccc"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b886c222-2a52-4838-80da-f366e188a5a0"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="33db9334-70b9-4f9f-9e89-6bdc5df540c4"
+                  LastKnownName="Naujo vartotojo įvedimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="33db9334-70b9-4f9f-9e89-6bdc5df540c4"
+            name="Naujo vartotojo įvedimas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="3496dc2e-19a2-48db-ab00-8c1267cf8d93"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8b589771-033d-4bf9-83f7-55aff453d979"
+                  LastKnownName="Naujų vartotojo duomenų įvedimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <initialNode
+            Id="b99de9d9-8d21-47f5-a61d-75f803815779"
+            name="Initial11"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="5edffd3c-26b9-4335-bd62-bd888eb84c42"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="e3451a5d-cc36-46c3-bcbb-28d19ed60974"
+                  LastKnownName="Esamo vartotojo redagavimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="e3451a5d-cc36-46c3-bcbb-28d19ed60974"
+            name="Esamo vartotojo redagavimas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="9f2f8dec-4eb4-402e-b66e-f951bdf0aace"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8b589771-033d-4bf9-83f7-55aff453d979"
+                  LastKnownName="Naujų vartotojo duomenų įvedimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="8b589771-033d-4bf9-83f7-55aff453d979"
+            name="Naujų vartotojo duomenų įvedimas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="dd6b1b53-6a30-4b82-8893-e410f72dd772"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="ad6edf23-9140-40f9-b4cb-c0d6c0a2ebfc"
+                  LastKnownName="Patikrinama, ar įrašius naujai pateiktus vartotojo duomenis sistemoje liks dar bent viena aktyvi administratoriaus paskyra"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="ad6edf23-9140-40f9-b4cb-c0d6c0a2ebfc"
+            name="Patikrinama, ar įrašius naujai pateiktus vartotojo duomenis sistemoje liks dar bent viena aktyvi administratoriaus paskyra"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="7babfcd7-8027-4a6f-9b05-68bb62e72510"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="67f1f0a8-9c18-4c6c-939b-6765fc69deb4"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="67f1f0a8-9c18-4c6c-939b-6765fc69deb4"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="3827ec2b-2c4d-44ab-b8b2-0692608518de"
+                guard="Nebelieka"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8b589771-033d-4bf9-83f7-55aff453d979"
+                  LastKnownName="Naujų vartotojo duomenų įvedimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="ae0b2ee0-51e1-40ca-9b8e-73a7d7af5a59"
+                guard="Lieka"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="76c2a2f4-6b96-4900-bd3d-c322a7d5b3a6"
+                  LastKnownName="Ar naujas vartotojo vardas nesutampa su jau esančiais"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="76c2a2f4-6b96-4900-bd3d-c322a7d5b3a6"
+            name="Ar naujas vartotojo vardas nesutampa su jau esančiais"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b3212961-620b-4c13-8c50-b7b934e2158a"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="ba3d5f46-4d70-4fda-9382-2ee42a09879f"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="b9bb939f-0e38-47cf-a851-de1c98998293"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <decisionNode
+            Id="ba3d5f46-4d70-4fda-9382-2ee42a09879f"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ded3311f-07dc-4714-a11a-f5daa7d03956"
+                guard="Sutampa"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8b589771-033d-4bf9-83f7-55aff453d979"
+                  LastKnownName="Naujų vartotojo duomenų įvedimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="303d355e-2eed-4697-b563-f1622f9867b8"
+                guard="Nesutampa"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="9d5d069f-ae20-47fb-a302-0ddd9a45efc5"
+                  LastKnownName="Įvesti duomenys išsaugomi duomenų bazėje"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="9d5d069f-ae20-47fb-a302-0ddd9a45efc5"
+            name="Įvesti duomenys išsaugomi duomenų bazėje"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="59c70381-6a29-438a-9770-4704d607ecc0"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="b9bb939f-0e38-47cf-a851-de1c98998293"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="c7b35578-4d43-4267-a048-27ca7ce3338c"
+        name="Activity3"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="b95a83a2-d92e-4409-8d18-999e16b4a4c4"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="cbb0cc62-8c30-456a-8923-927c48f07ee7"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="9ad57a72-91be-4d2a-b6d1-7ec3b588af60"
+                  LastKnownName="Naujos duomnų bazės pridėjimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="9ad57a72-91be-4d2a-b6d1-7ec3b588af60"
+            name="Naujos duomnų bazės pridėjimas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c1e51904-1bc9-4ffb-af62-bafe40ce546e"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="189a0128-9fe9-462f-b965-07695f5b1718"
+                  LastKnownName="Naujų duomenų bazės duomenų įvedimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <initialNode
+            Id="26d2c691-5871-421f-bbbe-4056c895be5d"
+            name="Initial11"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e40b0fa3-eaff-422f-9b46-f2f36b269423"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="acdf0b0b-81a1-495a-8e4e-b7d345e72464"
+                  LastKnownName="Esamos duomenų bazės redagavimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="acdf0b0b-81a1-495a-8e4e-b7d345e72464"
+            name="Esamos duomenų bazės redagavimas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="a698bebc-7cc6-4416-84f6-4edad7dcff64"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="189a0128-9fe9-462f-b965-07695f5b1718"
+                  LastKnownName="Naujų duomenų bazės duomenų įvedimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="189a0128-9fe9-462f-b965-07695f5b1718"
+            name="Naujų duomenų bazės duomenų įvedimas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b4b28e01-1e2f-46d0-ae5c-5eba19b0918c"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="69948e19-5511-4d65-ae57-a09cadca2123"
+                  LastKnownName="Patikrinama, ar nėra jau duomenų bazės su tokiu pačiu pavadinimu"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="69948e19-5511-4d65-ae57-a09cadca2123"
+            name="Patikrinama, ar nėra jau duomenų bazės su tokiu pačiu pavadinimu"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="6f60ba84-f57f-431c-b447-e4f0f5585bd9"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="9fc4244c-d696-4262-a33c-1de2a89d000d"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="9fc4244c-d696-4262-a33c-1de2a89d000d"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d9f6eba9-9dec-4b7a-9b3e-5485df5c32e8"
+                guard="Yra"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="189a0128-9fe9-462f-b965-07695f5b1718"
+                  LastKnownName="Naujų duomenų bazės duomenų įvedimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="e876342e-524a-43f8-8bfc-8d081a023733"
+                guard="Nėra"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="62059ada-6435-4fe8-b708-423067112289"
+                  LastKnownName="Įvesti duomenys išsaugomi duomenų bazėje"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <activityFinalNode
+            Id="cd4fb1be-897c-4827-9654-89f98f1a03b7"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="62059ada-6435-4fe8-b708-423067112289"
+            name="Įvesti duomenys išsaugomi duomenų bazėje"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="74d3e57f-460d-4dc3-9b80-97a88fa4cb46"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="cd4fb1be-897c-4827-9654-89f98f1a03b7"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="e089ea5e-dfd5-45a6-944d-0dbedc21dbf9"
+        name="Activity4"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="74d11e76-4198-4b17-aea0-42ac3965a629"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="5c17a45b-5e5e-4274-a232-f943d2ea2212"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c1a94178-bc87-4201-8612-4c0518c4553c"
+                  LastKnownName="Naujos užduoties kūrimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="c1a94178-bc87-4201-8612-4c0518c4553c"
+            name="Naujos užduoties kūrimas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1ee9ab0a-a397-446e-a24b-33e0dc2f456e"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d70ea01a-3010-487f-95aa-74e5e27a5c9a"
+                  LastKnownName="Projekto pavadinimo, pradinės ir galutinės duomenų bazės įvedimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <initialNode
+            Id="38d74eb0-5b70-444b-83d8-6bdc980d76e4"
+            name="Initial11"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2a04057a-da77-4926-a1fe-36f78a4cf633"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="314e1c46-19f7-4e8a-bc3e-60dd28716fde"
+                  LastKnownName="Esamos užduoties redagavimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="314e1c46-19f7-4e8a-bc3e-60dd28716fde"
+            name="Esamos užduoties redagavimas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="fa53dbb4-1bb1-4356-83b4-ec49ed59e67a"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d70ea01a-3010-487f-95aa-74e5e27a5c9a"
+                  LastKnownName="Projekto pavadinimo, pradinės ir galutinės duomenų bazės įvedimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="d70ea01a-3010-487f-95aa-74e5e27a5c9a"
+            name="Projekto pavadinimo, pradinės ir galutinės duomenų bazės įvedimas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="75ceb288-afd1-4a77-9805-87cd78254c7d"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="53c29583-9f28-4286-9906-9f77b2358d60"
+                  LastKnownName="Ar pavyksta prisijungti prie pradinės duomenų bazės"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="cf6c0c43-f4d0-4bc6-a1cb-a89463770b82"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="53c29583-9f28-4286-9906-9f77b2358d60"
+            name="Ar pavyksta prisijungti prie pradinės duomenų bazės"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="01cf2fc2-5842-4137-81f1-4a62728861bf"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="b6b28100-931c-4252-8b6b-b69f534c1b51"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="b6b28100-931c-4252-8b6b-b69f534c1b51"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c2a7bae4-b93d-4d80-8f2b-7e3182edfff5"
+                guard="Nepavyksta"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d70ea01a-3010-487f-95aa-74e5e27a5c9a"
+                  LastKnownName="Projekto pavadinimo, pradinės ir galutinės duomenų bazės įvedimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="b342e685-98ae-4231-93cd-c771754eb5d6"
+                guard="Pavyksta"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="4cc972f9-564f-4ac2-899b-010c6bf29f56"
+                  LastKnownName="Norimų perkelti lentelių ir jų stulpelių pasirinkimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="4cc972f9-564f-4ac2-899b-010c6bf29f56"
+            name="Norimų perkelti lentelių ir jų stulpelių pasirinkimas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e5b989b2-f767-4b62-bb61-c8b8d8aae7c8"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="183defb2-7b8b-46a9-bf0a-620c6297b227"
+                  LastKnownName="Duomenu skaldymo indekso laukelio ir skaldymo žingsnio dydžio pasirinkimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="183defb2-7b8b-46a9-bf0a-620c6297b227"
+            name="Duomenu skaldymo indekso laukelio ir skaldymo žingsnio dydžio pasirinkimas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="64061f0b-e636-4c9a-a3d6-ccae82779c9e"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="a1007874-6ce2-4219-9a40-25a88104375f"
+                  LastKnownName="Įvesti duomenys išsaugomi duomenų bazėje "
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="a1007874-6ce2-4219-9a40-25a88104375f"
+            name="Įvesti duomenys išsaugomi duomenų bazėje "
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="734fff8f-f5fc-4dc1-a6b9-18472a2cbe19"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="cf6c0c43-f4d0-4bc6-a1cb-a89463770b82"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="4b19a293-e7cb-46f4-a77e-d6a4c99022a3"
+        name="Activity5"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="5aa467ad-2fdf-481c-b5f5-1411977ef984"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="56a4063d-eba3-4d5f-8246-ebda7bcdc1d3"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d1ea6b5f-790d-4306-9e86-d4d45996b354"
+                  LastKnownName="Pasirenkamas norimas įvykdyti veiksmas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="d1ea6b5f-790d-4306-9e86-d4d45996b354"
+            name="Pasirenkamas norimas įvykdyti veiksmas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1266939a-176b-4a41-be74-b26296409383"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d632eb33-179d-4c0d-963e-a1d4a6d779cf"
+                  LastKnownName="Pasirkto veiksmo komandą išsiunčiamą užduotis vykdančiam serveriui"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="d632eb33-179d-4c0d-963e-a1d4a6d779cf"
+            name="Pasirkto veiksmo komandą išsiunčiamą užduotis vykdančiam serveriui"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="61a0b18d-93f3-466e-94b6-6ea8e06b6205"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="8ec59084-4fe5-4e14-93be-12568922c467"
+                  LastKnownName="Fork1"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode
+            Id="8ec59084-4fe5-4e14-93be-12568922c467"
+            name="Fork1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="a50c1389-ad26-4aaa-a0d2-adc1699ed01b"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="437dd0af-ccab-4686-aa7a-58fafaf664f5"
+                  LastKnownName="Įvykdomas norimas veiksmas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="84ce1b65-8b3d-4257-8747-9d2870e4becd"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="cc0892b7-68ef-4601-bda1-adc6548eb7db"
+                  LastKnownName="Atnaujinama projekto vykdymo būsena"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction
+            Id="cc0892b7-68ef-4601-bda1-adc6548eb7db"
+            name="Atnaujinama projekto vykdymo būsena"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d149d186-da6c-4830-a82a-9dec3565256f"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="afbf4220-bdbc-402b-a7ce-5773c94569ba"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="437dd0af-ccab-4686-aa7a-58fafaf664f5"
+            name="Įvykdomas norimas veiksmas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="216d17bb-7116-466d-b2fa-d2f7922f9840"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="68f8b40c-2bee-40a0-b012-ec18040fede0"
+                  LastKnownName="ActivityFinal2"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="afbf4220-bdbc-402b-a7ce-5773c94569ba"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <activityFinalNode
+            Id="68f8b40c-2bee-40a0-b012-ec18040fede0"
+            name="ActivityFinal2"
+            isLeaf="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="42df6db2-bf82-43c0-840e-eeaf6ae38b99"
+        name="Activity6"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="7f64c0da-b4a7-4a64-b745-8b5cdb674c31"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="bb9fbaed-b737-4442-8457-5dfe9d149762"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d63e99c4-616d-41dc-b8c7-8e4636ed6afd"
+                  LastKnownName="Užduoties visiškas pašalinimas iš sistemos"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="d63e99c4-616d-41dc-b8c7-8e4636ed6afd"
+            name="Užduoties visiškas pašalinimas iš sistemos"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ec74dc3a-786d-4299-b11f-984081b20838"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="348eb0c4-5f07-4203-87dc-4909bebe91ef"
+                  LastKnownName="Administratoriaus papildomai paprašoma patvirtinti šio veiksmo vykdymą"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="348eb0c4-5f07-4203-87dc-4909bebe91ef"
+            name="Administratoriaus papildomai paprašoma patvirtinti šio veiksmo vykdymą"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d3a91f59-3096-42e3-a077-54bb924f40f2"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="087a8094-586f-44e2-a6c6-6d9600d2dc0c"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="087a8094-586f-44e2-a6c6-6d9600d2dc0c"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="5152048f-fc5a-4983-abd9-f3daf5ac50e0"
+                guard="Papildomas patvirtinimas įvyksta"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="586664a4-1437-4436-aab4-c45819dfc64e"
+                  LastKnownName="Patikrinama ar užduotis nėra vykdoma"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="7f4d1c8d-1904-4fa6-bee9-6bb6ff83bf2c"
+                guard="Papildomas patvirtinimas neivyksta"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="cc49595a-9583-462f-a442-b6ea9b78da95"
+                  LastKnownName="Pašalinimo veiksmas atmetamas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <activityFinalNode
+            Id="c883cc6e-a76a-4dcc-9d23-d93843f874bc"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="586664a4-1437-4436-aab4-c45819dfc64e"
+            name="Patikrinama ar užduotis nėra vykdoma"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="619b8b53-7d58-47d7-ab3b-a40621100704"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="1213d964-012b-48ce-a7db-d73bc6df536e"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="cc49595a-9583-462f-a442-b6ea9b78da95"
+            name="Pašalinimo veiksmas atmetamas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="95fac62e-5acb-400d-8762-6c32025b44d2"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="c883cc6e-a76a-4dcc-9d23-d93843f874bc"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="1213d964-012b-48ce-a7db-d73bc6df536e"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c3de6b6f-e35d-4266-9455-100bb0ddda46"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="21da0bde-f4f3-4202-bd51-6cad52c2eafd"
+                  LastKnownName="Išvedamas klaidos pranešimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="49476660-6f12-4de7-9581-bf3dd8d65ee1"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8d8af9c6-0340-4df4-add7-d5cf75d55512"
+                  LastKnownName="Projektas ir su juo susijusi informacija pašalinama iš sistemos"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="21da0bde-f4f3-4202-bd51-6cad52c2eafd"
+            name="Išvedamas klaidos pranešimas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="056712d7-81c0-4629-8f0e-3e70eb2ccaa2"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="c883cc6e-a76a-4dcc-9d23-d93843f874bc"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="8d8af9c6-0340-4df4-add7-d5cf75d55512"
+            name="Projektas ir su juo susijusi informacija pašalinama iš sistemos"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="a8db51fc-dc5d-4048-b6b4-5a7e4790debb"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="2daf2a9e-dac1-478b-b2b0-6c4057d77fa6"
+                  LastKnownName="ActivityFinal2"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="2daf2a9e-dac1-478b-b2b0-6c4057d77fa6"
+            name="ActivityFinal2"
+            isLeaf="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="b6817857-007a-45df-b688-ff13aadb79f0"
+        name="Užduotis vykdantis servisas"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c3e5caf1-571c-40f8-8711-86cbec60aaf5"
+        name="7. Užduoties vykdymas"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="07cfaf11-bfc2-47d6-b0c4-0a8e3bcd25d4">
+            <useCaseMoniker
+              Id="d9a8936d-c08a-448a-b88d-89e2c4a20c8d"
+              LastKnownName="8. Duomenų kurie bus perkelti - Suskaldymas į grupes"
+              LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+          </include>
+          <include
+            Id="a314eaf7-4ed3-43ac-ba09-5b4290235661">
+            <useCaseMoniker
+              Id="d3ad1add-862f-40fd-a060-4a94623eeb11"
+              LastKnownName="8. Perkeliami duomenys"
+              LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+          </include>
+          <include
+            Id="4d27f7cd-232d-4278-aaba-5aa543b37735">
+            <useCaseMoniker
+              Id="ef0575e2-267f-438b-973c-e1537a62cf39"
+              LastKnownName="10. Perkeltų duomenų patikrinimas"
+              LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="b6817857-007a-45df-b688-ff13aadb79f0"
+            LastKnownName="Užduotis vykdantis servisas"
+            LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d9a8936d-c08a-448a-b88d-89e2c4a20c8d"
+        name="8. Duomenų kurie bus perkelti - Suskaldymas į grupes"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="b6817857-007a-45df-b688-ff13aadb79f0"
+            LastKnownName="Užduotis vykdantis servisas"
+            LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="26eaa394-8def-4ebc-961b-aeba09c3885a"
+        name="8. Duomenų kurie bus perkelti - analizė1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d3ad1add-862f-40fd-a060-4a94623eeb11"
+        name="8. Perkeliami duomenys"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="b6817857-007a-45df-b688-ff13aadb79f0"
+            LastKnownName="Užduotis vykdantis servisas"
+            LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ef0575e2-267f-438b-973c-e1537a62cf39"
+        name="10. Perkeltų duomenų patikrinimas"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="b6817857-007a-45df-b688-ff13aadb79f0"
+            LastKnownName="Užduotis vykdantis servisas"
+            LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="d0158bc9-ef33-4ed5-b61f-f89da5aa8794"
+        name="Activity7"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="ccf34f06-2470-41b9-aa1c-b649a2212c51"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="7e1ba6f8-fcb0-4812-8c81-5cc41b1c3b7e"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="9bdd3d78-a7a6-4eac-ae57-e125cee8ae03"
+                  LastKnownName="Naujai sukurtos užduoties vykdymas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="9bdd3d78-a7a6-4eac-ae57-e125cee8ae03"
+            name="Naujai sukurtos užduoties vykdymas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="589698a9-9205-4c29-8279-f62292815efe"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="da55af43-356c-4e4f-9dd7-4e0cbf8b6dd3"
+                  LastKnownName="Perkeliamų duomenų suskaldymas į grupes"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="da55af43-356c-4e4f-9dd7-4e0cbf8b6dd3"
+            name="Perkeliamų duomenų suskaldymas į grupes"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2336fdac-e54e-4bba-aca0-42a42c6081ce"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="126414ca-1535-4ba0-a9be-726183d4ce8c"
+                  LastKnownName="Perkeliami duomenys"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="126414ca-1535-4ba0-a9be-726183d4ce8c"
+            name="Perkeliami duomenys"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="a03ad856-c3d1-433d-a82e-246549fc4bf8"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="09917e48-e5ba-4318-801b-dbd507f018c3"
+                  LastKnownName="Papildoma analizė, ar neatsirado naujų duomenų"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="09917e48-e5ba-4318-801b-dbd507f018c3"
+            name="Papildoma analizė, ar neatsirado naujų duomenų"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="34c864d7-771b-4224-81fb-496f1ab5c3fa"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="be62b92b-58ef-4787-bc94-ed6161bce186"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="be62b92b-58ef-4787-bc94-ed6161bce186"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ae846747-5b1a-4efc-ad02-24b239dd90d4"
+                guard="Atsirado naujų duomenų"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="126414ca-1535-4ba0-a9be-726183d4ce8c"
+                  LastKnownName="Perkeliami duomenys"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="55fad089-9e20-48cb-8186-baf58572090e"
+                guard="Neatsirado naujų duomenų"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="0bcea784-1919-476d-b6f0-f17ef128044d"
+                  LastKnownName="Patikrinama ar duomenys perkelti teisingai"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="0bcea784-1919-476d-b6f0-f17ef128044d"
+            name="Patikrinama ar duomenys perkelti teisingai"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="14d0f68c-f517-4efd-8bef-ad5f0e8316d9"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="8e1efcfc-3af9-4b3f-a7c4-7e6a9ab4f0b6"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="8e1efcfc-3af9-4b3f-a7c4-7e6a9ab4f0b6"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="012b9a6a-9ce5-4b27-bcd5-10a8a6d91b2c"
+                guard="Yra neteisingai perkeltų duomenų"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="126414ca-1535-4ba0-a9be-726183d4ce8c"
+                  LastKnownName="Perkeliami duomenys"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="98fed101-abde-4448-89f4-f14c179369db"
+                guard="Duomenys perkelti teisingai"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="3fcf6d8b-cdfd-4ed3-b69d-11616dd90751"
+                  LastKnownName="Projekto vykdymas baigiamas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="3fcf6d8b-cdfd-4ed3-b69d-11616dd90751"
+            name="Projekto vykdymas baigiamas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="302d6c84-91ca-49fc-aeb5-494256a39798"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="d51c8f43-e27d-4c61-9888-42c0d01c40da"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="d51c8f43-e27d-4c61-9888-42c0d01c40da"
+            name="ActivityFinal1"
+            isLeaf="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="81782bbc-989c-4101-a1b4-db2ff8c1f2b3"
+        name="Servisas"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="a36f523f-cc65-420e-9bfa-2e2b8eb6e432"
+            isDerived="false"
+            sourceEndRoleName="Servisas"
+            targetEndRoleName="7. Užduoties vykdymas"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c3e5caf1-571c-40f8-8711-86cbec60aaf5"
+              LastKnownName="7. Užduoties vykdymas"
+              LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="75f37d74-61f7-46a6-a184-96389375e425"
+                  name="Servisas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a6733359-9550-498d-9a71-b0b785a36089"
+                  name="7. Užduoties vykdymas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="df3683c4-4465-4bf3-b9c6-e7ab866b91ca"
+        name="Activity8"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="97b57cd3-3b00-4027-bb7e-dfb59f2a2468"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="21068eb7-521d-47d8-9d8a-f5cdcfd1eb65"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="cf43b8af-9146-4991-ae41-13e636697d5f"
+                  LastKnownName="Perkeliamų duomenų analizė"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="cf43b8af-9146-4991-ae41-13e636697d5f"
+            name="Perkeliamų duomenų analizė"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="3227fd7d-1edf-451f-9a28-28151ce104b5"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="fd26d7cb-83aa-49a5-8fbd-a714a293872a"
+                  LastKnownName="Randamas indekso stulpelio minimali ir maksimali reikšmės"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="fd26d7cb-83aa-49a5-8fbd-a714a293872a"
+            name="Randamas indekso stulpelio minimali ir maksimali reikšmės"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="6846dc04-dac6-4e29-890f-d9df03254c00"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b8ffc1eb-3975-406a-8c04-5b364a9922a8"
+                  LastKnownName="Pagal žinimą minimumą ir maksimumą, sugeneruojamos duomenų grupės kas pasirinkta žingsnio dydį"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="b8ffc1eb-3975-406a-8c04-5b364a9922a8"
+            name="Pagal žinimą minimumą ir maksimumą, sugeneruojamos duomenų grupės kas pasirinkta žingsnio dydį"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="9fa6ab22-a9bf-4e54-bff9-8db9a48278b7"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="65844b67-181b-4723-b568-ad722a2b3397"
+                  LastKnownName="Informacija apie grupes išsaugoma sistemos duomenų bazėje"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="65844b67-181b-4723-b568-ad722a2b3397"
+            name="Informacija apie grupes išsaugoma sistemos duomenų bazėje"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="31b1db03-0a4b-466e-8b23-be6cbd8b127b"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="48bd2a95-1648-4fdc-9f91-2803b4b24c22"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="48bd2a95-1648-4fdc-9f91-2803b4b24c22"
+            name="ActivityFinal1"
+            isLeaf="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="cf7c82e2-5373-4e6a-bee1-b51a413d1923"
+        name="Activity9"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="4198df10-3620-40d1-9483-ca1988947545"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="dc7fb3c7-fe53-470c-b937-16a096600571"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="5e7d266a-33ca-4d8c-bc14-7d684e0b8d3e"
+                  LastKnownName="Duomenu perkėlimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="5e7d266a-33ca-4d8c-bc14-7d684e0b8d3e"
+            name="Duomenu perkėlimas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="43db9ec4-371e-454e-b3fc-c90ac70e677c"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d74c6c08-e473-4281-81e8-bd4bc3b7fa1b"
+                  LastKnownName="Gaunama grupės informacija, pagal kurią bus perkeltas duomenų fragmentas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="d74c6c08-e473-4281-81e8-bd4bc3b7fa1b"
+            name="Gaunama grupės informacija, pagal kurią bus perkeltas duomenų fragmentas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c002bc9c-54c8-4ba6-9f5d-0dedc2e0d80b"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="349797c8-bccb-4fde-af26-fc6ea55bc1fa"
+                  LastKnownName="Patikrinama, ar esamoje duomenų bazėje nėra šią grupę atitinkančių duomenų fragmento"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="349797c8-bccb-4fde-af26-fc6ea55bc1fa"
+            name="Patikrinama, ar esamoje duomenų bazėje nėra šią grupę atitinkančių duomenų fragmento"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="df3baae0-c333-4f19-ae5b-f3ee5a07a2fb"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="f02dc479-333c-4c69-812a-fdd8bd9bb3a0"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="f02dc479-333c-4c69-812a-fdd8bd9bb3a0"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2f04ef65-4067-4ca7-a4ab-ff6f3511f215"
+                guard="Duomenų yra"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c9b28f4e-01cf-48fb-8af7-7ed5273504e1"
+                  LastKnownName="Esami duomenys pašalinami"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="66721ec1-e899-4e15-b497-fc5f613fac7f"
+                guard="Duomenų nėra"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="9e5ec232-8e0a-4333-977e-9620d7ece3b8"
+                  LastKnownName="Perkeliami grupę atitinkantys duomenys iš vienos duomenų bazės į kitą"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="c9b28f4e-01cf-48fb-8af7-7ed5273504e1"
+            name="Esami duomenys pašalinami"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="92b45781-03a2-4ddf-a18d-e4439fbc7ded"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="9e5ec232-8e0a-4333-977e-9620d7ece3b8"
+                  LastKnownName="Perkeliami grupę atitinkantys duomenys iš vienos duomenų bazės į kitą"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="9e5ec232-8e0a-4333-977e-9620d7ece3b8"
+            name="Perkeliami grupę atitinkantys duomenys iš vienos duomenų bazės į kitą"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d7f5ade5-f42f-41ab-babe-435699ed9a02"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="63e9c62e-2c5d-4682-92fb-69d522d84955"
+                  LastKnownName="Grupės būsena pažymima kaip perkopijuota"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="63e9c62e-2c5d-4682-92fb-69d522d84955"
+            name="Grupės būsena pažymima kaip perkopijuota"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="247475b6-0af1-4db5-a026-b4f1bc92b607"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="8dd60703-42c3-46c9-9983-19ac1846edff"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="8dd60703-42c3-46c9-9983-19ac1846edff"
+            name="ActivityFinal1"
+            isLeaf="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="b8949690-a570-4229-a5bd-46e851598348"
+        name="Activity10"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <opaqueAction
+            Id="b6ca2630-0c96-49c9-aa5a-cfd5059b399b"
+            name="Duomenų sulyginimas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="283c27db-d9e6-40eb-965d-b7d8eeed93b2"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="86f1565e-fe3a-49ac-a055-cd5ad8292147"
+                  LastKnownName="Paskaičiuojama kiekvienai duomenų grupei maišos suma iš pradinės duomenų bazės"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <initialNode
+            Id="0f06adb9-6ad3-4b58-9a8d-09c93c998e3a"
+            name="Initial11"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1fb10e15-dc61-49fa-aa0d-e4f77a97a541"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b6ca2630-0c96-49c9-aa5a-cfd5059b399b"
+                  LastKnownName="Duomenų sulyginimas"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="86f1565e-fe3a-49ac-a055-cd5ad8292147"
+            name="Paskaičiuojama kiekvienai duomenų grupei maišos suma iš pradinės duomenų bazės"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2a0ef65f-1abc-4dd1-8cf0-c624028ab642"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="55b1d879-db2f-42c8-917c-b667ddbb3bd3"
+                  LastKnownName="Paskaičiuojamos maišos sumos kiekvienai duomenų grupei iš galutinės duomenų bazės"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="55b1d879-db2f-42c8-917c-b667ddbb3bd3"
+            name="Paskaičiuojamos maišos sumos kiekvienai duomenų grupei iš galutinės duomenų bazės"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b46f943a-b950-439e-bc7c-585c6388b3e7"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="9e179a97-d73a-4511-a896-e95969adbd54"
+                  LastKnownName="Maišos sumos sulyginamos"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="9e179a97-d73a-4511-a896-e95969adbd54"
+            name="Maišos sumos sulyginamos"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b9a87897-425b-4e99-bda4-354504e38143"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="2b74e122-aa68-4b58-b62f-e8c6a235873f"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="2b74e122-aa68-4b58-b62f-e8c6a235873f"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e3088e45-fe8c-4e9e-9e68-7257f483ada7"
+                guard="Sumos nesutampa"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="1a8e2416-c845-44ef-90f3-74463899689f"
+                  LastKnownName="Duomenu grupė pažymima, kad ją reikia perkopijuoti iš naujo"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="59ebf919-414c-4d0c-8580-179acec922d4"
+                guard="Sumos sutampa"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="5c67b595-dbba-4a06-ad63-527124f035d8"
+                  LastKnownName="Duomenų grupė pažymima, kad jin perkopijuota sėkmingai"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="1a8e2416-c845-44ef-90f3-74463899689f"
+            name="Duomenu grupė pažymima, kad ją reikia perkopijuoti iš naujo"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b9055293-1971-4b05-b281-ddf1d749bbbd"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="22d62c1b-356a-4b20-b6fd-7d0805336479"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="5c67b595-dbba-4a06-ad63-527124f035d8"
+            name="Duomenų grupė pažymima, kad jin perkopijuota sėkmingai"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="334e2265-bee4-45a1-b633-6d3cad82dfb2"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="22d62c1b-356a-4b20-b6fd-7d0805336479"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="22d62c1b-356a-4b20-b6fd-7d0805336479"
+            name="ActivityFinal1"
+            isLeaf="false" />
         </nodes>
       </activity>
     </packageHasNamedElement>

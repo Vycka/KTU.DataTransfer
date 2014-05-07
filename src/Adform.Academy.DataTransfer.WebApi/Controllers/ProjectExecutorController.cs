@@ -20,15 +20,16 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
             {
                 var project = session.Get<Project>(request.ProjectId);
 
-                //TODO: Logging..
-                //TODO: Start Project For Real;
-                project.ProjectState = ProjectStateTypes.Running;
-                project.ExecutionState = (project.ExecutionState != Core.DTO.Types.ExecutionStepsTypes.Completed
-                    ? Core.DTO.Types.ExecutionStepsTypes.FullAnalyze
-                    : Core.DTO.Types.ExecutionStepsTypes.AppendAnalyze);
 
-                session.Merge(project);
-                session.Flush();
+                //project.ExecutionState = (project.ExecutionState != Core.DTO.Types.ExecutionStepsTypes.Completed
+                //    ? Core.DTO.Types.ExecutionStepsTypes.FullAnalyze
+                //    : Core.DTO.Types.ExecutionStepsTypes.AppendAnalyze);
+
+                ServiceRunner.StartProject(request.ProjectId);
+
+
+                //session.Merge(project);
+                //session.Flush();
 
                 return new StartResponse
                 {
@@ -99,7 +100,7 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
                     };
                 }
 
-                Logger.Log(new ProjectDeleted(project, request.InvokerUserId));
+                Logger.Log(new ProjectDeleted(project.ProjectId, request.InvokerUserId));
 
                 session.Delete(project);
                 session.Flush();

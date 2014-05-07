@@ -1,10 +1,11 @@
-﻿using System.Web.Http;
+﻿using Adform.Academy.DataTransfer.Core.DataTransfer;
 using Adform.Academy.DataTransfer.Logger;
 
 namespace Adform.Academy.DataTransfer.WebApi.Controllers
 {
-    public class ControllerBase : ApiController
+    public class ControllerBase : System.Web.Http.ApiController
     {
-        protected ILogger Logger = new Log4NetLogger("DataTransferService");
+        public static ILogger Logger;
+        public static DataTransferServiceRunner ServiceRunner;
     }
 }

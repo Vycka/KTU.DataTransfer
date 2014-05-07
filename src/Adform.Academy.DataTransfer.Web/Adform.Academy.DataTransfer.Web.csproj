@@ -166,6 +166,7 @@
     <Content Include="Scripts\Project\LogList.js" />
     <Content Include="Scripts\Shared\MenuHighlighter.js" />
     <Content Include="Scripts\Shared\PostCommand.js" />
+    <None Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

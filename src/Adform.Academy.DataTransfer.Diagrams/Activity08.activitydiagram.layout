@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Activity8">
+  <activityRootModelMoniker Id="1d1c352c-a677-41cb-abda-3e3a368a379f" />
+  <nestedChildShapes>
+    <initialNodeShape Id="65487854-0ffd-4dfe-85fb-70404e8d9edd" absoluteBounds="3.125, 2.625, 0.125, 0.125" customColor="89, 89, 89">
+      <initialNodeMoniker Id="4953971a-c287-48aa-ab61-c3b6898449a4" LastKnownName="Initial1" />
+    </initialNodeShape>
+    <actionShape Id="a4f295cd-dcc7-4035-aec2-11b193f644dd" absoluteBounds="3.625, 2.5, 1.125, 0.375" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="a2aa7abb-a522-4de5-bf3b-511b739a93d3" LastKnownName="Perkeliamų duomenų analizė" />
+    </actionShape>
+    <actionShape Id="f5d9fdb4-4685-40b5-b322-07155605b4bc" absoluteBounds="5.375, 2.375, 1.125, 0.625" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="36750ac0-e952-4a38-b585-c5a95d0a65ac" LastKnownName="Randamas indekso stulpelio minimali ir maksimali reikšmės" />
+    </actionShape>
+    <controlFlowConnector edgePoints="[(3.25 : 2.6875); (3.625 : 2.6875)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <controlFlowMoniker Id="f8fcc413-c45b-4cf3-8f02-c6c7037f4651" />
+      <relativeChildShapes />
+      <nodes>
+        <initialNodeShapeMoniker Id="65487854-0ffd-4dfe-85fb-70404e8d9edd" />
+        <actionShapeMoniker Id="a4f295cd-dcc7-4035-aec2-11b193f644dd" />
+      </nodes>
+    </controlFlowConnector>
+    <controlFlowConnector edgePoints="[(4.75 : 2.6875); (5.375 : 2.6875)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <controlFlowMoniker Id="2c5f147f-0acb-4368-a556-99f16d25db35" />
+      <relativeChildShapes />
+      <nodes>
+        <actionShapeMoniker Id="a4f295cd-dcc7-4035-aec2-11b193f644dd" />
+        <actionShapeMoniker Id="f5d9fdb4-4685-40b5-b322-07155605b4bc" />
+      </nodes>
+    </controlFlowConnector>
+    <actionShape Id="ee41099b-610f-402a-a0ef-ea18e4dad5ae" absoluteBounds="7.5, 2.375, 1.625, 0.75" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="6088ae45-4194-470a-85e9-88a5697c1f6c" LastKnownName="Pagal žinimą minimumą ir maksimumą, sugeneruojamos duomenų grupės kas pasirinkta žingsnio dydį" />
+    </actionShape>
+    <controlFlowConnector edgePoints="[(6.5 : 2.6875); (7.5 : 2.6875)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <controlFlowMoniker Id="95cef996-933c-410c-bf00-5b43308c5bcd" />
+      <relativeChildShapes />
+      <nodes>
+        <actionShapeMoniker Id="f5d9fdb4-4685-40b5-b322-07155605b4bc" />
+        <actionShapeMoniker Id="ee41099b-610f-402a-a0ef-ea18e4dad5ae" />
+      </nodes>
+    </controlFlowConnector>
+    <actionShape Id="1533a6f1-6b59-4f16-903b-e5734d762f34" absoluteBounds="7.625, 3.75, 1.375, 0.75" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="2f939784-6e04-4d8f-a268-f23f7a1cbf8c" LastKnownName="Informacija apie grupes išsaugoma sistemos duomenų bazėje" />
+    </actionShape>
+    <controlFlowConnector edgePoints="[(8.3125 : 3.125); (8.3125 : 3.75)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <controlFlowMoniker Id="15b5ed4f-8004-4324-be43-efa814daf2a8" />
+      <relativeChildShapes />
+      <nodes>
+        <actionShapeMoniker Id="ee41099b-610f-402a-a0ef-ea18e4dad5ae" />
+        <actionShapeMoniker Id="1533a6f1-6b59-4f16-903b-e5734d762f34" />
+      </nodes>
+    </controlFlowConnector>
+    <activityFinalNodeShape Id="6711d71f-f75a-4529-9a3b-550dad96a6a4" absoluteBounds="6.625, 4.125, 0.125, 0.125" customColor="89, 89, 89">
+      <activityFinalNodeMoniker Id="4d1793a7-d464-473c-b5b7-8d388055e000" LastKnownName="ActivityFinal1" />
+    </activityFinalNodeShape>
+    <controlFlowConnector edgePoints="[(7.625 : 4.1875); (6.75 : 4.1875)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <controlFlowMoniker Id="1c67a5a9-4d20-4e1a-83bb-86758441413b" />
+      <relativeChildShapes />
+      <nodes>
+        <actionShapeMoniker Id="1533a6f1-6b59-4f16-903b-e5734d762f34" />
+        <activityFinalNodeShapeMoniker Id="6711d71f-f75a-4529-9a3b-550dad96a6a4" />
+      </nodes>
+    </controlFlowConnector>
+  </nestedChildShapes>
+</activityDiagram>

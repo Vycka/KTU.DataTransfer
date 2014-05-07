@@ -54,8 +54,6 @@ namespace Adform.Academy.DataTransfer.WebApi
 
         public void Start()
         {
-            _logging.Log(new LogEvent("Service host started"));
-
             _httpSelfHostServer.OpenAsync()
                 .ContinueWith(t => _logging.LogError(new LogErrorEvent(t.Exception)), TaskContinuationOptions.OnlyOnFaulted);
         }

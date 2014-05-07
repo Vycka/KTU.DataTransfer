@@ -51,7 +51,8 @@ namespace Adform.Academy.DataTransfer.Web.Controllers
             if (!response.Success)
             {
                 ModelState.AddModelError("ErrorSummary", response.Message);
-                return ProjectSummary(model);
+                model.Databases = BuildDatabasesList();
+                return View("ProjectSummary", model);
             }
 
             model.Tables = DatabaseRequests.GetDatabaseStructure(model.SourceDatabaseId).Tables;
@@ -60,7 +61,11 @@ namespace Adform.Academy.DataTransfer.Web.Controllers
 
         public ActionResult Details(int projectId)
         {
-            var  model = new ProjectEditorModel(ProjectRequests.GetProject(projectId));
+            var model = new ProjectEditorModel(ProjectRequests.GetProject(projectId));
+            var sourceDatabase = DatabaseRequests.GetDatabase(model.SourceDatabaseId);
+            var destinationDatabase = DatabaseRequests.GetDatabase(model.DestinationDatabaseId);
+            model.SourceDatabaseName = sourceDatabase.ConnectionName;
+            model.DestinationDatabaseName = destinationDatabase.ConnectionName;
             return View("ReviewFiltersFrame", model);
         }
 

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="1d1c352c-a677-41cb-abda-3e3a368a379f" name="Activity8" linkedPackageId="ed42ded0-db52-4962-870d-b337e6f2f2a9" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="e3b104a0-bb36-444c-824f-4386ce5b9218">
+      <profileInstance Id="a5c5d1b8-956c-4368-84b6-ccf934121ec4" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="62628464-a11c-4dda-9e39-13f32bd6aa13">
+      <profileInstance Id="b4c17e73-dcbb-418d-a2e0-2665c56ad1a1" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="b60ce8aa-9719-4401-a024-dda5e89c2bdc" name="Activity8" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="df3683c4-4465-4bf3-b9c6-e7ab866b91ca" />
+        <nodes>
+          <initialNode Id="4953971a-c287-48aa-ab61-c3b6898449a4" name="Initial1" isLeaf="false">
+            <elementDefinition Id="97b57cd3-3b00-4027-bb7e-dfb59f2a2468" />
+            <flowNodeTargets>
+              <controlFlow Id="f8fcc413-c45b-4cf3-8f02-c6c7037f4651" isLeaf="false">
+                <opaqueActionMoniker Id="a2aa7abb-a522-4de5-bf3b-511b739a93d3" LastKnownName="Perkeliamų duomenų analizė" />
+                <elementDefinition Id="21068eb7-521d-47d8-9d8a-f5cdcfd1eb65" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="a2aa7abb-a522-4de5-bf3b-511b739a93d3" name="Perkeliamų duomenų analizė" isLeaf="false">
+            <elementDefinition Id="cf43b8af-9146-4991-ae41-13e636697d5f" />
+            <flowNodeTargets>
+              <controlFlow Id="2c5f147f-0acb-4368-a556-99f16d25db35" isLeaf="false">
+                <opaqueActionMoniker Id="36750ac0-e952-4a38-b585-c5a95d0a65ac" LastKnownName="Randamas indekso stulpelio minimali ir maksimali reikšmės" />
+                <elementDefinition Id="3227fd7d-1edf-451f-9a28-28151ce104b5" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="36750ac0-e952-4a38-b585-c5a95d0a65ac" name="Randamas indekso stulpelio minimali ir maksimali reikšmės" isLeaf="false">
+            <elementDefinition Id="fd26d7cb-83aa-49a5-8fbd-a714a293872a" />
+            <flowNodeTargets>
+              <controlFlow Id="95cef996-933c-410c-bf00-5b43308c5bcd" isLeaf="false">
+                <opaqueActionMoniker Id="6088ae45-4194-470a-85e9-88a5697c1f6c" LastKnownName="Pagal žinimą minimumą ir maksimumą, sugeneruojamos duomenų grupės kas pasirinkta žingsnio dydį" />
+                <elementDefinition Id="6846dc04-dac6-4e29-890f-d9df03254c00" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="6088ae45-4194-470a-85e9-88a5697c1f6c" name="Pagal žinimą minimumą ir maksimumą, sugeneruojamos duomenų grupės kas pasirinkta žingsnio dydį" isLeaf="false">
+            <elementDefinition Id="b8ffc1eb-3975-406a-8c04-5b364a9922a8" />
+            <flowNodeTargets>
+              <controlFlow Id="15b5ed4f-8004-4324-be43-efa814daf2a8" isLeaf="false">
+                <opaqueActionMoniker Id="2f939784-6e04-4d8f-a268-f23f7a1cbf8c" LastKnownName="Informacija apie grupes išsaugoma sistemos duomenų bazėje" />
+                <elementDefinition Id="9fa6ab22-a9bf-4e54-bff9-8db9a48278b7" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="2f939784-6e04-4d8f-a268-f23f7a1cbf8c" name="Informacija apie grupes išsaugoma sistemos duomenų bazėje" isLeaf="false">
+            <elementDefinition Id="65844b67-181b-4723-b568-ad722a2b3397" />
+            <flowNodeTargets>
+              <controlFlow Id="1c67a5a9-4d20-4e1a-83bb-86758441413b" isLeaf="false">
+                <activityFinalNodeMoniker Id="4d1793a7-d464-473c-b5b7-8d388055e000" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="31b1db03-0a4b-466e-8b23-be6cbd8b127b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="4d1793a7-d464-473c-b5b7-8d388055e000" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="48bd2a95-1648-4fdc-9f91-2803b4b24c22" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="ed42ded0-db52-4962-870d-b337e6f2f2a9" name="Adform.Academy.DataTransfer.Diagrams">
+    <elementDefinition Id="de71d15e-79ce-4e7a-945f-f4b93b58e455" />
+  </package>
+</activityRootModel>

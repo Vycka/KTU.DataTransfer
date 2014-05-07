@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="df84d9f3-ab1b-4431-8bfb-cc7fc2f0b83c" name="Activity6" linkedPackageId="5b15f333-1bdb-4fed-b9dd-7e7ab4dc106a" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="1933ebfc-f688-45d0-a018-691ddf9153e5">
+      <profileInstance Id="ea800f9b-4f53-4fc6-9473-3a95e1327a55" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="73165214-33b4-4e29-89d3-d8465be0936f">
+      <profileInstance Id="3adce4ab-ba08-4243-8fcb-0cfbf1abb990" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="dcd25c60-074c-4d02-ad46-e8bc3aafecc7" name="Activity6" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="42df6db2-bf82-43c0-840e-eeaf6ae38b99" />
+        <nodes>
+          <initialNode Id="508e1f97-8d12-4240-9ee0-95beb1cfeb49" name="Initial1" isLeaf="false">
+            <elementDefinition Id="7f64c0da-b4a7-4a64-b745-8b5cdb674c31" />
+            <flowNodeTargets>
+              <controlFlow Id="1c921aa0-fc37-4a15-a1e2-8df797824e65" isLeaf="false">
+                <opaqueActionMoniker Id="490c1dd8-3e16-4b8b-b28f-785beb8ccd36" LastKnownName="Užduoties visiškas pašalinimas iš sistemos" />
+                <elementDefinition Id="bb9fbaed-b737-4442-8457-5dfe9d149762" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="490c1dd8-3e16-4b8b-b28f-785beb8ccd36" name="Užduoties visiškas pašalinimas iš sistemos" isLeaf="false">
+            <elementDefinition Id="d63e99c4-616d-41dc-b8c7-8e4636ed6afd" />
+            <flowNodeTargets>
+              <controlFlow Id="6769fffe-a7b1-436c-beef-879941763413" isLeaf="false">
+                <opaqueActionMoniker Id="0fa3e3ef-46e2-4d18-a1d8-42f1fc863944" LastKnownName="Administratoriaus papildomai paprašoma patvirtinti šio veiksmo vykdymą" />
+                <elementDefinition Id="ec74dc3a-786d-4299-b11f-984081b20838" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="0fa3e3ef-46e2-4d18-a1d8-42f1fc863944" name="Administratoriaus papildomai paprašoma patvirtinti šio veiksmo vykdymą" isLeaf="false">
+            <elementDefinition Id="348eb0c4-5f07-4203-87dc-4909bebe91ef" />
+            <flowNodeTargets>
+              <controlFlow Id="d0f110b8-0ab4-4e08-8034-6b3a0a289d79" isLeaf="false">
+                <decisionNodeMoniker Id="6bf65fc7-7750-4610-b911-55ef93248f7d" LastKnownName="Decision1" />
+                <elementDefinition Id="d3a91f59-3096-42e3-a077-54bb924f40f2" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="6bf65fc7-7750-4610-b911-55ef93248f7d" name="Decision1" isLeaf="false">
+            <elementDefinition Id="087a8094-586f-44e2-a6c6-6d9600d2dc0c" />
+            <flowNodeTargets>
+              <controlFlow Id="3171929d-a815-4cd2-b14e-c818b3f2ff0a" guard="Papildomas patvirtinimas įvyksta" isLeaf="false">
+                <opaqueActionMoniker Id="c7228bdf-5d63-4447-a271-d5094ad923d8" LastKnownName="Patikrinama ar užduotis nėra vykdoma" />
+                <elementDefinition Id="5152048f-fc5a-4983-abd9-f3daf5ac50e0" />
+              </controlFlow>
+              <controlFlow Id="bd6e6a16-0b35-4cc6-8bd6-464a182c5fae" guard="Papildomas patvirtinimas neivyksta" isLeaf="false">
+                <opaqueActionMoniker Id="5cbb26ad-5f81-485c-aa0c-500896b08a5e" LastKnownName="Pašalinimo veiksmas atmetamas" />
+                <elementDefinition Id="7f4d1c8d-1904-4fa6-bee9-6bb6ff83bf2c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <activityFinalNode Id="5e9e5efe-e47f-4064-9a61-d2083d06a12d" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="c883cc6e-a76a-4dcc-9d23-d93843f874bc" />
+          </activityFinalNode>
+          <opaqueAction Id="c7228bdf-5d63-4447-a271-d5094ad923d8" name="Patikrinama ar užduotis nėra vykdoma" isLeaf="false">
+            <elementDefinition Id="586664a4-1437-4436-aab4-c45819dfc64e" />
+            <flowNodeTargets>
+              <controlFlow Id="b952d738-a526-4df3-8a67-56fb929542cb" isLeaf="false">
+                <decisionNodeMoniker Id="01a7fe94-2c45-4e2e-a4ac-a933705aa3cb" LastKnownName="Decision2" />
+                <elementDefinition Id="619b8b53-7d58-47d7-ab3b-a40621100704" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="5cbb26ad-5f81-485c-aa0c-500896b08a5e" name="Pašalinimo veiksmas atmetamas" isLeaf="false">
+            <elementDefinition Id="cc49595a-9583-462f-a442-b6ea9b78da95" />
+            <flowNodeTargets>
+              <controlFlow Id="65de2cc4-2e4a-49c6-be8d-eb25d9c428ed" isLeaf="false">
+                <activityFinalNodeMoniker Id="5e9e5efe-e47f-4064-9a61-d2083d06a12d" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="95fac62e-5acb-400d-8762-6c32025b44d2" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="01a7fe94-2c45-4e2e-a4ac-a933705aa3cb" name="Decision2" isLeaf="false">
+            <elementDefinition Id="1213d964-012b-48ce-a7db-d73bc6df536e" />
+            <flowNodeTargets>
+              <controlFlow Id="6061c811-76c2-43a6-9f3d-5f2d816a0d19" isLeaf="false">
+                <opaqueActionMoniker Id="68811097-ae79-45b3-8399-a9b7c21f0a15" LastKnownName="Išvedamas klaidos pranešimas" />
+                <elementDefinition Id="c3de6b6f-e35d-4266-9455-100bb0ddda46" />
+              </controlFlow>
+              <controlFlow Id="423db54b-48a7-4bd6-a07f-f93803bf496c" isLeaf="false">
+                <opaqueActionMoniker Id="729697ed-f9e5-4a9f-b8d0-de0ebd5d84ba" LastKnownName="Projektas ir su juo susijusi informacija pašalinama iš sistemos" />
+                <elementDefinition Id="49476660-6f12-4de7-9581-bf3dd8d65ee1" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="68811097-ae79-45b3-8399-a9b7c21f0a15" name="Išvedamas klaidos pranešimas" isLeaf="false">
+            <elementDefinition Id="21da0bde-f4f3-4202-bd51-6cad52c2eafd" />
+            <flowNodeTargets>
+              <controlFlow Id="e8199d92-c94d-4e7f-bca0-b9010079851e" isLeaf="false">
+                <activityFinalNodeMoniker Id="5e9e5efe-e47f-4064-9a61-d2083d06a12d" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="056712d7-81c0-4629-8f0e-3e70eb2ccaa2" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="729697ed-f9e5-4a9f-b8d0-de0ebd5d84ba" name="Projektas ir su juo susijusi informacija pašalinama iš sistemos" isLeaf="false">
+            <elementDefinition Id="8d8af9c6-0340-4df4-add7-d5cf75d55512" />
+            <flowNodeTargets>
+              <controlFlow Id="35b89121-6262-4d45-8c65-a57d6ac0e406" isLeaf="false">
+                <activityFinalNodeMoniker Id="6dc3f182-0adc-471e-bc6c-5a6fab2d3652" LastKnownName="ActivityFinal2" />
+                <elementDefinition Id="a8db51fc-dc5d-4048-b6b4-5a7e4790debb" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="6dc3f182-0adc-471e-bc6c-5a6fab2d3652" name="ActivityFinal2" isLeaf="false">
+            <elementDefinition Id="2daf2a9e-dac1-478b-b2b0-6c4057d77fa6" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="5b15f333-1bdb-4fed-b9dd-7e7ab4dc106a" name="Adform.Academy.DataTransfer.Diagrams">
+    <elementDefinition Id="de71d15e-79ce-4e7a-945f-f4b93b58e455" />
+  </package>
+</activityRootModel>

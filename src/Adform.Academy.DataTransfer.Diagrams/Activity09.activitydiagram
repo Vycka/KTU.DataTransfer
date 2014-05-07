@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="3214b455-315a-4c90-87ff-f52254b496ed" name="Activity9" linkedPackageId="219521fe-a70d-4f35-af5b-ed5a64999c11" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="83f9163b-611a-4c7d-9e66-159f3c24a19f">
+      <profileInstance Id="a82459e7-2479-4bba-bf71-7911a259e023" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="f650c23d-628d-435f-805d-00ca1ead6dd5">
+      <profileInstance Id="8eed91fe-1e9d-4687-8952-6f889c1389a0" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="8cd0d58b-f164-4f7c-b7f8-a5e3d4eb352d" name="Activity9" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="cf7c82e2-5373-4e6a-bee1-b51a413d1923" />
+        <nodes>
+          <initialNode Id="35976431-4458-41e2-ad23-67ca94095400" name="Initial1" isLeaf="false">
+            <elementDefinition Id="4198df10-3620-40d1-9483-ca1988947545" />
+            <flowNodeTargets>
+              <controlFlow Id="4a38a6a7-9356-438d-a24a-8e55d09cae80" isLeaf="false">
+                <opaqueActionMoniker Id="cf2cf859-0bf7-412c-aa7f-885975e6dcd9" LastKnownName="Duomenu perkėlimas" />
+                <elementDefinition Id="dc7fb3c7-fe53-470c-b937-16a096600571" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="cf2cf859-0bf7-412c-aa7f-885975e6dcd9" name="Duomenu perkėlimas" isLeaf="false">
+            <elementDefinition Id="5e7d266a-33ca-4d8c-bc14-7d684e0b8d3e" />
+            <flowNodeTargets>
+              <controlFlow Id="3aafddc0-5afd-4361-9289-ec1ad9eb55b7" isLeaf="false">
+                <opaqueActionMoniker Id="bde486ff-6fe9-4388-92eb-5a3f5c6cede3" LastKnownName="Gaunama grupės informacija, pagal kurią bus perkeltas duomenų fragmentas" />
+                <elementDefinition Id="43db9ec4-371e-454e-b3fc-c90ac70e677c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="bde486ff-6fe9-4388-92eb-5a3f5c6cede3" name="Gaunama grupės informacija, pagal kurią bus perkeltas duomenų fragmentas" isLeaf="false">
+            <elementDefinition Id="d74c6c08-e473-4281-81e8-bd4bc3b7fa1b" />
+            <flowNodeTargets>
+              <controlFlow Id="e23dd494-0949-455b-9605-2958a39e11d7" isLeaf="false">
+                <opaqueActionMoniker Id="38046359-dedd-431f-9770-b5a5faa77ca2" LastKnownName="Patikrinama, ar esamoje duomenų bazėje nėra šią grupę atitinkančių duomenų fragmento" />
+                <elementDefinition Id="c002bc9c-54c8-4ba6-9f5d-0dedc2e0d80b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="38046359-dedd-431f-9770-b5a5faa77ca2" name="Patikrinama, ar esamoje duomenų bazėje nėra šią grupę atitinkančių duomenų fragmento" isLeaf="false">
+            <elementDefinition Id="349797c8-bccb-4fde-af26-fc6ea55bc1fa" />
+            <flowNodeTargets>
+              <controlFlow Id="688b9dfe-5fa5-483f-834d-a2d074866b1b" isLeaf="false">
+                <decisionNodeMoniker Id="c13baaa6-c9dd-4902-9ec7-10bd461e0516" LastKnownName="Decision1" />
+                <elementDefinition Id="df3baae0-c333-4f19-ae5b-f3ee5a07a2fb" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="c13baaa6-c9dd-4902-9ec7-10bd461e0516" name="Decision1" isLeaf="false">
+            <elementDefinition Id="f02dc479-333c-4c69-812a-fdd8bd9bb3a0" />
+            <flowNodeTargets>
+              <controlFlow Id="b58cf364-70b1-4daa-a7ea-8fab6b81f097" guard="Duomenų yra" isLeaf="false">
+                <opaqueActionMoniker Id="5f51360b-38bc-441f-a6e1-04a9e52c2cfd" LastKnownName="Esami duomenys pašalinami" />
+                <elementDefinition Id="2f04ef65-4067-4ca7-a4ab-ff6f3511f215" />
+              </controlFlow>
+              <controlFlow Id="61e7c43b-3f25-45ea-baf5-7a159c887b4d" guard="Duomenų nėra" isLeaf="false">
+                <opaqueActionMoniker Id="1f7c574e-ab9a-489b-905d-cb3c0a473090" LastKnownName="Perkeliami grupę atitinkantys duomenys iš vienos duomenų bazės į kitą" />
+                <elementDefinition Id="66721ec1-e899-4e15-b497-fc5f613fac7f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="5f51360b-38bc-441f-a6e1-04a9e52c2cfd" name="Esami duomenys pašalinami" isLeaf="false">
+            <elementDefinition Id="c9b28f4e-01cf-48fb-8af7-7ed5273504e1" />
+            <flowNodeTargets>
+              <controlFlow Id="b5f37aa5-12c4-4150-b71d-8f6aacd7e2da" isLeaf="false">
+                <opaqueActionMoniker Id="1f7c574e-ab9a-489b-905d-cb3c0a473090" LastKnownName="Perkeliami grupę atitinkantys duomenys iš vienos duomenų bazės į kitą" />
+                <elementDefinition Id="92b45781-03a2-4ddf-a18d-e4439fbc7ded" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="1f7c574e-ab9a-489b-905d-cb3c0a473090" name="Perkeliami grupę atitinkantys duomenys iš vienos duomenų bazės į kitą" isLeaf="false">
+            <elementDefinition Id="9e5ec232-8e0a-4333-977e-9620d7ece3b8" />
+            <flowNodeTargets>
+              <controlFlow Id="af021e6a-5ae9-4079-a55b-c582c02defd3" isLeaf="false">
+                <opaqueActionMoniker Id="9f869350-26b2-4560-9da4-50471a33fb1d" LastKnownName="Grupės būsena pažymima kaip perkopijuota" />
+                <elementDefinition Id="d7f5ade5-f42f-41ab-babe-435699ed9a02" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="9f869350-26b2-4560-9da4-50471a33fb1d" name="Grupės būsena pažymima kaip perkopijuota" isLeaf="false">
+            <elementDefinition Id="63e9c62e-2c5d-4682-92fb-69d522d84955" />
+            <flowNodeTargets>
+              <controlFlow Id="bcf39c07-e15f-4285-82ba-c1906b14c0cf" isLeaf="false">
+                <activityFinalNodeMoniker Id="048eda36-1dd3-460d-8611-88998b5f4190" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="247475b6-0af1-4db5-a026-b4f1bc92b607" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="048eda36-1dd3-460d-8611-88998b5f4190" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="8dd60703-42c3-46c9-9983-19ac1846edff" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="219521fe-a70d-4f35-af5b-ed5a64999c11" name="Adform.Academy.DataTransfer.Diagrams">
+    <elementDefinition Id="de71d15e-79ce-4e7a-945f-f4b93b58e455" />
+  </package>
+</activityRootModel>

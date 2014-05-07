@@ -86,7 +86,7 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
                 };
 
                 var existingDatabaseById = session.Get<Database>(database.DatabaseId);
-                Logger.Log(new DatabaseChangedEvent(database, existingDatabaseById, request.InvokerUserId));
+                Logger.Log(new DatabaseChangedEvent(database.DatabaseId, database.ConnectionName, existingDatabaseById.ConnectionName, request.InvokerUserId));
 
                 session.Merge(database);
                 session.Flush();
@@ -116,7 +116,7 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
 
                 if (result.Count == 0)
                 {
-                    Logger.Log(new DatabaseDeleteEvent(databaseToDelete, request.InvokerUserId));
+                    Logger.Log(new DatabaseDeleteEvent(databaseToDelete.ConnectionName, request.InvokerUserId));
 
                     session.Delete(databaseToDelete);
                     session.Flush();

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="9e8bbb77-48a6-4fbf-9c38-882b4299d262" name="Activity3" linkedPackageId="f134c8d8-4a30-4978-b3c6-35d0b8c781be" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="c66cbd2e-4c55-4466-ade5-c46c60f0f807">
+      <profileInstance Id="2f2bb80a-24dc-4bdf-b9c6-f180658b14fa" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="d5c310aa-c55b-4c3c-bd90-47b656f152be">
+      <profileInstance Id="ab7f7919-03e3-49cd-bade-783f7ab757d8" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="4028fc89-10c1-4a8b-bc91-cea727609d24" name="Activity3" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="c7b35578-4d43-4267-a048-27ca7ce3338c" />
+        <nodes>
+          <initialNode Id="cd745ac6-f7da-4c10-86a6-cc92830b565b" name="Initial1" isLeaf="false">
+            <elementDefinition Id="b95a83a2-d92e-4409-8d18-999e16b4a4c4" />
+            <flowNodeTargets>
+              <controlFlow Id="f5a9cd96-13bf-4131-88b6-f095410dfc1a" isLeaf="false">
+                <opaqueActionMoniker Id="4b3d0de7-7adf-45a4-a0e1-8fe5b0714960" LastKnownName="Naujos duomnų bazės pridėjimas" />
+                <elementDefinition Id="cbb0cc62-8c30-456a-8923-927c48f07ee7" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="4b3d0de7-7adf-45a4-a0e1-8fe5b0714960" name="Naujos duomnų bazės pridėjimas" isLeaf="false">
+            <elementDefinition Id="9ad57a72-91be-4d2a-b6d1-7ec3b588af60" />
+            <flowNodeTargets>
+              <controlFlow Id="35de100e-5ba2-4687-92c2-8c94b209a775" isLeaf="false">
+                <opaqueActionMoniker Id="66182d38-7531-4b5a-8b39-d262e12cdd63" LastKnownName="Naujų duomenų bazės duomenų įvedimas" />
+                <elementDefinition Id="c1e51904-1bc9-4ffb-af62-bafe40ce546e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <initialNode Id="2d8aea32-257a-4858-9abd-f5ac784c0e53" name="Initial11" isLeaf="false">
+            <elementDefinition Id="26d2c691-5871-421f-bbbe-4056c895be5d" />
+            <flowNodeTargets>
+              <controlFlow Id="44477ed6-7ea2-4a87-8123-f772234bac23" isLeaf="false">
+                <opaqueActionMoniker Id="106476f0-eb00-4568-b82f-29bc40ae4cc8" LastKnownName="Esamos duomenų bazės redagavimas" />
+                <elementDefinition Id="e40b0fa3-eaff-422f-9b46-f2f36b269423" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="106476f0-eb00-4568-b82f-29bc40ae4cc8" name="Esamos duomenų bazės redagavimas" isLeaf="false">
+            <elementDefinition Id="acdf0b0b-81a1-495a-8e4e-b7d345e72464" />
+            <flowNodeTargets>
+              <controlFlow Id="73d750b8-9397-49e5-82de-80baac49631d" isLeaf="false">
+                <opaqueActionMoniker Id="66182d38-7531-4b5a-8b39-d262e12cdd63" LastKnownName="Naujų duomenų bazės duomenų įvedimas" />
+                <elementDefinition Id="a698bebc-7cc6-4416-84f6-4edad7dcff64" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="66182d38-7531-4b5a-8b39-d262e12cdd63" name="Naujų duomenų bazės duomenų įvedimas" isLeaf="false">
+            <elementDefinition Id="189a0128-9fe9-462f-b965-07695f5b1718" />
+            <flowNodeTargets>
+              <controlFlow Id="b549a28a-bbf8-4dca-9b32-07c3467b66d6" isLeaf="false">
+                <opaqueActionMoniker Id="29ccf59b-bbe8-4150-a41b-40f31b819f77" LastKnownName="Patikrinama, ar nėra jau duomenų bazės su tokiu pačiu pavadinimu" />
+                <elementDefinition Id="b4b28e01-1e2f-46d0-ae5c-5eba19b0918c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="29ccf59b-bbe8-4150-a41b-40f31b819f77" name="Patikrinama, ar nėra jau duomenų bazės su tokiu pačiu pavadinimu" isLeaf="false">
+            <elementDefinition Id="69948e19-5511-4d65-ae57-a09cadca2123" />
+            <flowNodeTargets>
+              <controlFlow Id="768c59de-8237-4510-a26a-ba5e786ac5bc" isLeaf="false">
+                <decisionNodeMoniker Id="6676b871-df61-418b-8b91-134f7c444758" LastKnownName="Decision1" />
+                <elementDefinition Id="6f60ba84-f57f-431c-b447-e4f0f5585bd9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="6676b871-df61-418b-8b91-134f7c444758" name="Decision1" isLeaf="false">
+            <elementDefinition Id="9fc4244c-d696-4262-a33c-1de2a89d000d" />
+            <flowNodeTargets>
+              <controlFlow Id="f2e98933-50cd-4da6-a10d-fcee015d55fe" guard="Yra" isLeaf="false">
+                <opaqueActionMoniker Id="66182d38-7531-4b5a-8b39-d262e12cdd63" LastKnownName="Naujų duomenų bazės duomenų įvedimas" />
+                <elementDefinition Id="d9f6eba9-9dec-4b7a-9b3e-5485df5c32e8" />
+              </controlFlow>
+              <controlFlow Id="5141fa51-a867-4bc4-963a-e7905b6f7f6b" guard="Nėra" isLeaf="false">
+                <opaqueActionMoniker Id="dc76f105-1c7a-4c4b-95e2-324583d88cc6" LastKnownName="Įvesti duomenys išsaugomi duomenų bazėje" />
+                <elementDefinition Id="e876342e-524a-43f8-8bfc-8d081a023733" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <activityFinalNode Id="8562b42f-5fa0-4400-9a65-e4c5491b3d13" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="cd4fb1be-897c-4827-9654-89f98f1a03b7" />
+          </activityFinalNode>
+          <opaqueAction Id="dc76f105-1c7a-4c4b-95e2-324583d88cc6" name="Įvesti duomenys išsaugomi duomenų bazėje" isLeaf="false">
+            <elementDefinition Id="62059ada-6435-4fe8-b708-423067112289" />
+            <flowNodeTargets>
+              <controlFlow Id="43018f39-c79e-4036-bfba-28b0f3508551" isLeaf="false">
+                <activityFinalNodeMoniker Id="8562b42f-5fa0-4400-9a65-e4c5491b3d13" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="74d3e57f-460d-4dc3-9b80-97a88fa4cb46" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="f134c8d8-4a30-4978-b3c6-35d0b8c781be" name="Adform.Academy.DataTransfer.Diagrams">
+    <elementDefinition Id="de71d15e-79ce-4e7a-945f-f4b93b58e455" />
+  </package>
+</activityRootModel>

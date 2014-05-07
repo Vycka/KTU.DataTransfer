@@ -33,10 +33,8 @@ function RefreshAuditLog() {
                     td2.className = "td2";
                     td3.className = "td3";
 
-                    var time = logItem.TimeStamp;
-                    time.setMinutes(time.getMinutes() - time.getTimezoneOffset());
-  
-                    td1.innerHTML = moment(time).format("YYYY-MM-DD HH:mm:ss");
+                    var time = moment(logItem.TimeStamp).add('m',moment().zone()*-1);
+                    td1.innerHTML = time.format("YYYY-MM-DD HH:mm:ss");
                     if (logItem.UserName != null)
                         td2.innerHTML = logItem.UserName;
                     td3.innerHTML = logItem.Message;

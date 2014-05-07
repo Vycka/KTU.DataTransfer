@@ -83,7 +83,7 @@ namespace Adform.Academy.DataTransfer.Web.Controllers
             }
             else
             {
-                ViewBag.Error = "Invalid User name and/or password!";
+                ViewBag.Error = response.Message;
                 return View((object)returnUrl); // If passed as string, it will be treated as Controller name
             }
 

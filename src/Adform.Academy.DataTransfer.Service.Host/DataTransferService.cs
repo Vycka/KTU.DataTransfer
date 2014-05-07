@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.ServiceProcess;
+using Adform.Academy.DataTransfer.Core.DataTransfer;
 using Adform.Academy.DataTransfer.Logger;
 using Adform.Academy.DataTransfer.Logger.Events;
 using Adform.Academy.DataTransfer.WebApi;
@@ -11,14 +12,14 @@ namespace Adform.Academy.DataTransfer.Service.Host
 {
     public class DataTransferService : ServiceBase
     {
-        private readonly ILogger _logging;
-
+        private readonly ILogger _logger;
+        private DataTransferServiceRunner _serviceRunner;
         private WebHost _webApiHost;
 
-        public DataTransferService(ILogger logging)
+        public DataTransferService(ILogger logger)
         {
-            if (logging == null) throw new ArgumentNullException("logging");
-            _logging = logging;
+            if (logger == null) throw new ArgumentNullException("logger");
+            _logger = logger;
 
             ServiceName = "Adform.Academy.DataTransfer";
         }
@@ -39,25 +40,34 @@ namespace Adform.Academy.DataTransfer.Service.Host
 
         protected override void OnStart(string[] args)
         {
+            _logger.Log(new LogEvent("ServiceHost starting..."));
+
             AppDomain.CurrentDomain.UnhandledException -= OnUnhandledException;
             AppDomain.CurrentDomain.UnhandledException += OnUnhandledException;
+
+            _serviceRunner = new DataTransferServiceRunner(_logger);
+            _serviceRunner.StartService();
+
+            WebApi.Controllers.ControllerBase.Logger = _logger;
+            WebApi.Controllers.ControllerBase.ServiceRunner = _serviceRunner;
 
 
             string url = ConfigurationManager.AppSettings["DataTransferServiceUrl"];
             var dependencyResolver = new AutofacWebApiDependencyResolver(DI.Container.Instance);
-            _webApiHost = new WebHost(url, dependencyResolver, _logging);
+            _webApiHost = new WebHost(url, dependencyResolver, _logger);
             _webApiHost.Start();
 
-            _logging.Log(new LogEvent("Service Started"));
+            _logger.Log(new LogEvent("ServiceHost started"));
 
             base.OnStart(args);
         }
 
         protected override void OnStop()
         {
+            _serviceRunner.StopService();
             _webApiHost.Dispose();
 
-            _logging.Log(new LogEvent("Service Stopped!"));
+            _logger.Log(new LogEvent("ServiceHost stopped"));
             base.OnStop();
         }
 
@@ -72,7 +82,7 @@ namespace Adform.Academy.DataTransfer.Service.Host
         {
             var exception = args.ExceptionObject as Exception;
 
-            _logging.LogError(new LogErrorEvent(exception));
+            _logger.LogError(new LogErrorEvent(exception));
         }
 
         protected override void Dispose(bool disposing)

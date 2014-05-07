@@ -7,7 +7,6 @@ using Adform.Academy.DataTransfer.Core.DTO.Types;
 using Adform.Academy.DataTransfer.Logger.Events;
 using Adform.Academy.DataTransfer.WebApi.Contracts.Projects;
 using Newtonsoft.Json;
-using NHibernate;
 using NHibernate.Criterion;
 using NHibernate.Transform;
 
@@ -90,14 +89,20 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
             using (var session = SessionFactory.OpenSession())
             {
                 Project project = request.ProjectId == 0
-                    ? new Project {Filters = new List<Filter>()}
+                    ? new Project
+                    {
+                        Filters = new List<Filter>()
+                    }
                     : session.Get<Project>(request.ProjectId);
 
                 project.Name = request.ProjectName;
+                project.ExecutionState = ExecutionStepsTypes.NotStarted;
+                project.ProjectState = ProjectStateTypes.Stopped;
                 project.DatabaseSource = session.Get<Database>(request.SourceDatabaseId);
                 project.DatabaseDestination = session.Get<Database>(request.DestinationDatabaseId);
                 project.CreatedBy = session.Get<User>(request.InvokerUserId);
                 project.Filters.Clear();
+
                 foreach (FilterItem filter in request.Filters)
                 {
                     var filterDto = new Filter
@@ -123,9 +128,9 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
                 session.Flush();
 
                 if (request.ProjectId == 0)
-                    Logger.Log(new ProjectCreatedEvent(project, request.InvokerUserId));
+                    Logger.Log(new ProjectCreatedEvent(project.ProjectId, request.InvokerUserId));
                 else
-                    Logger.Log(new ProjectModified(project, request.InvokerUserId));
+                    Logger.Log(new ProjectModified(project.ProjectId, request.InvokerUserId));
 
                 return new SaveProjectResponse();
             }
@@ -139,7 +144,7 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
             {
                 var project = session.Get<Project>(request.ProjectId);
 
-                Logger.Log(new ProjectDeleted(project, request.InvokerUserId));
+                Logger.Log(new ProjectDeleted(project.ProjectId, request.InvokerUserId));
 
                 session.Delete(project);
                 session.Flush();

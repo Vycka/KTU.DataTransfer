@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<componentDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UMLComponentDiagram1">
-  <componentModelMoniker Id="f2d72767-e61f-427b-8290-2e4585a06726" />
-  <nestedChildShapes>
-    <componentShape Id="625d924b-673f-4543-b0a6-9781e7f18e6e" absoluteBounds="2.625, 1.25, 2.3604166666666675, 2.3625000000000003" customColor="161, 199, 231" whiteBoxBoundsHeight="2.3625000000000003" whiteBoxBoundsWidth="2.3604166666666675" blackBoxBoundsHeight="0.7" blackBoxBoundsWidth="2.3604166666666675" whiteBoxTopEdgeShapesCount="0" whiteBoxRightEdgeShapesCount="0" whiteBoxBottomEdgeShapesCount="0" whiteBoxLeftEdgeShapesCount="0" blackBoxTopEdgeShapesCount="0" blackBoxRightEdgeShapesCount="0" blackBoxBottomEdgeShapesCount="0" blackBoxLeftEdgeShapesCount="0" whiteBoxSettingsInitialized="true" blackBoxSettingsInitialized="true">
-      <componentMoniker Id="afc61ebc-fd91-4c4a-a912-14b597b23a16" LastKnownName="Component1" />
-    </componentShape>
-  </nestedChildShapes>
-</componentDiagram>

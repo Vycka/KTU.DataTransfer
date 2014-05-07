@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="e4d96080-abd3-4274-840b-47d3c78dacd3" name="UseCaseHuman" linkedPackageId="32fc6139-8071-4f30-9715-9b5e2afc1180" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="d4ebfb4c-6bdc-44d4-bafb-bbf5ef8426a6" name="Internetinė sąsaja / WebApi" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="923d66e0-7e59-44c2-9bc1-7cc11693d1ce" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="59f11c78-f591-4478-be3f-83795923af8d" name="1. Prisijungimas prie sistemos" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a28ba5bd-61e4-42cc-8586-e306799a931b" />
+        <subjects>
+          <subsystemMoniker Id="d4ebfb4c-6bdc-44d4-bafb-bbf5ef8426a6" LastKnownName="Internetinė sąsaja / WebApi" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="bcf7460a-2186-4248-a2c8-698bdef4e595" name="2.Vartotojo paskyrų kūrimas ir redagavimas" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a7fa7f01-153b-42ba-b714-174fe3c68124" />
+        <subjects>
+          <subsystemMoniker Id="d4ebfb4c-6bdc-44d4-bafb-bbf5ef8426a6" LastKnownName="Internetinė sąsaja / WebApi" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <useCase Id="72235475-0ffb-4a6f-a7fd-af1a4bdf1b36" name="3.Duomenų bazių kūrimas ir redagavimas" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="791a7fa6-657f-4fc2-a276-2e09eb8dc676" />
+        <subjects>
+          <subsystemMoniker Id="d4ebfb4c-6bdc-44d4-bafb-bbf5ef8426a6" LastKnownName="Internetinė sąsaja / WebApi" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9dad59aa-51f6-4b23-aa3d-67fb1afb04b4" name="4. Perkėlimo užduočių kūrimas ir redagavimas" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="aae93801-df1e-401e-be50-25f3f33d2c67" />
+        <subjects>
+          <subsystemMoniker Id="d4ebfb4c-6bdc-44d4-bafb-bbf5ef8426a6" LastKnownName="Internetinė sąsaja / WebApi" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="33207c42-1a96-4617-806a-fd6da98d437a" name="5. Perkėlimo užduočių vykdymo paleidimas ar sustabdymas" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e10d0c32-034b-4fcd-accc-579ff0362710" />
+        <subjects>
+          <subsystemMoniker Id="d4ebfb4c-6bdc-44d4-bafb-bbf5ef8426a6" LastKnownName="Internetinė sąsaja / WebApi" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6c9eebec-da64-4f2c-a196-10ce13aca21e" name="6. Perkėlimo užduoties visiškas pašalinimas iš sistemos" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="31206b0c-5585-4a81-aa78-3e07ebf154a5" />
+        <subjects>
+          <subsystemMoniker Id="d4ebfb4c-6bdc-44d4-bafb-bbf5ef8426a6" LastKnownName="Internetinė sąsaja / WebApi" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="ef575fc6-b754-44fc-abce-176546d43b3e" name="Neprisijungęs vartotojas (Svečias)" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5e50057e-a491-44d6-adb4-dde7a8abe729" />
+        <targetEnds>
+          <association Id="9fa0f6c9-77f2-4498-a9c6-98da05470b12" isDerived="false" sourceEndRoleName="Neprisijungęs vartotojas" targetEndRoleName="1. Prisijungimas prie sistemos" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="59f11c78-f591-4478-be3f-83795923af8d" LastKnownName="1. Prisijungimas prie sistemos" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f395bb2b-d510-4b36-a45d-41acb769e34e" name="Neprisijungęs vartotojas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="23bbd017-e836-4ef4-a4f4-78833e419a5d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7a82e780-5e4e-4eec-a57a-1967f3fbb465" name="1. Prisijungimas prie sistemos" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a2304673-096b-4cae-b422-2c71be4a3381" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="90bbaca4-0275-41f8-82d5-4ef85b5c7368" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="172988bd-f9d9-4bd0-8f57-3cf85d411889" name="Prisijungęs vartotojas" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c887d117-8ae3-437e-b428-65381f59278d" />
+        <targetEnds>
+          <association Id="7667670c-2501-4197-b6fa-b59f38af8d12" isDerived="false" sourceEndRoleName="Prisijungęs vartotojas" targetEndRoleName="4. Perkėlimo užduočių kūrimas ir redagavimas" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9dad59aa-51f6-4b23-aa3d-67fb1afb04b4" LastKnownName="4. Perkėlimo užduočių kūrimas ir redagavimas" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f373bb1e-224b-4dd1-bbc8-cee9894194d9" name="Prisijungęs vartotojas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a8208144-5415-4929-954a-d02eae4c33f9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5b9d5aaa-d134-4dff-adaa-ae8a75610c81" name="4. Perkėlimo užduočių kūrimas ir redagavimas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="49c1aca4-b256-4602-8063-b53a49271d68" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ee794500-652e-4286-96f2-1c92b546ff94" />
+          </association>
+          <association Id="cb055374-5d92-4de8-a742-9a485cc2e064" isDerived="false" sourceEndRoleName="Prisijungęs vartotojas" targetEndRoleName="5. Perkėlimo užduočių vykdymo paleidimas ar sustabdymas" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="33207c42-1a96-4617-806a-fd6da98d437a" LastKnownName="5. Perkėlimo užduočių vykdymo paleidimas ar sustabdymas" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="597a5533-c714-4b10-b92a-a6dd4b634a46" name="Prisijungęs vartotojas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7359e9c4-7dc3-449d-ab79-7d15e33aad96" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7bdbf8a6-e5a2-45c7-ad2a-e71d9c88a8dc" name="5. Perkėlimo užduočių vykdymo paleidimas ar sustabdymas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3af25e13-dc2c-4718-8f60-622da3b1cd4e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d08b1927-0c90-4c69-a45c-22b2b4794ae9" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="32946f22-1735-4b78-bf99-db5ea625e0bd" name="Prisijungęs Administratorius" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="86bc8080-b2ab-4874-b485-1c19529f3967" />
+        <targetEnds>
+          <association Id="1707af1c-1691-48fb-aea5-895afd2f1888" isDerived="false" sourceEndRoleName="Prisijungęs Administratorius" targetEndRoleName="3.Duomenų bazių kūrimas ir redagavimas" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="72235475-0ffb-4a6f-a7fd-af1a4bdf1b36" LastKnownName="3.Duomenų bazių kūrimas ir redagavimas" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5d5cc45c-afb4-41fe-a719-f6e26ea01a82" name="Prisijungęs Administratorius" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e14e197f-ab23-444d-b57d-1640aa8c0bc2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a5e28967-a047-46f5-9f9b-cd859a61da73" name="3.Duomenų bazių kūrimas ir redagavimas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9b92a627-ca0a-4db2-bdbd-996353786d4d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0382af92-5a74-4971-aec2-3d1e79098a21" />
+          </association>
+          <association Id="bbe6ab65-54f9-4934-b834-b47c652ed9d8" isDerived="false" sourceEndRoleName="Prisijungęs Administratorius" targetEndRoleName="4. Perkėlimo užduočių kūrimas ir redagavimas" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9dad59aa-51f6-4b23-aa3d-67fb1afb04b4" LastKnownName="4. Perkėlimo užduočių kūrimas ir redagavimas" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7b88ab81-6530-415f-b249-324ad2ecec53" name="Prisijungęs Administratorius" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="add614de-3391-490d-9e6f-87bb65a4c613" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0d7a2499-b070-4cc8-8a81-5ee81c3440b1" name="4. Perkėlimo užduočių kūrimas ir redagavimas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d6f6e849-e50e-482a-ada0-fce0b13d79c9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ac8a021c-1794-4e6a-b851-4a0eeeaf547b" />
+          </association>
+          <association Id="1abaa63a-edfc-45ca-832a-dfaea81882e6" isDerived="false" sourceEndRoleName="Prisijungęs Administratorius" targetEndRoleName="4. Perkėlimo užduočių kūrimas ir redagavimas" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9dad59aa-51f6-4b23-aa3d-67fb1afb04b4" LastKnownName="4. Perkėlimo užduočių kūrimas ir redagavimas" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4c8b1ff2-39c0-4404-b343-a3681918b181" name="Prisijungęs Administratorius" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="824e7e0f-5e3f-4473-ab0e-3c247fe51bd5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4289fafc-099a-47fa-a536-fdd5b6fc5ca9" name="4. Perkėlimo užduočių kūrimas ir redagavimas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9860e675-a14d-42b5-be95-d14477c83144" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="89ccf70c-11e1-4180-9cbd-f8b88abb52df" />
+          </association>
+          <association Id="ea9e1e7c-49c8-4496-9e25-444e9620a15f" isDerived="false" sourceEndRoleName="Prisijungęs Administratorius" targetEndRoleName="5. Perkėlimo užduočių vykdymo paleidimas ar sustabdymas" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="33207c42-1a96-4617-806a-fd6da98d437a" LastKnownName="5. Perkėlimo užduočių vykdymo paleidimas ar sustabdymas" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cfc3e662-04fc-4ce5-b07d-19aa4a25159c" name="Prisijungęs Administratorius" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4efb2b2a-bfea-4252-b73f-4d0d3319047b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8f7c223d-318c-45a6-9ad7-ee38fd0bdec1" name="5. Perkėlimo užduočių vykdymo paleidimas ar sustabdymas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d6b145d1-c0f9-4a6d-be9a-4e727be93f64" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8404b33e-41f6-4a8a-859b-94dcc5316f6e" />
+          </association>
+          <association Id="379675b7-0ab4-4670-8350-99e13efe67b0" isDerived="false" sourceEndRoleName="Prisijungęs Administratorius" targetEndRoleName="2.Vartotojo paskyrų kūrimas ir redagavimas" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="bcf7460a-2186-4248-a2c8-698bdef4e595" LastKnownName="2.Vartotojo paskyrų kūrimas ir redagavimas" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="66998412-1ace-46b7-9595-286429dde126" name="Prisijungęs Administratorius" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8e5a85d6-f162-449f-aa31-774b6574cd93" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bc2e666c-9b20-4a55-a08b-67030a3b5e11" name="2.Vartotojo paskyrų kūrimas ir redagavimas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="38ed8e5c-9428-4ead-a27c-653e70257b99" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="315e9a9b-6c58-46e1-9dff-932227eb4341" />
+          </association>
+          <association Id="c357cfdb-27f9-49cf-808d-dcd1a2dd67a4" isDerived="false" sourceEndRoleName="Prisijungęs Administratorius" targetEndRoleName="6. Perkėlimo užduoties visiškas pašalinimas iš sistemos" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6c9eebec-da64-4f2c-a196-10ce13aca21e" LastKnownName="6. Perkėlimo užduoties visiškas pašalinimas iš sistemos" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d0e016ef-6ef4-44c1-bfcb-933de38434ac" name="Prisijungęs Administratorius" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="423ce079-1e6a-43bf-bc37-1a0e0da6d154" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d60fb725-cec3-4f8c-a7d7-fc206351f642" name="6. Perkėlimo užduoties visiškas pašalinimas iš sistemos" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ed939528-a00e-48de-a4d3-f521f618dd65" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="84d79293-cf63-4d95-8162-566b6465a560" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="fe13ef01-d922-4e8d-bed7-e36fafb89283" name="Užduotis vykdantis servisas" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b6817857-007a-45df-b688-ff13aadb79f0" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="98366ae7-9798-4397-9aa4-3dcb2e9a3d20" name="7. Užduoties vykdymas" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c3e5caf1-571c-40f8-8711-86cbec60aaf5" />
+        <additions>
+          <include Id="df654274-848b-4e4f-962c-354970334688">
+            <useCaseMoniker Id="c19b2d1a-30d9-40ac-b023-b6020ee8304d" LastKnownName="8. Duomenų kurie bus perkelti - Suskaldymas į grupes" />
+            <elementDefinition Id="07cfaf11-bfc2-47d6-b0c4-0a8e3bcd25d4" />
+          </include>
+          <include Id="c411a17a-cf72-4ad2-bf08-02cbdfe51bc8">
+            <useCaseMoniker Id="95d0555e-8228-4c66-81cb-ba9b7a242bfb" LastKnownName="8. Perkeliami duomenys" />
+            <elementDefinition Id="a314eaf7-4ed3-43ac-ba09-5b4290235661" />
+          </include>
+          <include Id="7609428d-5b23-4532-9cd9-387e6c9a3ba1">
+            <useCaseMoniker Id="60dca4bc-d184-4b55-95fa-c2027aa6dd5e" LastKnownName="10. Perkeltų duomenų patikrinimas" />
+            <elementDefinition Id="4d27f7cd-232d-4278-aaba-5aa543b37735" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="fe13ef01-d922-4e8d-bed7-e36fafb89283" LastKnownName="Užduotis vykdantis servisas" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="c19b2d1a-30d9-40ac-b023-b6020ee8304d" name="8. Duomenų kurie bus perkelti - Suskaldymas į grupes" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d9a8936d-c08a-448a-b88d-89e2c4a20c8d" />
+        <subjects>
+          <subsystemMoniker Id="fe13ef01-d922-4e8d-bed7-e36fafb89283" LastKnownName="Užduotis vykdantis servisas" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <useCase Id="95d0555e-8228-4c66-81cb-ba9b7a242bfb" name="8. Perkeliami duomenys" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d3ad1add-862f-40fd-a060-4a94623eeb11" />
+        <subjects>
+          <subsystemMoniker Id="fe13ef01-d922-4e8d-bed7-e36fafb89283" LastKnownName="Užduotis vykdantis servisas" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="60dca4bc-d184-4b55-95fa-c2027aa6dd5e" name="10. Perkeltų duomenų patikrinimas" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ef0575e2-267f-438b-973c-e1537a62cf39" />
+        <subjects>
+          <subsystemMoniker Id="fe13ef01-d922-4e8d-bed7-e36fafb89283" LastKnownName="Užduotis vykdantis servisas" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="2e0d2896-a650-469a-a6f6-5ffec674fc23" name="Servisas" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="81782bbc-989c-4101-a1b4-db2ff8c1f2b3" />
+        <targetEnds>
+          <association Id="272a4bb8-f328-4623-b9c6-14325c885ba4" isDerived="false" sourceEndRoleName="Servisas" targetEndRoleName="7. Užduoties vykdymas" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="98366ae7-9798-4397-9aa4-3dcb2e9a3d20" LastKnownName="7. Užduoties vykdymas" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cfa87ef0-865e-4ebc-9b71-0b353b8d40a8" name="Servisas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="75f37d74-61f7-46a6-a184-96389375e425" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f1dbd14e-c0a4-4339-93f4-85af50fd7698" name="7. Užduoties vykdymas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a6733359-9550-498d-9a71-b0b785a36089" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a36f523f-cc65-420e-9bfa-2e2b8eb6e432" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="32fc6139-8071-4f30-9715-9b5e2afc1180" name="Adform.Academy.DataTransfer.Diagrams">
+    <elementDefinition Id="de71d15e-79ce-4e7a-945f-f4b93b58e455" />
+    <profileInstances>
+      <packageHasProfileInstances Id="3acb6157-3bdf-4b08-bb74-70eda5060508">
+        <profileInstance Id="e3e6caa2-acd3-41f0-a8ac-335dda56f4a6" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="080dfc7d-26fb-44e7-a5e7-f5462c92898f">
+        <profileInstance Id="e23acd33-e37e-4458-b95c-9cde5b0982bc" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

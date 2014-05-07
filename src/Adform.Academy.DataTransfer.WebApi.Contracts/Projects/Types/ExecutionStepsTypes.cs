@@ -9,6 +9,7 @@
         Copy = 3,
         Verify = 4,
         Delete = 5,
-        Completed = 6
+        Completed = 6,
+        Canceled = 7
     }
 }

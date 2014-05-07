@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Newtonsoft.Json;
 
 namespace Adform.Academy.DataTransfer.Core.DTO.Models
 {

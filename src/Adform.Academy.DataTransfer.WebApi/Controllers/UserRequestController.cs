@@ -92,7 +92,7 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
                 {
                     var existingUser = session.Get<User>(request.UserId);
 
-                    Logger.Log(new UserModifiedEvent(existingUser, request.UserName, request.InvokerUserId));
+                    Logger.Log(new UserModifiedEvent(existingUser.UserName, request.UserName, request.InvokerUserId));
 
                     user.Password = existingUser.Password;
                 }
@@ -135,13 +135,19 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
             {
                 return new CheckLoginResponse
                 {
-                    Success = false
+                    Success = false,
+                    Message = "Incorrect Username and/or Password"
                 };
             }
 
 
             var response = new CheckLoginResponse();
-            response.Success = user.IsActive && ComputeSha256(request.Password) == user.Password;
+            response.Success = ComputeSha256(request.Password) == user.Password;
+            if (!user.IsActive && response.Success)
+            {
+                response.Message = "User is deactivated";
+                response.Success = false;
+            }
             if (response.Success)
             {
                 response.UserId = user.UserId;
