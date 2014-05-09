@@ -12,6 +12,12 @@ namespace Adform.Academy.DataTransfer.Web.Controllers
         }
 
         [Authorize]
+        public JsonResult Continue(int id)
+        {
+            return Json(ProjectExecutorRequests.Continue(id));
+        }
+
+        [Authorize]
         public JsonResult Archive(int id)
         {
             return Json(ProjectExecutorRequests.Archive(id));

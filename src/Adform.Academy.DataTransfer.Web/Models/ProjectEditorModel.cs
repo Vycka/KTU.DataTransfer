@@ -97,6 +97,7 @@ namespace Adform.Academy.DataTransfer.Web.Models
                         if (Filters[x].Columns.Count == 0)
                         {
                             Filters.RemoveAt(x);
+                            x--;
                         }
                     }
                 }

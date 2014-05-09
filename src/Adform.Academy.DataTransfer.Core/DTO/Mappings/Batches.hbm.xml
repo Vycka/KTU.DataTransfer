@@ -9,7 +9,8 @@
     </id>
     
     <many-to-one name="Filter" class="Filter" column="ID_Filters"/>
-    <property name="BatchFilter"/>
+    <property name="BatchFilterMin"/>
+    <property name="BatchFilterMax"/>
     <property name="BatchState" column="ID_BatchState"/>
   </class>
 

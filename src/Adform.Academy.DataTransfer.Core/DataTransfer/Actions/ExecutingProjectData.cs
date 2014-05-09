@@ -12,5 +12,6 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer.Actions
         public SqlConnection DesConnection;
         public ISession Session;
         public ILogger Logger;
+        public ProjectRunner ProjectRunner;
     }
 }

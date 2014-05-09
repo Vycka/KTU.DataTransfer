@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="de71d15e-79ce-4e7a-945f-f4b93b58e455"
   name="Adform.Academy.DataTransfer.Diagrams" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -22,7 +22,7 @@
       Id="97948792-0dc4-4900-8f40-504e5c3a32f2">
       <body>Priklausomai nuo situacijos galimi veiksmai:
 * Paleisti projektą.
-* Pristabdytį projektą su galimybe pratesti.
+* Pristabdytį projektą su galimybe pratęsti.
 * Pratesti projekto vykdymą.
 * Visiškai atšaukti projekto vykdymą.</body>
       <annotatedElements>
@@ -1130,14 +1130,14 @@
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="9ad57a72-91be-4d2a-b6d1-7ec3b588af60"
-                  LastKnownName="Naujos duomnų bazės pridėjimas"
+                  LastKnownName="Naujos duomenų bazės pridėjimas"
                   LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
               </controlFlow>
             </flowNodeTargets>
           </initialNode>
           <opaqueAction
             Id="9ad57a72-91be-4d2a-b6d1-7ec3b588af60"
-            name="Naujos duomnų bazės pridėjimas"
+            name="Naujos duomenų bazės pridėjimas"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
@@ -1471,14 +1471,14 @@
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="d632eb33-179d-4c0d-963e-a1d4a6d779cf"
-                  LastKnownName="Pasirkto veiksmo komandą išsiunčiamą užduotis vykdančiam serveriui"
+                  LastKnownName="Pasirinkto veiksmo komandą išsiunčiamą užduotis vykdančiam serveriui"
                   LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
           <opaqueAction
             Id="d632eb33-179d-4c0d-963e-a1d4a6d779cf"
-            name="Pasirkto veiksmo komandą išsiunčiamą užduotis vykdančiam serveriui"
+            name="Pasirinkto veiksmo komandą išsiunčiamą užduotis vykdančiam serveriui"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow

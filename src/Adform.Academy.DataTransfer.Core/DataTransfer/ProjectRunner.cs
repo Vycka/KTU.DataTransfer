@@ -19,12 +19,14 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer
         private CancelType _stopType = CancelType.ShutDown;
 
         private ExecutingProjectData _projectData;
-        private int _executingTaskPosition = 0;
+        private int _executingTaskPosition;
 
         private readonly List<IAction> _executingTasksList = new List<IAction>
         {
             new FullAnalyze(),
-            new CreateTables()
+            new CreateTables(),
+            new CopyData(),
+            new AppendAnalyze()
         };
 
         public bool CancelationPending { get; private set; }
@@ -63,6 +65,7 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer
                 _projectData.DesConnection = new SqlConnection(BuildConnectionString(_projectData.Project.DatabaseDestination));
                 _projectData.SrcConnection.Open();
                 _projectData.DesConnection.Open();
+                _projectData.ProjectRunner = this;
 
                 _projectData.Project.ProjectState = ProjectStateTypes.Running;
                 _projectData.Session.Merge(_projectData.Project);
@@ -75,6 +78,9 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer
                 {
                     ExecuteNextTask();
                 }
+
+                if (_projectData.Project.ExecutionState == ExecutionStepsTypes.Completed)
+                    _projectData.Project.ProjectState = ProjectStateTypes.Stopped;
 
                 if (CancelationPending)
                 {
@@ -109,7 +115,11 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer
 
         private void ExecuteNextTask()
         {
-            _executingTasksList[_executingTaskPosition].ExecuteAction(_projectData);
+            IAction executingAction = _executingTasksList[_executingTaskPosition];
+
+            if (executingAction.ValidateStepExecution(_projectData.Project))
+                executingAction.ExecuteAction(_projectData);
+
             _executingTaskPosition = (_executingTaskPosition + 1) % _executingTasksList.Count;
         }
 

@@ -22,22 +22,23 @@ function SubmitSelections() {
     $("[id^=index-range-]").each(function() {
         var picker = $(this);
         var table = picker.attr("data-tablename");
-        var column = $("#index-selector-" + table).find(":selected").val();
+        var column = $("#index-selector-" + table).find(":selected");
         var selected = picker.find(":selected");
         var range = selected.val();
-        SetFilterBatchRange(table, column, range, selected.attr("data-name"));
+        SetFilterBatchRange(table, column.val(), range, selected.attr("data-name"), column.attr("data-field-type"));
     });
 
     $("#modelstate-form").submit();
 }
 
-function SetFilterBatchRange(table, column, value, name) {
+function SetFilterBatchRange(table, column, value, name, columnType) {
     var state = JSON.parse($("#FiltersJson").val());
     $.each(state, function (index) {
         if (state[index]["TableName"] == table) {
             state[index]["FilterValue"]["IndexColumn"] = column;
             state[index]["FilterValue"]["IndexStepName"] = name;
             state[index]["FilterValue"]["IndexStep"] = value;
+            state[index]["FilterValue"]["IndexColumnType"] = columnType;
             return false;
         }
         return true;

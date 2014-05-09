@@ -24,6 +24,7 @@ namespace Adform.Academy.DataTransfer.WebApi.Contracts.Projects
         public string IndexColumn;
         public string IndexStepName;
         public string IndexStep;
+        public string IndexColumnType;
     }
 
     public class ColumnItem

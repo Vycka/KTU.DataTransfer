@@ -144,6 +144,19 @@ function StartProjectClick() {
     );
 }
 
+function ContinueProjectClick() {
+    PostCommand(
+        "ProjectExecutor/Continue",
+        { id: window.SelectedItemId },
+        function (result, data) {
+            if (result == true) {
+                UpdateProjectState(data.ProjectState);
+                UpdateContextButtons();
+            }
+        }
+    );
+}
+
 function ArchiveProjectClick() {
     if (!confirm('Are you sure you want to archive project: ' + $('#itemlist-name-' + window.SelectedItemId).html() + '?'))
         return;

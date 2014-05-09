@@ -54,20 +54,20 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer
 
         public void StartProject(int projectId)
         {
-            StopProjectSilent(projectId);
+            StopProject(projectId, CancelType.ShutDown);
 
             var projectRunner = new ProjectRunner(projectId, _logger);
             projectRunner.StartAsync();
             _activeProjects.Add(projectId, projectRunner);
         }
 
-        private void StopProjectSilent(int projectId)
+        private void StopProject(int projectId, CancelType cancelType)
         {
             if (_activeProjects.ContainsKey(projectId))
             {
                 var project = _activeProjects[projectId];
                 if (project.IsRunning)
-                    project.StopExecution(CancelType.ShutDown);
+                    project.StopExecution(cancelType);
 
                 _activeProjects.Remove(projectId);
             }

@@ -248,16 +248,18 @@ select, input[type="button"], input[type="submit"]
 }
 
 .td1 {
-    width: 16%;
+    width: 126px;
 }
 
 .td2 {
-    width: 15%;
+    width: 117px;
     text-align: center;
 }
 
 .td3 {
-    width: 69%;
+    width: 539px;
+    word-wrap:break-word;
+    display: inline-block;
 }
 
 .logrow:hover {

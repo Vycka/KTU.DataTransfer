@@ -13,10 +13,11 @@ namespace Adform.Academy.DataTransfer.Core.DTO.Models
         public virtual IList<Batch> Batches { get; set; }
     }
 
-    public struct FilterValue
+    public class FilterValue
     {
         public string IndexColumn;
         public string IndexStepName;
         public string IndexStep;
+        public string IndexColumnType;
     }
 }

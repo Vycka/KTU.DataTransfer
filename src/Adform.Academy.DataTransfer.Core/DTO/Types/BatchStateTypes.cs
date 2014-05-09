@@ -5,7 +5,7 @@
         NotCopied = 0,
         Copied = 1,
         Verified = 2,
-        FailedVerification = 3,
-        Error = 4
+        //FailedVerification = 3,
+        //Error = 4
     }
 }

@@ -46,6 +46,8 @@
     <Compile Include="Logs\GetLogsResponse.cs" />
     <Compile Include="ProjectExecutor\ArchiveRequest.cs" />
     <Compile Include="ProjectExecutor\ArchiveResponse.cs" />
+    <Compile Include="ProjectExecutor\ContinueRequest.cs" />
+    <Compile Include="ProjectExecutor\ContinueResponse.cs" />
     <Compile Include="ProjectExecutor\DeleteRequest.cs" />
     <Compile Include="ProjectExecutor\DeleteResponse.cs" />
     <Compile Include="ProjectExecutor\StartRequest.cs" />

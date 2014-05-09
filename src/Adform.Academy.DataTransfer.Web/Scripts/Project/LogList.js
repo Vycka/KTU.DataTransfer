@@ -16,7 +16,8 @@ function RefreshAuditLog() {
         { BeginFromId: window.AuditLogLastItem, ProjectId: window.ProjectId },
         function (result, data) {
             if (result == true) {
-                var logs = $.parseJSON(JSON.stringify(data.Logs), true);
+                //var logs = $.parseJSON(JSON.stringify(data.Logs), true);
+                var logs = data.Logs;
                 var itemsLen = logs.length - 1;
                 var logsPane = document.getElementById('log-body');
                 for (var x = itemsLen; x >= 0; x--) {
@@ -37,7 +38,7 @@ function RefreshAuditLog() {
                     td1.innerHTML = time.format("YYYY-MM-DD HH:mm:ss");
                     if (logItem.UserName != null)
                         td2.innerHTML = logItem.UserName;
-                    td3.innerHTML = logItem.Message;
+                    td3.innerHTML = logItem.Message.split("\n").join("<br />");
                     tr.appendChild(td1);
                     tr.appendChild(td2);
                     tr.appendChild(td3);

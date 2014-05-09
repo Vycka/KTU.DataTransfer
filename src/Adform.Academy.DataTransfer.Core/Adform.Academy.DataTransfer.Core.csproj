@@ -71,12 +71,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataTransfer\Actions\ActionBase.cs" />
+    <Compile Include="DataTransfer\Actions\AppendAnalyze.cs" />
+    <Compile Include="DataTransfer\Actions\CopyData.cs" />
     <Compile Include="DataTransfer\Actions\CreateTables.cs" />
     <Compile Include="DataTransfer\Actions\ExecutingProjectData.cs" />
     <Compile Include="DataTransfer\Actions\FullAnalyze.cs" />
     <Compile Include="DataTransfer\Actions\IAction.cs" />
+    <Compile Include="DataTransfer\Actions\Verify.cs" />
     <Compile Include="DataTransfer\DataTransferServiceRunner.cs" />
-    <Compile Include="DataTransfer\FilterParser.cs" />
+    <Compile Include="DataTransfer\ValueParsers\FilterValueParsed.cs" />
     <Compile Include="DataTransfer\ProjectRunner.cs" />
     <Compile Include="DTO\Models\Log.cs" />
     <Compile Include="DTO\Models\PendingUserAction.cs" />

@@ -20,16 +20,7 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
             {
                 var project = session.Get<Project>(request.ProjectId);
 
-
-                //project.ExecutionState = (project.ExecutionState != Core.DTO.Types.ExecutionStepsTypes.Completed
-                //    ? Core.DTO.Types.ExecutionStepsTypes.FullAnalyze
-                //    : Core.DTO.Types.ExecutionStepsTypes.AppendAnalyze);
-
                 ServiceRunner.StartProject(request.ProjectId);
-
-
-                //session.Merge(project);
-                //session.Flush();
 
                 return new StartResponse
                 {
@@ -44,6 +35,31 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
                 };
             }
         }
+
+        [Route("Continue")]
+        [HttpGet, HttpPost]
+        public ContinueResponse Continue(ContinueRequest request)
+        {
+            using (var session = SessionFactory.OpenSession())
+            {
+                var project = session.Get<Project>(request.ProjectId);
+
+                ServiceRunner.StartProject(request.ProjectId);
+
+                return new ContinueResponse
+                {
+                    ProjectState = new ProjectListItem
+                    {
+                        CreatedByUserName = project.CreatedBy.UserName,
+                        ExecutionStep = (ExecutionStepsTypes)project.ExecutionState,
+                        Name = project.Name,
+                        ProjectId = project.ProjectId,
+                        ProjectState = (Contracts.Projects.Types.ProjectStateTypes)project.ProjectState
+                    }
+                };
+            }
+        }
+
 
         [Route("Archive")]
         [HttpGet, HttpPost]

@@ -9,6 +9,7 @@
         Verify = 4,
         Delete = 5,
         Completed = 6,
-        Canceled = 7
+        Canceled = 7,
+        CreatingTables = 8
     }
 }

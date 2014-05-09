@@ -5,7 +5,7 @@
       <elementDefinition Id="97948792-0dc4-4900-8f40-504e5c3a32f2" />
       <body>Priklausomai nuo situacijos galimi veiksmai:
 * Paleisti projektą.
-* Pristabdytį projektą su galimybe pratesti.
+* Pristabdytį projektą su galimybe pratęsti.
 * Pratesti projekto vykdymą.
 * Visiškai atšaukti projekto vykdymą.</body>
       <annotatedElements>
@@ -13,20 +13,6 @@
       </annotatedElements>
     </comment>
   </ownedCommentsInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="70793cc0-909f-400a-99fc-8241c9391bc9">
-      <profileInstance Id="4137152a-7bc8-4f50-9762-85fe3ed9bd0d" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="cee27609-73c7-4235-97c1-0f9c255457b1">
-      <profileInstance Id="1d974c99-1676-469b-b3cd-9eb1e849c09e" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <activityRootModelHasActivity>
       <activity Id="38260346-f9b5-4623-85a4-70bc80ae4346" name="Activity5" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
@@ -45,12 +31,12 @@
             <elementDefinition Id="d1ea6b5f-790d-4306-9e86-d4d45996b354" />
             <flowNodeTargets>
               <controlFlow Id="ea47e71e-b738-440d-bcf4-aa0acea17f87" isLeaf="false">
-                <opaqueActionMoniker Id="765907ad-4f84-41b0-8d46-cb7a87d959ef" LastKnownName="Pasirkto veiksmo komandą išsiunčiamą užduotis vykdančiam serveriui" />
+                <opaqueActionMoniker Id="765907ad-4f84-41b0-8d46-cb7a87d959ef" LastKnownName="Pasirinkto veiksmo komandą išsiunčiamą užduotis vykdančiam serveriui" />
                 <elementDefinition Id="1266939a-176b-4a41-be74-b26296409383" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
-          <opaqueAction Id="765907ad-4f84-41b0-8d46-cb7a87d959ef" name="Pasirkto veiksmo komandą išsiunčiamą užduotis vykdančiam serveriui" isLeaf="false">
+          <opaqueAction Id="765907ad-4f84-41b0-8d46-cb7a87d959ef" name="Pasirinkto veiksmo komandą išsiunčiamą užduotis vykdančiam serveriui" isLeaf="false">
             <elementDefinition Id="d632eb33-179d-4c0d-963e-a1d4a6d779cf" />
             <flowNodeTargets>
               <controlFlow Id="ce13b0e1-9c00-4bc3-9329-3be9c913e9cb" isLeaf="false">
@@ -102,5 +88,19 @@
   </packagedElements>
   <package Id="076c2751-11f7-4df0-9990-a63fd948e18c" name="Adform.Academy.DataTransfer.Diagrams">
     <elementDefinition Id="de71d15e-79ce-4e7a-945f-f4b93b58e455" />
+    <profileInstances>
+      <packageHasProfileInstances Id="70793cc0-909f-400a-99fc-8241c9391bc9">
+        <profileInstance Id="4137152a-7bc8-4f50-9762-85fe3ed9bd0d" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="cee27609-73c7-4235-97c1-0f9c255457b1">
+        <profileInstance Id="1d974c99-1676-469b-b3cd-9eb1e849c09e" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </activityRootModel>
