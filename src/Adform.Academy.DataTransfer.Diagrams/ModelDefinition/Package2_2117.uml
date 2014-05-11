@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="98e8adfc-813e-4740-a017-0d293412c074"
+  name="Logger"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="c0cedb4c-c97e-47a6-a58d-e38b7bbb5799"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DAdform.Academy.DataTransfer.Logger"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="cebda155-4c77-4d80-a5b0-236809d5ffda"
+        name="ILogger"
+        visibility="Private"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="a9be902c-7b84-4fe0-b4c1-b7f0c30302f4"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FVytautas%2FDocuments%2FVisual Studio 2013%2FProjects%2FKTU.DataTransfer%2Fsrc%2FAdform.Academy.DataTransfer.Logger%2Fbin%2FDebug%2FAdform.Academy.DataTransfer.Logger.dll&quot; Namespace%3DAdform.Academy.DataTransfer.Logger Type%3DILogger"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="77eb1277-b036-43bd-8c47-906b6b1818dc"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="72729c9b-c875-4b5a-90d9-53c761702459">
+                <propertyInstance
+                  Id="f31093c2-f25f-4e13-b7f4-2b3921ebf4be"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8c60a37f-aee6-4dfd-9c44-c1c373da6df8">
+                <propertyInstance
+                  Id="68239eb9-d19f-41a1-8a61-0ac53313c34c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c9a483ce-73de-4e63-923e-69e8f4f743da">
+                <propertyInstance
+                  Id="6142b671-4c53-409b-8e96-c7105221adcd"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c88a80b9-d016-4d85-b25a-3380ac2ab786">
+                <propertyInstance
+                  Id="3b682846-4791-4274-a1dd-2cf7e5a8d00b"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

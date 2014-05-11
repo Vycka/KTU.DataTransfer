@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="0ad020e7-9924-4b23-99d0-c1e3b198a812"
+  name="Web"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="4520e040-10a3-44cf-ab8d-0d00b63fefd0"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DAdform.Academy.DataTransfer.Web"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="60c926b8-9177-4653-a233-6f20432a9a3a"
+        LastKnownName="Controllers"
+        LastKnownLocation="Package1_1141.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="6e9dfa90-8360-49cd-a0c1-7f9e9a0dfbcd"
+        LastKnownName="Models"
+        LastKnownLocation="Package3_1141.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="d5785f48-bff5-4647-bd63-4f7776bb9395"
+        LastKnownName="Services"
+        LastKnownLocation="Package_1148.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="3a30974f-07c9-4ac4-9054-3efa1792f6f3"
+        LastKnownName="Tools"
+        LastKnownLocation="Package_1156.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

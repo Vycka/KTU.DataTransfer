@@ -26,7 +26,8 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer
             new FullAnalyze(),
             new CreateTables(),
             new CopyData(),
-            new AppendAnalyze()
+            new AppendAnalyze(),
+            new Verify()
         };
 
         public bool CancelationPending { get; private set; }
@@ -69,6 +70,7 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer
 
                 _projectData.Project.ProjectState = ProjectStateTypes.Running;
                 _projectData.Session.Merge(_projectData.Project);
+                _projectData.Session.Flush();
 
                 while (
                     CancelationPending == false &&

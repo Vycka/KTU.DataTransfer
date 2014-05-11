@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="bb5f88b5-5e4c-4deb-9bf6-3d874ab895be"
+  name="Dependencies"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="dc59e01f-fa57-429b-9014-ab065b8ddd4c"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Web.Http.Dependencies"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="b1db4bce-c7ab-4132-8c0c-0a6ec8f85a81"
+        name="IDependencyResolver"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="32774a87-5d7f-46d1-9df7-31a689f2c2b4"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FVytautas%2FDocuments%2FVisual Studio 2013%2FProjects%2FKTU.DataTransfer%2Fpackages%2FMicrosoft.AspNet.WebApi.Core.5.1.2%2Flib%2Fnet45%2FSystem.Web.Http.dll&quot; Namespace%3DSystem.Web.Http.Dependencies Type%3DIDependencyResolver"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="948fdaa7-bd5a-43dd-9a98-03e85d16daa8"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5c997a83-bc00-42e1-b9f2-06cced2857c1">
+                <propertyInstance
+                  Id="2de94b14-dd5a-435f-8e7e-f2661ed922e4"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bb5ab21d-9028-4260-b12d-0cc0ccddcfcb">
+                <propertyInstance
+                  Id="b6054c7b-bc96-4d35-b63c-1d2f3c533cbe"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="affaeb88-b0dd-4276-bcff-ba34ba89ec0c">
+                <propertyInstance
+                  Id="2e612470-36ad-4ab0-9b19-03fb75ffb188"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="336d7f86-096d-4097-a381-3e165b6aa4b2">
+                <propertyInstance
+                  Id="32308fe4-ef73-427d-adb9-e86da71bdb99"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

@@ -13,7 +13,7 @@ namespace Adform.Academy.DataTransfer.Logger
         private readonly SqlConnection _sqlConnection;
         public DataTransferNHibernateAppender()
         {
-            _sqlConnection = new SqlConnection("Server=(local);Initial Catalog=DataTransfer;Integrated Security=SSPI");
+            _sqlConnection = new SqlConnection();
         }
 
         public void Close()
@@ -28,7 +28,10 @@ namespace Adform.Academy.DataTransfer.Logger
             if (logEvent != null)
             {
                 if (_sqlConnection.State != ConnectionState.Open)
+                {
+                    _sqlConnection.ConnectionString = ConnectionString;
                     _sqlConnection.Open();
+                }
                 var command = new SqlCommand(
                     @"INSERT INTO
                         [DataTransfer].[Logs]
@@ -46,6 +49,8 @@ namespace Adform.Academy.DataTransfer.Logger
                 command.ExecuteNonQuery();
             }
         }
+
+        public string ConnectionString { get; set; }
 
         public string Name { get; set; }
     }

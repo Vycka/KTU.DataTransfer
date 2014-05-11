@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="7365153a-79bd-4a9e-afe9-364dad738af5"
+  name="ValueParsers"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="1e331268-5b00-4ab4-a81d-899e76465691"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DAdform.Academy.DataTransfer.Core.DataTransfer.ValueParsers"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="de73ac1a-83c3-4a53-8353-be1ca6aec163"
+        name="FilterValueParsed"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="c777635a-1bda-40f6-a432-5580041a819a"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FVytautas%2FDocuments%2FVisual Studio 2013%2FProjects%2FKTU.DataTransfer%2Fsrc%2FAdform.Academy.DataTransfer.Core%2Fbin%2FDebug%2FAdform.Academy.DataTransfer.Core.dll&quot; Namespace%3DAdform.Academy.DataTransfer.Core.DataTransfer.ValueParsers Type%3DFilterValueParsed"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7984ca10-7ae0-44dc-8030-d2f470f1445d"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2e8516f2-5a45-48fe-942f-6a5dc564f6a2">
+                <propertyInstance
+                  Id="89aaab0f-6880-45ec-86c0-5fc861da2355"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bd396fd5-6ea7-47d7-a0c4-b0bb0d698e3e">
+                <propertyInstance
+                  Id="80a9d476-bfaf-4af1-b52c-c2bc80cc46ad"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b39d7548-26d1-45ef-a264-f29b1ae88e7b">
+                <propertyInstance
+                  Id="435dd69e-f686-4fe0-b67b-55e58030887d"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="621415b6-5073-4bbf-b8b8-ac06646e6100">
+                <propertyInstance
+                  Id="8e2498fc-72dc-4b1e-b30f-65944ef54717"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a18ff8b5-3c89-4ce8-b689-03ec2ce522f3">
+                <propertyInstance
+                  Id="ebbaaab8-045a-4dc8-ba82-25d715d292c0"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

@@ -13,10 +13,12 @@ using Database = Microsoft.SqlServer.Management.Smo.Database;
 
 namespace Adform.Academy.DataTransfer.Core.DataTransfer.Actions
 {
-    public class CreateTables : IAction
+    public class CreateTables : ActionBase, IAction
     {
         public void ExecuteAction(ExecutingProjectData data)
         {
+            SetStep(data, ExecutionStepsTypes.CreatingTables);
+
             var srcSrvConnection = new ServerConnection(data.SrcConnection);
             var server = new Server(srcSrvConnection);
             Database database = server.Databases[srcSrvConnection.DatabaseName];
@@ -34,11 +36,13 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer.Actions
             StringCollection scriptCollection = scripter.Script(urns);
             string concatedScript = String.Join(Environment.NewLine, scriptCollection.Cast<string>());
 
-            new SqlCommand(concatedScript, data.DesConnection).ExecuteNonQuery();
             string removeUnusedColumnsQuery = GetExcludeColumnsQuery(data);
+
+            new SqlCommand(concatedScript, data.DesConnection).ExecuteNonQuery();
             if (!String.IsNullOrWhiteSpace(removeUnusedColumnsQuery))
                 new SqlCommand(removeUnusedColumnsQuery, data.DesConnection).ExecuteNonQuery();
 
+            SetStep(data, ExecutionStepsTypes.Copy);
         }
 
         public bool ValidateStepExecution(Project project)

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="20886856-fa3e-4dfa-a0d6-d30d92914938"
+  name="Logs"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="8e2e3184-b4ec-43b9-bffa-e8ff52a6368a"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DAdform.Academy.DataTransfer.WebApi.Contracts.Logs"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="de1b3ca2-46fe-4151-b4ac-c44ae14c3b55"
+        name="GetLogsResponse"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="30afba61-1383-40cd-acb8-33a16362963e"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FVytautas%2FDocuments%2FVisual Studio 2013%2FProjects%2FKTU.DataTransfer%2Fsrc%2FAdform.Academy.DataTransfer.WebApi.Contracts%2Fbin%2FDebug%2FAdform.Academy.DataTransfer.WebApi.Contracts.dll&quot; Namespace%3DAdform.Academy.DataTransfer.WebApi.Contracts.Logs Type%3DGetLogsResponse"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="5ee2ef3e-cdfe-4dbd-bb2b-564df740e851"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9129a7e4-cd17-4673-b38b-d2cf1b4e2981">
+                <propertyInstance
+                  Id="7fa05d19-f674-4791-bd04-6e0be1beeb08"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="90f9c181-c516-44f9-85e0-031ef9a80f56">
+                <propertyInstance
+                  Id="a16b3784-99b1-4c8e-b635-e123f4d7bc4d"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="89986834-f820-4ab6-b2c4-498e9cc20236">
+                <propertyInstance
+                  Id="a2859cf2-9ec9-4172-8c38-b0cb4239c850"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b0a95772-73aa-4d48-a2be-5a70a5dc0d62">
+                <propertyInstance
+                  Id="880c1cc8-d4c4-41d1-8f45-e7d08d32e860"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2bebb719-b790-4b60-b5f1-f420b7399b6a">
+                <propertyInstance
+                  Id="d4ebc0a4-0f1f-43e4-b443-842b68611683"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2d4931c0-4ad2-4a77-9c3b-87d5cf567ff1"
+        name="GetLogsRequest"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="b6cffd40-3b0d-4c9b-a5cb-67156aefa50b"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FVytautas%2FDocuments%2FVisual Studio 2013%2FProjects%2FKTU.DataTransfer%2Fsrc%2FAdform.Academy.DataTransfer.WebApi.Contracts%2Fbin%2FDebug%2FAdform.Academy.DataTransfer.WebApi.Contracts.dll&quot; Namespace%3DAdform.Academy.DataTransfer.WebApi.Contracts.Logs Type%3DGetLogsRequest"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="f59c598f-bdd3-4dd5-994e-3ef90355242c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3661a323-2f0a-4f06-9d55-9cd9c590bff3">
+                <propertyInstance
+                  Id="3b3cba21-fbf9-49fe-a490-423a73f92373"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="03a134c5-66e0-49ab-a17e-9753e2ab32ef">
+                <propertyInstance
+                  Id="f2ba5616-9b12-4672-a70b-933adc79322c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="992be201-e6ce-496c-bc46-68e93054b8f9">
+                <propertyInstance
+                  Id="c1d7d6e8-7736-4f16-b513-39e88ea0dd2b"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bdbe586e-9115-4f0d-9660-c060a800995f">
+                <propertyInstance
+                  Id="330bae25-29b1-48fa-a197-4e7c572fad09"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d267c462-3913-44bc-b566-34021dc421a0">
+                <propertyInstance
+                  Id="6cbdd01a-ad7d-406d-8155-c894b91e07e2"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

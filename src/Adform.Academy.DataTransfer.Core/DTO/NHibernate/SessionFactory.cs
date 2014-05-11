@@ -40,7 +40,7 @@ namespace Adform.Academy.DataTransfer.Core.DTO.NHibernate
                 DataSource = database.Host,
                 InitialCatalog = database.DatabaseName,
                 UserID = database.UserName,
-                Password = database.Password,
+                Password = database.Password
                 //Encrypt = true
             };
 

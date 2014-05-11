@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using Adform.Academy.DataTransfer.Core.DataTransfer.ValueParsers;
 using Adform.Academy.DataTransfer.Core.DTO.Models;
 using Adform.Academy.DataTransfer.Core.DTO.Types;
-using Microsoft.SqlServer.Management.Smo;
-using NHibernate.Mapping;
 
 namespace Adform.Academy.DataTransfer.Core.DataTransfer.Actions
 {
@@ -22,7 +19,6 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer.Actions
             foreach (var filter in data.Project.Filters)
             {
                 var parsedFilter = new FilterValueParsed(filter);
-                string columnsList = String.Join(",", filter.Columns.Select(c => string.Concat("[", c.ColumnName, "]")));
 
                 foreach (var batch in filter.Batches)
                 {
@@ -33,7 +29,7 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer.Actions
 
                     try
                     {
-                        CopyBatch(data, parsedFilter, batch, columnsList);
+                        CopyBatch(data, parsedFilter, batch);
                     }
                     catch (Exception)
                     {
@@ -43,12 +39,12 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer.Actions
                     if (copyFailed)
                     {
                         DelteBatchFromDestination(data, parsedFilter, batch);
-                        CopyBatch(data, parsedFilter, batch, columnsList);
+                        CopyBatch(data, parsedFilter, batch);
                     }
                 }
             }
 
-            SetStep(data, ExecutionStepsTypes.AppendAnalyze); //should be append analyze
+            SetStep(data, ExecutionStepsTypes.AppendAnalyze);
         }
 
         public bool ValidateStepExecution(Project project)
@@ -56,7 +52,7 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer.Actions
             return project.Filters.Any(filter => filter.Batches.Any(b => b.BatchState == BatchStateTypes.NotCopied));
         }
 
-        private void CopyBatch(ExecutingProjectData data, FilterValueParsed parsedFilter, Batch batch, string columnsList)
+        private void CopyBatch(ExecutingProjectData data, FilterValueParsed parsedFilter, Batch batch)
         {
             if (batch.BatchState != BatchStateTypes.NotCopied)
                 return;
@@ -68,7 +64,7 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer.Actions
                 var srcReadCommand = data.SrcConnection.CreateCommand();
                 srcReadCommand.CommandText = string.Format(
                     "SELECT {0} FROM [{1}] WHERE [{2}] >= @MinValue AND [{2}] < @MaxValue",
-                    columnsList,
+                    parsedFilter.ColumnsListSqlFriendly,
                     parsedFilter.TableName,
                     parsedFilter.IndexColumn
                 );
@@ -91,6 +87,7 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer.Actions
 
                         transaction.Commit();
                         batch.BatchState = BatchStateTypes.Copied;
+                        batch.Checksum = null;
                     }
                     
                 }

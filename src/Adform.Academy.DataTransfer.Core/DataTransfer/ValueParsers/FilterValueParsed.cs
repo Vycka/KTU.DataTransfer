@@ -1,6 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Adform.Academy.DataTransfer.Core.DTO.Models;
-using Microsoft.SqlServer.Management.Smo;
 using Newtonsoft.Json;
 
 namespace Adform.Academy.DataTransfer.Core.DataTransfer.ValueParsers
@@ -18,6 +18,7 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer.ValueParsers
             IndexColumnType = parsedFilter.IndexColumnType;
 
             TableName = filter.TableName;
+            ColumnsListSqlFriendly = String.Join(",", filter.Columns.Select(c => string.Concat("[", c.ColumnName, "]")));
         }
 
         public string IndexColumn;
@@ -25,6 +26,7 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer.ValueParsers
         public string IndexStep;
         public string IndexColumnType;
         public string TableName;
+        public string ColumnsListSqlFriendly;
     }
 
 }

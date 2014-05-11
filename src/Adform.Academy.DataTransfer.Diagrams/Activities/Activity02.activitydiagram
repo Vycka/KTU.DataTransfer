@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="2415d41a-ed19-4873-bb51-73085c464b9d" name="Activity2" linkedPackageId="85ad75fd-12ba-45ea-9193-720b33b004a4" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="f7664f46-c774-4670-b7c6-9873184edbbd">
-      <profileInstance Id="d949d22b-bcfc-45c9-b146-270d5550b3e2" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="19d9920c-9422-436e-acd8-010b8061e7b6">
-      <profileInstance Id="91e3ded5-1807-4523-b9ef-89f9ff87294a" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <activityRootModelHasActivity>
       <activity Id="3e3a93a4-70bc-4540-aa17-d3197af5f78b" name="Activity2" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
@@ -49,9 +35,9 @@
           <opaqueAction Id="38ec35bf-0ce7-4380-8df2-19c6182e1a73" name="Esamo vartotojo redagavimas" isLeaf="false">
             <elementDefinition Id="e3451a5d-cc36-46c3-bcbb-28d19ed60974" />
             <flowNodeTargets>
-              <controlFlow Id="434fecd9-6466-482d-a795-8775dd884c74" isLeaf="false">
-                <opaqueActionMoniker Id="a0e09aae-3a40-472d-849a-c0dacb64a3bf" LastKnownName="Naujų vartotojo duomenų įvedimas" />
-                <elementDefinition Id="9f2f8dec-4eb4-402e-b66e-f951bdf0aace" />
+              <controlFlow Id="10af5890-09a7-466a-bef1-b4aa507e4f00" isLeaf="false">
+                <opaqueActionMoniker Id="b1e2b4f7-c69a-4b19-a45f-d6a1f325cb0a" LastKnownName="Esamo vartotojo informacijos užkrovimas" />
+                <elementDefinition Id="1c8107d2-e083-4dab-a100-c872e0f151b5" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
@@ -120,11 +106,34 @@
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
+          <opaqueAction Id="b1e2b4f7-c69a-4b19-a45f-d6a1f325cb0a" name="Esamo vartotojo informacijos užkrovimas" isLeaf="false">
+            <elementDefinition Id="c64f1eec-c401-4b44-aa9c-e828dfbc83e5" />
+            <flowNodeTargets>
+              <controlFlow Id="c52ef034-7384-49ba-92e0-675e32276d5c" isLeaf="false">
+                <opaqueActionMoniker Id="a0e09aae-3a40-472d-849a-c0dacb64a3bf" LastKnownName="Naujų vartotojo duomenų įvedimas" />
+                <elementDefinition Id="eb799ccc-d511-451e-9e78-45b46a9a6fcb" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
         </nodes>
       </activity>
     </activityRootModelHasActivity>
   </packagedElements>
   <package Id="85ad75fd-12ba-45ea-9193-720b33b004a4" name="Adform.Academy.DataTransfer.Diagrams">
     <elementDefinition Id="de71d15e-79ce-4e7a-945f-f4b93b58e455" />
+    <profileInstances>
+      <packageHasProfileInstances Id="f7664f46-c774-4670-b7c6-9873184edbbd">
+        <profileInstance Id="d949d22b-bcfc-45c9-b146-270d5550b3e2" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="19d9920c-9422-436e-acd8-010b8061e7b6">
+        <profileInstance Id="91e3ded5-1807-4523-b9ef-89f9ff87294a" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </activityRootModel>

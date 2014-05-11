@@ -86,7 +86,7 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
                 };
 
                 var existingDatabaseById = session.Get<Database>(database.DatabaseId);
-                Logger.Log(new DatabaseChangedEvent(database.DatabaseId, database.ConnectionName, existingDatabaseById.ConnectionName, request.InvokerUserId));
+                Logger.Log(new DatabaseChangedEvent(database.DatabaseId, database.ConnectionName, (existingDatabaseById != null ? existingDatabaseById.ConnectionName : ""), request.InvokerUserId));
 
                 session.Merge(database);
                 session.Flush();

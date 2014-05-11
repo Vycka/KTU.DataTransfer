@@ -1,10 +1,4 @@
-﻿$(document).ready(function () {
-    $('[id^=index-selector-]').each(function() {
-        $(this).change();
-    });
-});
-
-function IndexSelected(tableName) {
+﻿function IndexSelected(tableName) {
     var elementType = $("#index-selector-" + tableName).find(":selected").attr("data-field-type");
     var dropdown = $("#index-range-" + tableName);
     dropdown.html("");
@@ -53,9 +47,16 @@ $(document).ready(function () {
         var filter = filters[index];
         var indexDropDown = $("#index-selector-" + filter.TableName);
         var stepDropDown = $("#index-range-" + filter.TableName);
-        indexDropDown.val(filter.FilterValue.IndexColumn);
-        indexDropDown.change();
-        stepDropDown.val(filter.FilterValue.IndexStep);
+        if (filter.FilterValue.IndexColumn == null) {
+            indexDropDown.find('option:first-child').attr("selected", "selected");
+            indexDropDown.change();
+        } else {
+            indexDropDown.val(filter.FilterValue.IndexColumn);
+            indexDropDown.change();
+            stepDropDown.val(filter.FilterValue.IndexStep);
+        }
+        
+        
     });
 });
 

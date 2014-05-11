@@ -18,7 +18,7 @@
             <elementDefinition Id="9ad57a72-91be-4d2a-b6d1-7ec3b588af60" />
             <flowNodeTargets>
               <controlFlow Id="35de100e-5ba2-4687-92c2-8c94b209a775" isLeaf="false">
-                <opaqueActionMoniker Id="66182d38-7531-4b5a-8b39-d262e12cdd63" LastKnownName="Naujų duomenų bazės duomenų įvedimas" />
+                <opaqueActionMoniker Id="66182d38-7531-4b5a-8b39-d262e12cdd63" LastKnownName="Naujų duomenų įvedimas" />
                 <elementDefinition Id="c1e51904-1bc9-4ffb-af62-bafe40ce546e" />
               </controlFlow>
             </flowNodeTargets>
@@ -35,13 +35,13 @@
           <opaqueAction Id="106476f0-eb00-4568-b82f-29bc40ae4cc8" name="Esamos duomenų bazės redagavimas" isLeaf="false">
             <elementDefinition Id="acdf0b0b-81a1-495a-8e4e-b7d345e72464" />
             <flowNodeTargets>
-              <controlFlow Id="73d750b8-9397-49e5-82de-80baac49631d" isLeaf="false">
-                <opaqueActionMoniker Id="66182d38-7531-4b5a-8b39-d262e12cdd63" LastKnownName="Naujų duomenų bazės duomenų įvedimas" />
-                <elementDefinition Id="a698bebc-7cc6-4416-84f6-4edad7dcff64" />
+              <controlFlow Id="6a41ce9a-97c5-403e-ae4d-344dc5606ece" isLeaf="false">
+                <opaqueActionMoniker Id="1583fae4-2951-418a-b5a5-9991636e8b56" LastKnownName="Esamos duomenų bazės informacijos atvaizdavimas" />
+                <elementDefinition Id="b1bf8762-9630-4ff6-82ff-b0c043c2647e" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
-          <opaqueAction Id="66182d38-7531-4b5a-8b39-d262e12cdd63" name="Naujų duomenų bazės duomenų įvedimas" isLeaf="false">
+          <opaqueAction Id="66182d38-7531-4b5a-8b39-d262e12cdd63" name="Naujų duomenų įvedimas" isLeaf="false">
             <elementDefinition Id="189a0128-9fe9-462f-b965-07695f5b1718" />
             <flowNodeTargets>
               <controlFlow Id="b549a28a-bbf8-4dca-9b32-07c3467b66d6" isLeaf="false">
@@ -63,7 +63,7 @@
             <elementDefinition Id="9fc4244c-d696-4262-a33c-1de2a89d000d" />
             <flowNodeTargets>
               <controlFlow Id="f2e98933-50cd-4da6-a10d-fcee015d55fe" guard="Yra" isLeaf="false">
-                <opaqueActionMoniker Id="66182d38-7531-4b5a-8b39-d262e12cdd63" LastKnownName="Naujų duomenų bazės duomenų įvedimas" />
+                <opaqueActionMoniker Id="66182d38-7531-4b5a-8b39-d262e12cdd63" LastKnownName="Naujų duomenų įvedimas" />
                 <elementDefinition Id="d9f6eba9-9dec-4b7a-9b3e-5485df5c32e8" />
               </controlFlow>
               <controlFlow Id="5141fa51-a867-4bc4-963a-e7905b6f7f6b" guard="Nėra" isLeaf="false">
@@ -81,6 +81,15 @@
               <controlFlow Id="43018f39-c79e-4036-bfba-28b0f3508551" isLeaf="false">
                 <activityFinalNodeMoniker Id="8562b42f-5fa0-4400-9a65-e4c5491b3d13" LastKnownName="ActivityFinal1" />
                 <elementDefinition Id="74d3e57f-460d-4dc3-9b80-97a88fa4cb46" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="1583fae4-2951-418a-b5a5-9991636e8b56" name="Esamos duomenų bazės informacijos atvaizdavimas" isLeaf="false">
+            <elementDefinition Id="bbccd7e7-46f3-4af4-9142-3b369a63f910" />
+            <flowNodeTargets>
+              <controlFlow Id="9d2fdb31-1339-4e7e-9ddf-c1505ce376cd" isLeaf="false">
+                <opaqueActionMoniker Id="66182d38-7531-4b5a-8b39-d262e12cdd63" LastKnownName="Naujų duomenų įvedimas" />
+                <elementDefinition Id="d49dd5a4-69eb-461e-84ef-5e6b6ac1966b" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>

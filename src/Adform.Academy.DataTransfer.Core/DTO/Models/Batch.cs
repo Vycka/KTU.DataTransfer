@@ -9,5 +9,7 @@ namespace Adform.Academy.DataTransfer.Core.DTO.Models
         public virtual string BatchFilterMin { get; set; }
         public virtual string BatchFilterMax { get; set; }
         public virtual BatchStateTypes BatchState { get; set; }
+
+        public virtual int? Checksum { get; set; }
     }
 }

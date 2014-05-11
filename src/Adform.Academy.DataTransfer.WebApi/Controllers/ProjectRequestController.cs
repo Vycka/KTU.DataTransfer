@@ -124,11 +124,16 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
                     project.Filters.Add(filterDto);
                 }
 
-                session.Merge(project);
+                if (project.ProjectId == 0)
+                    session.Save(project);
+                else
+                    session.Merge(project);
                 session.Flush();
 
                 if (request.ProjectId == 0)
+                {
                     Logger.Log(new ProjectCreatedEvent(project.ProjectId, request.InvokerUserId));
+                }
                 else
                     Logger.Log(new ProjectModified(project.ProjectId, request.InvokerUserId));
 

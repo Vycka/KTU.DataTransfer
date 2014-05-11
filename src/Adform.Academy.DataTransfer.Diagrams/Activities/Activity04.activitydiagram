@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="df25d89a-648e-4f3e-b3d5-4d7b8a9d083d" name="Activity4" linkedPackageId="ed59c621-2796-4043-a454-3bbc3040c3e2" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="5cbf94ca-34f1-45d3-8c9d-81ea20bb5574">
-      <profileInstance Id="564afc7f-9bc3-4bae-9fbc-0a9680bb8b4f" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="34022272-5a1b-40ce-af9e-85ee6c06e5c4">
-      <profileInstance Id="0679bde6-71fd-47e1-aea5-d5920d986e1f" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <activityRootModelHasActivity>
       <activity Id="072f834e-32a9-489e-9307-7ac518e9125a" name="Activity4" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
@@ -79,13 +65,13 @@
           <decisionNode Id="ca62ffa5-e1e7-44e7-a3a4-fdf8ad2d1617" name="Decision1" isLeaf="false">
             <elementDefinition Id="b6b28100-931c-4252-8b6b-b69f534c1b51" />
             <flowNodeTargets>
-              <controlFlow Id="0f46ad60-7a36-4a9f-80f0-2954444a9e8a" guard="Nepavyksta" isLeaf="false">
-                <opaqueActionMoniker Id="b1a68348-b4e8-45f0-bf69-f52831c30e58" LastKnownName="Projekto pavadinimo, pradinės ir galutinės duomenų bazės įvedimas" />
-                <elementDefinition Id="c2a7bae4-b93d-4d80-8f2b-7e3182edfff5" />
-              </controlFlow>
               <controlFlow Id="91bcc7df-81e7-4735-b0a7-5d0efd76a071" guard="Pavyksta" isLeaf="false">
                 <opaqueActionMoniker Id="e6d1bef1-019c-4c26-898e-2d9005c2d6ba" LastKnownName="Norimų perkelti lentelių ir jų stulpelių pasirinkimas" />
                 <elementDefinition Id="b342e685-98ae-4231-93cd-c771754eb5d6" />
+              </controlFlow>
+              <controlFlow Id="6335d288-da0e-44ab-b9ed-0c2b9d98b7c1" guard="Nepavyksta" isLeaf="false">
+                <opaqueActionMoniker Id="bb502afa-99ae-49e5-b01e-460fbc2b65b5" LastKnownName="Išvedamas klaidos pranešimas" />
+                <elementDefinition Id="02f831b2-cec1-4e48-8470-b51c43e6eaef" />
               </controlFlow>
             </flowNodeTargets>
           </decisionNode>
@@ -116,11 +102,34 @@
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
+          <opaqueAction Id="bb502afa-99ae-49e5-b01e-460fbc2b65b5" name="Išvedamas klaidos pranešimas" isLeaf="false">
+            <elementDefinition Id="a07176df-f552-4fba-97e3-e7f6c14baa6c" />
+            <flowNodeTargets>
+              <controlFlow Id="5897033e-6be7-443f-90f8-aedfc96612dd" isLeaf="false">
+                <opaqueActionMoniker Id="b1a68348-b4e8-45f0-bf69-f52831c30e58" LastKnownName="Projekto pavadinimo, pradinės ir galutinės duomenų bazės įvedimas" />
+                <elementDefinition Id="2f534781-5ce9-4127-b507-f9aaf4405c0b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
         </nodes>
       </activity>
     </activityRootModelHasActivity>
   </packagedElements>
   <package Id="ed59c621-2796-4043-a454-3bbc3040c3e2" name="Adform.Academy.DataTransfer.Diagrams">
     <elementDefinition Id="de71d15e-79ce-4e7a-945f-f4b93b58e455" />
+    <profileInstances>
+      <packageHasProfileInstances Id="5cbf94ca-34f1-45d3-8c9d-81ea20bb5574">
+        <profileInstance Id="564afc7f-9bc3-4bae-9fbc-0a9680bb8b4f" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="34022272-5a1b-40ce-af9e-85ee6c06e5c4">
+        <profileInstance Id="0679bde6-71fd-47e1-aea5-d5920d986e1f" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </activityRootModel>

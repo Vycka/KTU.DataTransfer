@@ -123,7 +123,7 @@
       <subsystemMoniker Id="fe13ef01-d922-4e8d-bed7-e36fafb89283" LastKnownName="Užduotis vykdantis servisas" />
       <nestedChildShapes>
         <useCaseShape Id="b9e1c24e-d698-4510-86b1-07cd7401bb98" absoluteBounds="6.5, 8.125, 1.375, 0.5" customColor="238, 237, 131" heightOffset="0">
-          <useCaseMoniker Id="95d0555e-8228-4c66-81cb-ba9b7a242bfb" LastKnownName="8. Perkeliami duomenys" />
+          <useCaseMoniker Id="95d0555e-8228-4c66-81cb-ba9b7a242bfb" LastKnownName="9. Duomenų perkėlimas" />
           <relativeChildShapes />
         </useCaseShape>
         <useCaseShape Id="7e27d744-3474-4e8f-a619-7e0d16348659" absoluteBounds="6.5, 6.625, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
@@ -131,7 +131,7 @@
           <relativeChildShapes />
         </useCaseShape>
         <useCaseShape Id="065a72f3-297d-4b11-aa0e-ee60fa8743dc" absoluteBounds="5, 7.75, 1.375, 0.875" customColor="238, 237, 131" heightOffset="0">
-          <useCaseMoniker Id="c19b2d1a-30d9-40ac-b023-b6020ee8304d" LastKnownName="8. Duomenų kurie bus perkelti - Suskaldymas į grupes" />
+          <useCaseMoniker Id="c19b2d1a-30d9-40ac-b023-b6020ee8304d" LastKnownName="8. Duomenų grupavimas" />
           <relativeChildShapes />
         </useCaseShape>
         <useCaseShape Id="28b4c17d-a316-4423-8a71-f1005a8038f3" absoluteBounds="8, 7.375, 1.125, 1" customColor="238, 237, 131" heightOffset="0">
@@ -164,7 +164,7 @@
         <useCaseShapeMoniker Id="28b4c17d-a316-4423-8a71-f1005a8038f3" />
       </nodes>
     </includeConnector>
-    <useCaseAssociationConnector edgePoints="[(4.25 : 6.41666666666667); (6.52565835097474 : 6.79594305849579)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+    <useCaseAssociationConnector edgePoints="[(4.25 : 6.41666666666667); (6.52565835097474 : 6.79594305849579)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
       <associationMoniker Id="272a4bb8-f328-4623-b9c6-14325c885ba4" />
       <relativeChildShapes />
       <nodes>

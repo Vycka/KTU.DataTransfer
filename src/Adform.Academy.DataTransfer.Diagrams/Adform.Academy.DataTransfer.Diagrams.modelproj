@@ -22,82 +22,261 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
-    <Content Include="Activity01.activitydiagram">
+    <Content Include="Activities\Activity01.activitydiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Activity01.activitydiagram.layout">
+    <Content Include="Activities\Activity01.activitydiagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>Activity01.activitydiagram</DependentUpon>
+      <DependentUpon>Activities\Activity01.activitydiagram</DependentUpon>
     </Content>
-    <Content Include="Activity10.activitydiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Activity10.activitydiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>Activity10.activitydiagram</DependentUpon>
-    </Content>
-    <Content Include="Activity02.activitydiagram">
+    <Content Include="Activities\Activity02.activitydiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Activity02.activitydiagram.layout">
+    <Content Include="Activities\Activity02.activitydiagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>Activity02.activitydiagram</DependentUpon>
+      <DependentUpon>Activities\Activity02.activitydiagram</DependentUpon>
     </Content>
-    <Content Include="Activity03.activitydiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Activity03.activitydiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>Activity03.activitydiagram</DependentUpon>
-    </Content>
-    <Content Include="Activity04.activitydiagram">
+    <Content Include="Activities\Activity03.activitydiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Activity04.activitydiagram.layout">
+    <Content Include="Activities\Activity03.activitydiagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>Activity04.activitydiagram</DependentUpon>
+      <DependentUpon>Activities\Activity03.activitydiagram</DependentUpon>
     </Content>
-    <Content Include="Activity05.activitydiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Activity05.activitydiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>Activity05.activitydiagram</DependentUpon>
-    </Content>
-    <Content Include="Activity06.activitydiagram">
+    <Content Include="Activities\Activity04.activitydiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Activity06.activitydiagram.layout">
+    <Content Include="Activities\Activity04.activitydiagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>Activity06.activitydiagram</DependentUpon>
+      <DependentUpon>Activities\Activity04.activitydiagram</DependentUpon>
     </Content>
-    <Content Include="Activity07.activitydiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Activity07.activitydiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>Activity07.activitydiagram</DependentUpon>
-    </Content>
-    <Content Include="Activity08.activitydiagram">
+    <Content Include="Activities\Activity05.activitydiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Activity08.activitydiagram.layout">
+    <Content Include="Activities\Activity05.activitydiagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>Activity08.activitydiagram</DependentUpon>
+      <DependentUpon>Activities\Activity05.activitydiagram</DependentUpon>
     </Content>
-    <Content Include="Activity09.activitydiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Activity09.activitydiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>Activity09.activitydiagram</DependentUpon>
-    </Content>
-    <Content Include="Magic.activitydiagram">
+    <Content Include="Activities\Activity06.activitydiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Magic.activitydiagram.layout">
+    <Content Include="Activities\Activity06.activitydiagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>Magic.activitydiagram</DependentUpon>
+      <DependentUpon>Activities\Activity06.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Activities\Activity07.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Activities\Activity07.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Activities\Activity07.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Activities\Activity08.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Activities\Activity08.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Activities\Activity08.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Activities\Activity09.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Activities\Activity09.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Activities\Activity09.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Activities\Activity10.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Activities\Activity10.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Activities\Activity10.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Activities\Magic.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Activities\Magic.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Activities\Magic.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="ClassDiagrams\UMLClassDiagram1.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ClassDiagrams\UMLClassDiagram1.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ClassDiagrams\UMLClassDiagram1.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ClassDiagrams\UMLClassDiagram2.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ClassDiagrams\UMLClassDiagram2.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ClassDiagrams\UMLClassDiagram2.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ClassDiagrams\UMLClassDiagram3.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ClassDiagrams\UMLClassDiagram3.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ClassDiagrams\UMLClassDiagram3.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ClassDiagrams\UMLClassDiagram4.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ClassDiagrams\UMLClassDiagram4.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ClassDiagrams\UMLClassDiagram4.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\Package10_2117.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package11_2117.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package12_2117.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1122.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1126.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1130.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1131.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1141.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1148.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1149.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1156.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_2117.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_2126.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1122.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1126.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1130.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1131.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1141.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_2117.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_2126.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_1122.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_1126.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_1131.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_1141.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_2117.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package4_2117.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package5_2117.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package6_2117.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package7_2117.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package8_2117.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package9_2117.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1122.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1126.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1130.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1131.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1141.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1148.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1149.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1156.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_2117.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_2126.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Sequences\CopyData.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Sequences\CopyData.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Sequences\CopyData.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="Sequences\ExecuteProject.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Sequences\ExecuteProject.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Sequences\ExecuteProject.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="Sequences\FullAnalyze.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Sequences\FullAnalyze.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Sequences\FullAnalyze.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="Sequences\Verify.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Sequences\Verify.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Sequences\Verify.sequencediagram</DependentUpon>
     </Content>
     <Content Include="UseCaseHuman.usecasediagram">
       <SubType>Content</SubType>
@@ -110,5 +289,8 @@
     <Content Include="ModelDefinition\Adform.Academy.DataTransfer.Diagrams.uml">
       <SubType>Content</SubType>
     </Content>
+    <Folder Include="Activities" />
+    <Folder Include="ClassDiagrams" />
+    <Folder Include="Sequences" />
   </ItemGroup>
 </Project>

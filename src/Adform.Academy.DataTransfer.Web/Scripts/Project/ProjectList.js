@@ -55,6 +55,7 @@ function UpdateProjectState(stateInfo) {
 
 function UpdateContextButtons() {
     var state = $("#itemlist-name-" + window.SelectedItemId).attr("data-state");
+    var step = $("#itemlist-name-" + window.SelectedItemId).attr("data-step");
     var buttonsToDisplay = {};
     if (state == 0) // Stopped
     {
@@ -78,7 +79,7 @@ function UpdateContextButtons() {
     }
 
     SetButtonVisibility("edit", buttonsToDisplay["edit"]);
-    SetButtonVisibility("start", buttonsToDisplay["start"]);
+    SetButtonVisibility("start", buttonsToDisplay["start"] == true && step != 6);
     SetButtonVisibility("continue", buttonsToDisplay["continue"]);
     SetButtonVisibility("cancel", buttonsToDisplay["cancel"]);
     SetButtonVisibility("pause", buttonsToDisplay["pause"]);

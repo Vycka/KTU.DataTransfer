@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="4673100e-49ae-43a9-b34b-dfeb66695edb"
+  name="SelfHost"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="2e502c31-fbd3-459d-b6ff-564250bbcb05"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Web.Http.SelfHost"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="85f9dc33-b602-434c-b8ba-ccceaa429e64"
+        name="HttpSelfHostConfiguration"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="e06fe27c-cf22-438b-9364-72b226abe6bd"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FVytautas%2FDocuments%2FVisual Studio 2013%2FProjects%2FKTU.DataTransfer%2Fpackages%2FMicrosoft.AspNet.WebApi.SelfHost.5.1.2%2Flib%2Fnet45%2FSystem.Web.Http.SelfHost.dll&quot; Namespace%3DSystem.Web.Http.SelfHost Type%3DHttpSelfHostConfiguration"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="41d891e6-503d-4a3a-8cce-c68c80024d48"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8c07aa4c-a270-4ea8-8478-fb6aeb3261b1">
+                <propertyInstance
+                  Id="031046f3-162f-4104-951f-cdf9ada62e3d"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2f63f69c-f867-4d32-823d-4db848af67d8">
+                <propertyInstance
+                  Id="6141e9c2-541a-46c4-ae1e-67287890f47c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5b8e1439-116d-4021-89ac-14d0954f85b5">
+                <propertyInstance
+                  Id="e5818232-b77b-4dd1-ace6-9b442b9ed788"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2b451956-b919-480a-85b8-d76940825f23">
+                <propertyInstance
+                  Id="31c7d0e3-7c2b-4046-b5c0-baea1a439140"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3c2824f6-1491-403e-bd1e-0c90e7b711c3">
+                <propertyInstance
+                  Id="76d6c6d6-bf54-4bde-b183-c29e573bd2bf"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f4d5f367-8111-45f8-800b-8307922f481e"
+        name="HttpSelfHostServer"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="24dd3c4d-bf47-4104-86b0-49fe04a3108b"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FVytautas%2FDocuments%2FVisual Studio 2013%2FProjects%2FKTU.DataTransfer%2Fpackages%2FMicrosoft.AspNet.WebApi.SelfHost.5.1.2%2Flib%2Fnet45%2FSystem.Web.Http.SelfHost.dll&quot; Namespace%3DSystem.Web.Http.SelfHost Type%3DHttpSelfHostServer"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="2fe58e30-3308-4e3e-a177-0c74f23a7f45"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6726f8e2-8651-4f76-9fe3-9d14873f0d02">
+                <propertyInstance
+                  Id="23019047-1474-4095-bcbb-e701a47883dc"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="141cd4a9-0e8f-4276-8ee6-3cb21231535b">
+                <propertyInstance
+                  Id="0a87a032-e24e-49f8-a20a-df58d5efb0ae"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="405ac289-f47a-4227-8277-3b092257879c">
+                <propertyInstance
+                  Id="a9d1de9b-7513-4110-bf9c-19b0b91a52a4"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="002d6156-e348-4d4a-9b87-8424fee3ae13">
+                <propertyInstance
+                  Id="a02d1653-4136-4c56-b9fa-b31de7751012"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9e7c2436-5003-4fad-8b1d-3fc331eb9d6a">
+                <propertyInstance
+                  Id="0ba1b556-0c56-4c8c-bfa5-c4ed848d9d94"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

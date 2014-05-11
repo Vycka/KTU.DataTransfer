@@ -229,11 +229,11 @@
         <elementDefinition Id="c3e5caf1-571c-40f8-8711-86cbec60aaf5" />
         <additions>
           <include Id="df654274-848b-4e4f-962c-354970334688">
-            <useCaseMoniker Id="c19b2d1a-30d9-40ac-b023-b6020ee8304d" LastKnownName="8. Duomenų kurie bus perkelti - Suskaldymas į grupes" />
+            <useCaseMoniker Id="c19b2d1a-30d9-40ac-b023-b6020ee8304d" LastKnownName="8. Duomenų grupavimas" />
             <elementDefinition Id="07cfaf11-bfc2-47d6-b0c4-0a8e3bcd25d4" />
           </include>
           <include Id="c411a17a-cf72-4ad2-bf08-02cbdfe51bc8">
-            <useCaseMoniker Id="95d0555e-8228-4c66-81cb-ba9b7a242bfb" LastKnownName="8. Perkeliami duomenys" />
+            <useCaseMoniker Id="95d0555e-8228-4c66-81cb-ba9b7a242bfb" LastKnownName="9. Duomenų perkėlimas" />
             <elementDefinition Id="a314eaf7-4ed3-43ac-ba09-5b4290235661" />
           </include>
           <include Id="7609428d-5b23-4532-9cd9-387e6c9a3ba1">
@@ -247,7 +247,7 @@
       </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <useCase Id="c19b2d1a-30d9-40ac-b023-b6020ee8304d" name="8. Duomenų kurie bus perkelti - Suskaldymas į grupes" isAbstract="false" isLeaf="false">
+      <useCase Id="c19b2d1a-30d9-40ac-b023-b6020ee8304d" name="8. Duomenų grupavimas" isAbstract="false" isLeaf="false">
         <elementDefinition Id="d9a8936d-c08a-448a-b88d-89e2c4a20c8d" />
         <subjects>
           <subsystemMoniker Id="fe13ef01-d922-4e8d-bed7-e36fafb89283" LastKnownName="Užduotis vykdantis servisas" />
@@ -255,7 +255,7 @@
       </useCase>
     </packageHasNamedElement>
     <useCaseModelRootHasTypes>
-      <useCase Id="95d0555e-8228-4c66-81cb-ba9b7a242bfb" name="8. Perkeliami duomenys" isAbstract="false" isLeaf="false">
+      <useCase Id="95d0555e-8228-4c66-81cb-ba9b7a242bfb" name="9. Duomenų perkėlimas" isAbstract="false" isLeaf="false">
         <elementDefinition Id="d3ad1add-862f-40fd-a060-4a94623eeb11" />
         <subjects>
           <subsystemMoniker Id="fe13ef01-d922-4e8d-bed7-e36fafb89283" LastKnownName="Užduotis vykdantis servisas" />
