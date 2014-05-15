@@ -15,18 +15,18 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer.Actions
 
 
 
-            SetStep(data, GetNextActionAfterAppendAnalyze(data.Project) ? ExecutionStepsTypes.Verify : ExecutionStepsTypes.Copy);
+            SetStep(data, CanAdvanceToNextAction(data.Project) ? ExecutionStepsTypes.Verify : ExecutionStepsTypes.Copy);
         }
 
         public bool ValidateStepExecution(Project project)
         {
-            return GetNextActionAfterAppendAnalyze(project);
+            return CanAdvanceToNextAction(project);
             //return project.ExecutionState == ExecutionStepsTypes.AppendAnalyze;
         }
 
-        private bool GetNextActionAfterAppendAnalyze(Project project)
+        private bool CanAdvanceToNextAction(Project project)
         {
-            return project.Filters.All(filter => filter.Batches.All(b => b.BatchState == BatchStateTypes.Copied));
+            return project.Filters.All(filter => filter.Batches.All(b => b.BatchState == BatchStateTypes.Copied || b.BatchState == BatchStateTypes.Verified));
         }
 
         //private MinMaxItems GetCurrentMinMax()

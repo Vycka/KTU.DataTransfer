@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="6b707a0e-7faa-4839-b01d-8e6fbde2ff35" name="Activity5" linkedPackageId="076c2751-11f7-4df0-9990-a63fd948e18c" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="6b707a0e-7faa-4839-b01d-8e6fbde2ff35" name="Activity5" linkedPackageId="076c2751-11f7-4df0-9990-a63fd948e18c" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
   <ownedCommentsInternal>
     <comment Id="3697608f-f31c-454b-b48d-fe00796c788c">
       <elementDefinition Id="97948792-0dc4-4900-8f40-504e5c3a32f2" />
@@ -13,6 +13,20 @@
       </annotatedElements>
     </comment>
   </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="9b15eb6c-8f63-4935-9ee2-e6e419ca557c">
+      <profileInstance Id="1c5611cd-bb88-4fa0-95f9-0bc6079f2b60" name="CSharpProfile">
+        <elementDefinition Id="8a73b926-8be0-4047-b2d9-eb0431be2a6c" />
+      </profileInstance>
+      <elementDefinition Id="77775c9b-5685-4c25-8a44-35787140e765" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="f5b65faf-e398-44bc-b65c-b90006fe50d0">
+      <profileInstance Id="aa977086-0509-4c02-b5f2-ffc74ea1053f" name="TextTemplateBindings">
+        <elementDefinition Id="bd7e95b5-e70d-451d-8e29-9c26f19b1c1f" />
+      </profileInstance>
+      <elementDefinition Id="197c8c43-4daf-4d7a-82c7-94e453d8fee2" />
+    </packageHasProfileInstances>
+  </profileInstances>
   <packagedElements>
     <activityRootModelHasActivity>
       <activity Id="38260346-f9b5-4623-85a4-70bc80ae4346" name="Activity5" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
@@ -31,12 +45,12 @@
             <elementDefinition Id="d1ea6b5f-790d-4306-9e86-d4d45996b354" />
             <flowNodeTargets>
               <controlFlow Id="ea47e71e-b738-440d-bcf4-aa0acea17f87" isLeaf="false">
-                <opaqueActionMoniker Id="765907ad-4f84-41b0-8d46-cb7a87d959ef" LastKnownName="Pasirinkto veiksmo komandą išsiunčiamą užduotis vykdančiam serveriui" />
+                <opaqueActionMoniker Id="765907ad-4f84-41b0-8d46-cb7a87d959ef" LastKnownName="Pasirinkto veiksmo komandą išsiunčiamą projektus vykdančiam serveriui" />
                 <elementDefinition Id="1266939a-176b-4a41-be74-b26296409383" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
-          <opaqueAction Id="765907ad-4f84-41b0-8d46-cb7a87d959ef" name="Pasirinkto veiksmo komandą išsiunčiamą užduotis vykdančiam serveriui" isLeaf="false">
+          <opaqueAction Id="765907ad-4f84-41b0-8d46-cb7a87d959ef" name="Pasirinkto veiksmo komandą išsiunčiamą projektus vykdančiam serveriui" isLeaf="false">
             <elementDefinition Id="d632eb33-179d-4c0d-963e-a1d4a6d779cf" />
             <flowNodeTargets>
               <controlFlow Id="ce13b0e1-9c00-4bc3-9329-3be9c913e9cb" isLeaf="false">

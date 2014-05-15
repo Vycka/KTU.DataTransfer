@@ -18,6 +18,18 @@ namespace Adform.Academy.DataTransfer.Web.Controllers
         }
 
         [Authorize]
+        public JsonResult Pause(int id)
+        {
+            return Json(ProjectExecutorRequests.Pause(id));
+        }
+
+        [Authorize]
+        public JsonResult Cancel(int id)
+        {
+            return Json(ProjectExecutorRequests.Cancel(id));
+        }
+
+        [Authorize]
         public JsonResult Archive(int id)
         {
             return Json(ProjectExecutorRequests.Archive(id));

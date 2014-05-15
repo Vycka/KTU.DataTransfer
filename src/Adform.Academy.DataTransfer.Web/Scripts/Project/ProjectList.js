@@ -20,7 +20,68 @@ function RefreshProjectStates() {
         UpdateContextButtons();
     });
 
+    if (window.DetailsAreShown) {
+        PostCommand('ProjectList/GetProjectProgress', { id : window.SelectedItemId }, function (result, data) {
+            if (result == true) {
+                if (data.StateItems.length != 0)
+                    $("#ProgressBar").css("display", "");
+
+                var totalBatches = 0;
+                var notCopiedPercent = 0;
+                var copiedPercent = 0;
+                var verifiedPercent = 0;
+
+                var notCopied = 0;
+                var copied = 0;
+                var verified = 0;
+                $.each(data.StateItems, function(index, val) {
+                    //{"StateItems":[{"StateId":2,"Count":10}],"Success":true,"Message":""}
+
+                    totalBatches += val.Count;
+
+                    if (val.StateId == 0) {
+                        notCopiedPercent += val.Count;
+                        notCopied += val.Count;
+                    }
+                    else if (val.StateId == 1) {
+                        copiedPercent += val.Count;
+                        copied += val.Count;
+                    }
+                    else if (val.StateId == 2) {
+                        verifiedPercent += val.Count;
+
+                        copied += val.Count;
+                        verified += val.Count;
+                    }
+                });
+
+                $('#PB_Batches_Completed').html(copied);
+                $('#PB_Batches_Total').html(totalBatches);
+
+                $("#PB_Val_NotCopied").html(Math.round((100 / totalBatches) * notCopied,0));
+                $("#PB_Val_Copied").html(Math.round((100 / totalBatches) * copied, 0));
+                $("#PB_Val_Checked").html(Math.round((100 / totalBatches) * verified, 0));
+
+                SetProgressBar("NotCopied", Math.round((100 / totalBatches) * notCopiedPercent, 0));
+                SetProgressBar("Copied", Math.round((100 / totalBatches) * copiedPercent, 0));
+                SetProgressBar("Checked", Math.round((100 / totalBatches) * verifiedPercent, 0));
+            }
+            UpdateContextButtons();
+        });
+    }
+
     window.ProjectListPostActive = false;
+}
+
+function SetProgressBar(name, value) {
+    var roundedVal = Math.round(value, 0);
+    var element = $("#PB_" + name);
+    if (roundedVal == 0)
+        element.css("display", "none");
+    else {
+        element.css("display", "");
+        element.css("width", roundedVal + "%");
+    }
 }
 
 function UpdateProjectState(stateInfo) {
@@ -115,6 +176,7 @@ $(document).ready(function() {
 function HideProjectDetails() {
     window.DetailsAreShown = false;
     $("#project-details-pane").css("display", "none");
+    $("#ProgressBar").css("display", "none");
 }
 
 function ShowProjectDetails() {
@@ -140,6 +202,7 @@ function StartProjectClick() {
             if (result == true) {
                 UpdateProjectState(data.ProjectState);
                 UpdateContextButtons();
+                ShowProjectDetails();
             }
         }
     );
@@ -153,6 +216,31 @@ function ContinueProjectClick() {
             if (result == true) {
                 UpdateProjectState(data.ProjectState);
                 UpdateContextButtons();
+                ShowProjectDetails();
+            }
+        }
+    );
+}
+
+function PauseProjectClick() {
+    PostCommand(
+        "ProjectExecutor/Pause",
+        { id: window.SelectedItemId },
+        function (result, data) {
+            if (result == true) {
+
+            }
+        }
+    );
+}
+
+function CancelProjectClick() {
+    PostCommand(
+        "ProjectExecutor/Cancel",
+        { id: window.SelectedItemId },
+        function (result, data) {
+            if (result == true) {
+
             }
         }
     );

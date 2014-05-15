@@ -23,7 +23,6 @@ namespace Adform.Academy.DataTransfer.Web.Services.DataTransfer
             var request = new GetProjectRequest
             {
                 ProjectId = projectId,
-
             };
 
             string responseString = ServiceClient.PostRequest("Projects/GetProject", request);
@@ -44,6 +43,18 @@ namespace Adform.Academy.DataTransfer.Web.Services.DataTransfer
 
             string responseString = ServiceClient.PostRequest("Projects/Save", request);
             var response = JsonConvert.DeserializeObject<SaveProjectResponse>(responseString);
+            return response;
+        }
+
+        public static GetProjectProgressResponse GetProgress(int projectId)
+        {
+            var request = new GetProjectProgressRequest
+            {
+                ProjectId = projectId
+            };
+
+            string responseString = ServiceClient.PostRequest("Projects/GetProjectProgress", request);
+            var response = JsonConvert.DeserializeObject<GetProjectProgressResponse>(responseString);
             return response;
         }
     }

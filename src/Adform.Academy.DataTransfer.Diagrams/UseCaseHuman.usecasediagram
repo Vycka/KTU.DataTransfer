@@ -1,5 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="e4d96080-abd3-4274-840b-47d3c78dacd3" name="UseCaseHuman" linkedPackageId="32fc6139-8071-4f30-9715-9b5e2afc1180" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="e4d96080-abd3-4274-840b-47d3c78dacd3" name="UseCaseHuman" linkedPackageId="32fc6139-8071-4f30-9715-9b5e2afc1180" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="6c2a021e-862d-4d3e-8e03-c4a121b13d80">
+      <profileInstance Id="ce440b53-ad77-4466-848e-22c139f6a0cf" name="CSharpProfile">
+        <elementDefinition Id="8a73b926-8be0-4047-b2d9-eb0431be2a6c" />
+      </profileInstance>
+      <elementDefinition Id="77775c9b-5685-4c25-8a44-35787140e765" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="028ac004-585b-4cc8-8613-47853a03a01d">
+      <profileInstance Id="1a77699a-f25e-42f8-9c4d-152e718e5d3e" name="TextTemplateBindings">
+        <elementDefinition Id="bd7e95b5-e70d-451d-8e29-9c26f19b1c1f" />
+      </profileInstance>
+      <elementDefinition Id="197c8c43-4daf-4d7a-82c7-94e453d8fee2" />
+    </packageHasProfileInstances>
+  </profileInstances>
   <packagedElements>
     <useCaseModelRootHasTypes>
       <subsystem Id="d4ebfb4c-6bdc-44d4-bafb-bbf5ef8426a6" name="Internetinė sąsaja / WebApi" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -31,7 +45,7 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="9dad59aa-51f6-4b23-aa3d-67fb1afb04b4" name="4. Perkėlimo užduočių kūrimas ir redagavimas" isAbstract="false" isLeaf="false">
+      <useCase Id="9dad59aa-51f6-4b23-aa3d-67fb1afb04b4" name="4. Perkėlimo projektų kūrimas ir redagavimas" isAbstract="false" isLeaf="false">
         <elementDefinition Id="aae93801-df1e-401e-be50-25f3f33d2c67" />
         <subjects>
           <subsystemMoniker Id="d4ebfb4c-6bdc-44d4-bafb-bbf5ef8426a6" LastKnownName="Internetinė sąsaja / WebApi" />
@@ -39,7 +53,7 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="33207c42-1a96-4617-806a-fd6da98d437a" name="5. Perkėlimo užduočių vykdymo paleidimas ar sustabdymas" isAbstract="false" isLeaf="false">
+      <useCase Id="33207c42-1a96-4617-806a-fd6da98d437a" name="5. Perkėlimo projektų vykdymo paleidimas ar sustabdymas" isAbstract="false" isLeaf="false">
         <elementDefinition Id="e10d0c32-034b-4fcd-accc-579ff0362710" />
         <subjects>
           <subsystemMoniker Id="d4ebfb4c-6bdc-44d4-bafb-bbf5ef8426a6" LastKnownName="Internetinė sąsaja / WebApi" />
@@ -47,7 +61,7 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="6c9eebec-da64-4f2c-a196-10ce13aca21e" name="6. Perkėlimo užduoties visiškas pašalinimas iš sistemos" isAbstract="false" isLeaf="false">
+      <useCase Id="6c9eebec-da64-4f2c-a196-10ce13aca21e" name="6. Perkėlimo projekto visiškas pašalinimas iš sistemos" isAbstract="false" isLeaf="false">
         <elementDefinition Id="31206b0c-5585-4a81-aa78-3e07ebf154a5" />
         <subjects>
           <subsystemMoniker Id="d4ebfb4c-6bdc-44d4-bafb-bbf5ef8426a6" LastKnownName="Internetinė sąsaja / WebApi" />
@@ -82,7 +96,7 @@
         <elementDefinition Id="c887d117-8ae3-437e-b428-65381f59278d" />
         <targetEnds>
           <association Id="7667670c-2501-4197-b6fa-b59f38af8d12" isDerived="false" sourceEndRoleName="Prisijungęs vartotojas" targetEndRoleName="4. Perkėlimo užduočių kūrimas ir redagavimas" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="9dad59aa-51f6-4b23-aa3d-67fb1afb04b4" LastKnownName="4. Perkėlimo užduočių kūrimas ir redagavimas" />
+            <useCaseMoniker Id="9dad59aa-51f6-4b23-aa3d-67fb1afb04b4" LastKnownName="4. Perkėlimo projektų kūrimas ir redagavimas" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="f373bb1e-224b-4dd1-bbc8-cee9894194d9" name="Prisijungęs vartotojas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -98,7 +112,7 @@
             <elementDefinition Id="ee794500-652e-4286-96f2-1c92b546ff94" />
           </association>
           <association Id="cb055374-5d92-4de8-a742-9a485cc2e064" isDerived="false" sourceEndRoleName="Prisijungęs vartotojas" targetEndRoleName="5. Perkėlimo užduočių vykdymo paleidimas ar sustabdymas" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="33207c42-1a96-4617-806a-fd6da98d437a" LastKnownName="5. Perkėlimo užduočių vykdymo paleidimas ar sustabdymas" />
+            <useCaseMoniker Id="33207c42-1a96-4617-806a-fd6da98d437a" LastKnownName="5. Perkėlimo projektų vykdymo paleidimas ar sustabdymas" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="597a5533-c714-4b10-b92a-a6dd4b634a46" name="Prisijungęs vartotojas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -137,7 +151,7 @@
             <elementDefinition Id="0382af92-5a74-4971-aec2-3d1e79098a21" />
           </association>
           <association Id="bbe6ab65-54f9-4934-b834-b47c652ed9d8" isDerived="false" sourceEndRoleName="Prisijungęs Administratorius" targetEndRoleName="4. Perkėlimo užduočių kūrimas ir redagavimas" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="9dad59aa-51f6-4b23-aa3d-67fb1afb04b4" LastKnownName="4. Perkėlimo užduočių kūrimas ir redagavimas" />
+            <useCaseMoniker Id="9dad59aa-51f6-4b23-aa3d-67fb1afb04b4" LastKnownName="4. Perkėlimo projektų kūrimas ir redagavimas" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="7b88ab81-6530-415f-b249-324ad2ecec53" name="Prisijungęs Administratorius" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -153,7 +167,7 @@
             <elementDefinition Id="ac8a021c-1794-4e6a-b851-4a0eeeaf547b" />
           </association>
           <association Id="1abaa63a-edfc-45ca-832a-dfaea81882e6" isDerived="false" sourceEndRoleName="Prisijungęs Administratorius" targetEndRoleName="4. Perkėlimo užduočių kūrimas ir redagavimas" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="9dad59aa-51f6-4b23-aa3d-67fb1afb04b4" LastKnownName="4. Perkėlimo užduočių kūrimas ir redagavimas" />
+            <useCaseMoniker Id="9dad59aa-51f6-4b23-aa3d-67fb1afb04b4" LastKnownName="4. Perkėlimo projektų kūrimas ir redagavimas" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="4c8b1ff2-39c0-4404-b343-a3681918b181" name="Prisijungęs Administratorius" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -169,7 +183,7 @@
             <elementDefinition Id="89ccf70c-11e1-4180-9cbd-f8b88abb52df" />
           </association>
           <association Id="ea9e1e7c-49c8-4496-9e25-444e9620a15f" isDerived="false" sourceEndRoleName="Prisijungęs Administratorius" targetEndRoleName="5. Perkėlimo užduočių vykdymo paleidimas ar sustabdymas" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="33207c42-1a96-4617-806a-fd6da98d437a" LastKnownName="5. Perkėlimo užduočių vykdymo paleidimas ar sustabdymas" />
+            <useCaseMoniker Id="33207c42-1a96-4617-806a-fd6da98d437a" LastKnownName="5. Perkėlimo projektų vykdymo paleidimas ar sustabdymas" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="cfc3e662-04fc-4ce5-b07d-19aa4a25159c" name="Prisijungęs Administratorius" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -201,7 +215,7 @@
             <elementDefinition Id="315e9a9b-6c58-46e1-9dff-932227eb4341" />
           </association>
           <association Id="c357cfdb-27f9-49cf-808d-dcd1a2dd67a4" isDerived="false" sourceEndRoleName="Prisijungęs Administratorius" targetEndRoleName="6. Perkėlimo užduoties visiškas pašalinimas iš sistemos" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="6c9eebec-da64-4f2c-a196-10ce13aca21e" LastKnownName="6. Perkėlimo užduoties visiškas pašalinimas iš sistemos" />
+            <useCaseMoniker Id="6c9eebec-da64-4f2c-a196-10ce13aca21e" LastKnownName="6. Perkėlimo projekto visiškas pašalinimas iš sistemos" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="d0e016ef-6ef4-44c1-bfcb-933de38434ac" name="Prisijungęs Administratorius" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -225,7 +239,7 @@
       </subsystem>
     </useCaseModelRootHasTypes>
     <packageHasNamedElement>
-      <useCase Id="98366ae7-9798-4397-9aa4-3dcb2e9a3d20" name="7. Užduoties vykdymas" isAbstract="false" isLeaf="false">
+      <useCase Id="98366ae7-9798-4397-9aa4-3dcb2e9a3d20" name="7. Projekto vykdymas" isAbstract="false" isLeaf="false">
         <elementDefinition Id="c3e5caf1-571c-40f8-8711-86cbec60aaf5" />
         <additions>
           <include Id="df654274-848b-4e4f-962c-354970334688">
@@ -275,7 +289,7 @@
         <elementDefinition Id="81782bbc-989c-4101-a1b4-db2ff8c1f2b3" />
         <targetEnds>
           <association Id="272a4bb8-f328-4623-b9c6-14325c885ba4" isDerived="false" sourceEndRoleName="Servisas" targetEndRoleName="7. Užduoties vykdymas" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="98366ae7-9798-4397-9aa4-3dcb2e9a3d20" LastKnownName="7. Užduoties vykdymas" />
+            <useCaseMoniker Id="98366ae7-9798-4397-9aa4-3dcb2e9a3d20" LastKnownName="7. Projekto vykdymas" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="cfa87ef0-865e-4ebc-9b71-0b353b8d40a8" name="Servisas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">

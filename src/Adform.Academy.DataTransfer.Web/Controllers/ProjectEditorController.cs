@@ -105,7 +105,10 @@ namespace Adform.Academy.DataTransfer.Web.Controllers
         public ActionResult Save(ProjectEditorModel model)
         {
             ModelState.Clear();
-            ProjectRequests.Save(model);
+            var response = ProjectRequests.Save(model);
+
+            if (response.Success != true)
+                return View("ErrorMessage", new ErrorMessageModel {Message = response.Message});
 
             return View();
         }

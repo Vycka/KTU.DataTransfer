@@ -22,15 +22,15 @@
       <subsystemMoniker Id="d4ebfb4c-6bdc-44d4-bafb-bbf5ef8426a6" LastKnownName="Internetinė sąsaja / WebApi" />
       <nestedChildShapes>
         <useCaseShape Id="55da1c39-d840-4d1c-bc44-85f65c6e48a2" absoluteBounds="7.5, 5.25, 1.75, 0.75" customColor="238, 237, 131" heightOffset="0">
-          <useCaseMoniker Id="6c9eebec-da64-4f2c-a196-10ce13aca21e" LastKnownName="6. Perkėlimo užduoties visiškas pašalinimas iš sistemos" />
+          <useCaseMoniker Id="6c9eebec-da64-4f2c-a196-10ce13aca21e" LastKnownName="6. Perkėlimo projekto visiškas pašalinimas iš sistemos" />
           <relativeChildShapes />
         </useCaseShape>
         <useCaseShape Id="1a7f41d0-31ae-43ae-bc5d-cd9dadf142d0" absoluteBounds="5.125, 4.375, 1.75, 0.75" customColor="238, 237, 131" heightOffset="0">
-          <useCaseMoniker Id="33207c42-1a96-4617-806a-fd6da98d437a" LastKnownName="5. Perkėlimo užduočių vykdymo paleidimas ar sustabdymas" />
+          <useCaseMoniker Id="33207c42-1a96-4617-806a-fd6da98d437a" LastKnownName="5. Perkėlimo projektų vykdymo paleidimas ar sustabdymas" />
           <relativeChildShapes />
         </useCaseShape>
         <useCaseShape Id="b202356e-046e-4ba6-a06b-ff18917bfea0" absoluteBounds="5.25, 3.125, 1.25, 1" customColor="238, 237, 131" heightOffset="0">
-          <useCaseMoniker Id="9dad59aa-51f6-4b23-aa3d-67fb1afb04b4" LastKnownName="4. Perkėlimo užduočių kūrimas ir redagavimas" />
+          <useCaseMoniker Id="9dad59aa-51f6-4b23-aa3d-67fb1afb04b4" LastKnownName="4. Perkėlimo projektų kūrimas ir redagavimas" />
           <relativeChildShapes />
         </useCaseShape>
         <useCaseShape Id="6a7445b7-ff62-4efe-acb4-a8a637f2b523" absoluteBounds="7.75, 2.875, 1.25, 0.75" customColor="238, 237, 131" heightOffset="0">
@@ -127,7 +127,7 @@
           <relativeChildShapes />
         </useCaseShape>
         <useCaseShape Id="7e27d744-3474-4e8f-a619-7e0d16348659" absoluteBounds="6.5, 6.625, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
-          <useCaseMoniker Id="98366ae7-9798-4397-9aa4-3dcb2e9a3d20" LastKnownName="7. Užduoties vykdymas" />
+          <useCaseMoniker Id="98366ae7-9798-4397-9aa4-3dcb2e9a3d20" LastKnownName="7. Projekto vykdymas" />
           <relativeChildShapes />
         </useCaseShape>
         <useCaseShape Id="065a72f3-297d-4b11-aa0e-ee60fa8743dc" absoluteBounds="5, 7.75, 1.375, 0.875" customColor="238, 237, 131" heightOffset="0">

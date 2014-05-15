@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Adform.Academy.DataTransfer.Core.DTO.Models;
 using Newtonsoft.Json;
+using Column = Adform.Academy.DataTransfer.Core.DTO.Models.Column;
 
 namespace Adform.Academy.DataTransfer.Core.DataTransfer.ValueParsers
 {
@@ -19,6 +21,7 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer.ValueParsers
 
             TableName = filter.TableName;
             ColumnsListSqlFriendly = String.Join(",", filter.Columns.Select(c => string.Concat("[", c.ColumnName, "]")));
+            ColumnList = filter.Columns;
         }
 
         public string IndexColumn;
@@ -27,6 +30,7 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer.ValueParsers
         public string IndexColumnType;
         public string TableName;
         public string ColumnsListSqlFriendly;
+        public IEnumerable<Column> ColumnList;
     }
 
 }

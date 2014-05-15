@@ -27,6 +27,28 @@ namespace Adform.Academy.DataTransfer.Web.Services.DataTransfer
             return response;
         }
 
+        public static PauseProjectResponse Pause(int projectId)
+        {
+            var request = new ContinueRequest
+            {
+                ProjectId = projectId
+            };
+            string responseString = ServiceClient.PostRequest("ProjectExecutor/Pause", request);
+            var response = JsonConvert.DeserializeObject<PauseProjectResponse>(responseString);
+            return response;
+        }
+
+        public static CancelProjectResponse Cancel(int projectId)
+        {
+            var request = new ContinueRequest
+            {
+                ProjectId = projectId
+            };
+            string responseString = ServiceClient.PostRequest("ProjectExecutor/Cancel", request);
+            var response = JsonConvert.DeserializeObject<CancelProjectResponse>(responseString);
+            return response;
+        }
+
         public static ArchiveResponse Archive(int projectId)
         {
             var request = new ArchiveRequest

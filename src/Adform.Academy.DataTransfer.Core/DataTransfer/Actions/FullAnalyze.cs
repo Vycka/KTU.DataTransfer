@@ -28,7 +28,8 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer.Actions
         public bool ValidateStepExecution(Project project)
         {
             return (project.ExecutionState == ExecutionStepsTypes.FullAnalyze ||
-                    project.ExecutionState == ExecutionStepsTypes.NotStarted);
+                    project.ExecutionState == ExecutionStepsTypes.NotStarted ||
+                    project.ExecutionState == ExecutionStepsTypes.Canceled);
         }
 
         private static MinMaxItems GetMinMaxValues(SqlConnection srcConnection, FilterValueParsed parsedFilter)

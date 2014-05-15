@@ -348,7 +348,7 @@
     <packageHasNamedElement>
       <useCase
         Id="aae93801-df1e-401e-be50-25f3f33d2c67"
-        name="4. Perkėlimo užduočių kūrimas ir redagavimas"
+        name="4. Perkėlimo projektų kūrimas ir redagavimas"
         isAbstract="false"
         isLeaf="false">
         <subjects>
@@ -362,7 +362,7 @@
     <packageHasNamedElement>
       <useCase
         Id="e10d0c32-034b-4fcd-accc-579ff0362710"
-        name="5. Perkėlimo užduočių vykdymo paleidimas ar sustabdymas"
+        name="5. Perkėlimo projektų vykdymo paleidimas ar sustabdymas"
         isAbstract="false"
         isLeaf="false">
         <subjects>
@@ -383,7 +383,7 @@
     <packageHasNamedElement>
       <useCase
         Id="31206b0c-5585-4a81-aa78-3e07ebf154a5"
-        name="6. Perkėlimo užduoties visiškas pašalinimas iš sistemos"
+        name="6. Perkėlimo projekto visiškas pašalinimas iš sistemos"
         isAbstract="false"
         isLeaf="false">
         <subjects>
@@ -459,7 +459,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="aae93801-df1e-401e-be50-25f3f33d2c67"
-              LastKnownName="4. Perkėlimo užduočių kūrimas ir redagavimas"
+              LastKnownName="4. Perkėlimo projektų kūrimas ir redagavimas"
               LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -498,7 +498,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="e10d0c32-034b-4fcd-accc-579ff0362710"
-              LastKnownName="5. Perkėlimo užduočių vykdymo paleidimas ar sustabdymas"
+              LastKnownName="5. Perkėlimo projektų vykdymo paleidimas ar sustabdymas"
               LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -586,7 +586,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="aae93801-df1e-401e-be50-25f3f33d2c67"
-              LastKnownName="4. Perkėlimo užduočių kūrimas ir redagavimas"
+              LastKnownName="4. Perkėlimo projektų kūrimas ir redagavimas"
               LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -625,7 +625,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="aae93801-df1e-401e-be50-25f3f33d2c67"
-              LastKnownName="4. Perkėlimo užduočių kūrimas ir redagavimas"
+              LastKnownName="4. Perkėlimo projektų kūrimas ir redagavimas"
               LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -664,7 +664,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="e10d0c32-034b-4fcd-accc-579ff0362710"
-              LastKnownName="5. Perkėlimo užduočių vykdymo paleidimas ar sustabdymas"
+              LastKnownName="5. Perkėlimo projektų vykdymo paleidimas ar sustabdymas"
               LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -742,7 +742,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="31206b0c-5585-4a81-aa78-3e07ebf154a5"
-              LastKnownName="6. Perkėlimo užduoties visiškas pašalinimas iš sistemos"
+              LastKnownName="6. Perkėlimo projekto visiškas pašalinimas iš sistemos"
               LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -1320,14 +1320,14 @@
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="c1a94178-bc87-4201-8612-4c0518c4553c"
-                  LastKnownName="Naujos užduoties kūrimas"
+                  LastKnownName="Naujo projekto kūrimas"
                   LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
               </controlFlow>
             </flowNodeTargets>
           </initialNode>
           <opaqueAction
             Id="c1a94178-bc87-4201-8612-4c0518c4553c"
-            name="Naujos užduoties kūrimas"
+            name="Naujo projekto kūrimas"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
@@ -1350,14 +1350,14 @@
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="314e1c46-19f7-4e8a-bc3e-60dd28716fde"
-                  LastKnownName="Esamos užduoties redagavimas"
+                  LastKnownName="Esamo projekto redagavimas"
                   LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
               </controlFlow>
             </flowNodeTargets>
           </initialNode>
           <opaqueAction
             Id="314e1c46-19f7-4e8a-bc3e-60dd28716fde"
-            name="Esamos užduoties redagavimas"
+            name="Esamo projekto redagavimas"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
@@ -1528,14 +1528,14 @@
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="d632eb33-179d-4c0d-963e-a1d4a6d779cf"
-                  LastKnownName="Pasirinkto veiksmo komandą išsiunčiamą užduotis vykdančiam serveriui"
+                  LastKnownName="Pasirinkto veiksmo komandą išsiunčiamą projektus vykdančiam serveriui"
                   LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
           <opaqueAction
             Id="d632eb33-179d-4c0d-963e-a1d4a6d779cf"
-            name="Pasirinkto veiksmo komandą išsiunčiamą užduotis vykdančiam serveriui"
+            name="Pasirinkto veiksmo komandą išsiunčiamą projektus vykdančiam serveriui"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
@@ -1633,14 +1633,14 @@
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="d63e99c4-616d-41dc-b8c7-8e4636ed6afd"
-                  LastKnownName="Užduoties visiškas pašalinimas iš sistemos"
+                  LastKnownName="Projektas pašalinimas iš sistemos"
                   LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
               </controlFlow>
             </flowNodeTargets>
           </initialNode>
           <opaqueAction
             Id="d63e99c4-616d-41dc-b8c7-8e4636ed6afd"
-            name="Užduoties visiškas pašalinimas iš sistemos"
+            name="Projektas pašalinimas iš sistemos"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
@@ -1798,7 +1798,7 @@
     <packageHasNamedElement>
       <useCase
         Id="c3e5caf1-571c-40f8-8711-86cbec60aaf5"
-        name="7. Užduoties vykdymas"
+        name="7. Projekto vykdymas"
         isAbstract="false"
         isLeaf="false">
         <additions>
@@ -1902,14 +1902,14 @@
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="9bdd3d78-a7a6-4eac-ae57-e125cee8ae03"
-                  LastKnownName="Naujai sukurtos užduoties vykdymas"
+                  LastKnownName="Naujai sukurto projekto vykdymas"
                   LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
               </controlFlow>
             </flowNodeTargets>
           </initialNode>
           <opaqueAction
             Id="9bdd3d78-a7a6-4eac-ae57-e125cee8ae03"
-            name="Naujai sukurtos užduoties vykdymas"
+            name="Naujai sukurto projekto vykdymas"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
@@ -2070,7 +2070,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="c3e5caf1-571c-40f8-8711-86cbec60aaf5"
-              LastKnownName="7. Užduoties vykdymas"
+              LastKnownName="7. Projekto vykdymas"
               LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -12917,32 +12917,12 @@
             </operands>
           </combinedFragment>
           <operandOccurrenceSpecification
-            Id="8f844595-cc34-426e-a9d3-be0f6f80a50f"
-            name="OperandOccurrenceSpecification1">
+            Id="aad77f61-bced-417a-afdd-fdd83ecfcd28"
+            name="OperandOccurrenceSpecification7">
             <covered>
               <lifelineMoniker
-                Id="23cef842-9bc7-49ee-ae55-36118fe0f484"
-                LastKnownName="this : ProjectRunner"
-                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="a3b9bbc0-ffcc-48c3-9ece-7f0c3bc06e72"
-            name="OperandOccurrenceSpecification3">
-            <covered>
-              <lifelineMoniker
-                Id="86cd1310-feaa-4d98-a778-8435c1729c79"
-                LastKnownName="this._projectData : ExecutingProjectData"
-                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="8c9b83f2-4c38-4947-97d1-f85d46bb2fc5"
-            name="OperandOccurrenceSpecification11">
-            <covered>
-              <lifelineMoniker
-                Id="316c9fc6-6dca-4c16-8065-75204f0c85dd"
-                LastKnownName="this._logger : ILogger"
+                Id="2494c77b-6054-4cde-9ffe-11d72f194e39"
+                LastKnownName="executingAction : IAction"
                 LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -12957,22 +12937,42 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="aad77f61-bced-417a-afdd-fdd83ecfcd28"
-            name="OperandOccurrenceSpecification7">
-            <covered>
-              <lifelineMoniker
-                Id="2494c77b-6054-4cde-9ffe-11d72f194e39"
-                LastKnownName="executingAction : IAction"
-                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="9d1b788d-5ad7-4a72-b106-d64367b1b82c"
             name="OperandOccurrenceSpecification9">
             <covered>
               <lifelineMoniker
                 Id="e01897c0-83b8-4209-82f8-0051f4a4e659"
                 LastKnownName="logObject : LogErrorEvent"
+                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="a3b9bbc0-ffcc-48c3-9ece-7f0c3bc06e72"
+            name="OperandOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="86cd1310-feaa-4d98-a778-8435c1729c79"
+                LastKnownName="this._projectData : ExecutingProjectData"
+                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="8f844595-cc34-426e-a9d3-be0f6f80a50f"
+            name="OperandOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="23cef842-9bc7-49ee-ae55-36118fe0f484"
+                LastKnownName="this : ProjectRunner"
+                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="8c9b83f2-4c38-4947-97d1-f85d46bb2fc5"
+            name="OperandOccurrenceSpecification11">
+            <covered>
+              <lifelineMoniker
+                Id="316c9fc6-6dca-4c16-8065-75204f0c85dd"
+                LastKnownName="this._logger : ILogger"
                 LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -13155,22 +13155,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="51cdb757-ba82-43c2-afa6-55cca4742eb4"
-            name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker
-                Id="88d0fb2a-36df-4230-90b8-eb9261fd7f26"
-                LastKnownName="SessionFactory"
-                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="1ff910bf-f8a9-49ed-821f-15304ab6b400"
             name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker
                 Id="23cef842-9bc7-49ee-ae55-36118fe0f484"
                 LastKnownName="this : ProjectRunner"
+                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="51cdb757-ba82-43c2-afa6-55cca4742eb4"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="88d0fb2a-36df-4230-90b8-eb9261fd7f26"
+                LastKnownName="SessionFactory"
                 LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -13361,22 +13361,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="7d7ecda1-2d70-4b86-b777-394c41d8415b"
-            name="OperandOccurrenceSpecification27">
-            <covered>
-              <lifelineMoniker
-                Id="2494c77b-6054-4cde-9ffe-11d72f194e39"
-                LastKnownName="executingAction : IAction"
-                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="e7b55694-7354-4ecf-9fbb-203ffc36062a"
             name="OperandOccurrenceSpecification25">
             <covered>
               <lifelineMoniker
                 Id="23cef842-9bc7-49ee-ae55-36118fe0f484"
                 LastKnownName="this : ProjectRunner"
+                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="7d7ecda1-2d70-4b86-b777-394c41d8415b"
+            name="OperandOccurrenceSpecification27">
+            <covered>
+              <lifelineMoniker
+                Id="2494c77b-6054-4cde-9ffe-11d72f194e39"
+                LastKnownName="executingAction : IAction"
                 LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -13541,22 +13541,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="dbaaa077-b070-4fe8-92d9-50dc57da3e52"
-            name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker
-                Id="23cef842-9bc7-49ee-ae55-36118fe0f484"
-                LastKnownName="this : ProjectRunner"
-                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="0d16e711-997d-4399-b03a-cb6338cbac83"
             name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker
                 Id="2494c77b-6054-4cde-9ffe-11d72f194e39"
                 LastKnownName="executingAction : IAction"
+                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="dbaaa077-b070-4fe8-92d9-50dc57da3e52"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="23cef842-9bc7-49ee-ae55-36118fe0f484"
+                LastKnownName="this : ProjectRunner"
                 LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -13579,22 +13579,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="8ac37962-e995-4619-b686-b2bb4135f369"
-            name="OperandOccurrenceSpecification31">
-            <covered>
-              <lifelineMoniker
-                Id="2494c77b-6054-4cde-9ffe-11d72f194e39"
-                LastKnownName="executingAction : IAction"
-                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="9543d63b-443a-487f-93f6-46eea78e6389"
             name="OperandOccurrenceSpecification29">
             <covered>
               <lifelineMoniker
                 Id="23cef842-9bc7-49ee-ae55-36118fe0f484"
                 LastKnownName="this : ProjectRunner"
+                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="8ac37962-e995-4619-b686-b2bb4135f369"
+            name="OperandOccurrenceSpecification31">
+            <covered>
+              <lifelineMoniker
+                Id="2494c77b-6054-4cde-9ffe-11d72f194e39"
+                LastKnownName="executingAction : IAction"
                 LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -13707,22 +13707,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="00bc0a13-9e6f-4b33-9a8d-80bd0e15f55a"
-            name="OperandOccurrenceSpecification30">
-            <covered>
-              <lifelineMoniker
-                Id="23cef842-9bc7-49ee-ae55-36118fe0f484"
-                LastKnownName="this : ProjectRunner"
-                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="81e35fdd-bf80-414c-b9f0-9eb033891a73"
             name="OperandOccurrenceSpecification32">
             <covered>
               <lifelineMoniker
                 Id="2494c77b-6054-4cde-9ffe-11d72f194e39"
                 LastKnownName="executingAction : IAction"
+                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="00bc0a13-9e6f-4b33-9a8d-80bd0e15f55a"
+            name="OperandOccurrenceSpecification30">
+            <covered>
+              <lifelineMoniker
+                Id="23cef842-9bc7-49ee-ae55-36118fe0f484"
+                LastKnownName="this : ProjectRunner"
                 LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -13745,6 +13745,16 @@
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
+            Id="73705421-4e07-4b77-a37e-2f2a7536686f"
+            name="OperandOccurrenceSpecification26">
+            <covered>
+              <lifelineMoniker
+                Id="23cef842-9bc7-49ee-ae55-36118fe0f484"
+                LastKnownName="this : ProjectRunner"
+                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
             Id="79f8219e-d374-465b-abe1-e63e7e7ba6bf"
             name="OperandOccurrenceSpecification28">
             <covered>
@@ -13755,12 +13765,12 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="73705421-4e07-4b77-a37e-2f2a7536686f"
-            name="OperandOccurrenceSpecification26">
+            Id="84bd9215-627e-4fd6-8af5-2875f384b0e5"
+            name="OperandOccurrenceSpecification6">
             <covered>
               <lifelineMoniker
-                Id="23cef842-9bc7-49ee-ae55-36118fe0f484"
-                LastKnownName="this : ProjectRunner"
+                Id="88d0fb2a-36df-4230-90b8-eb9261fd7f26"
+                LastKnownName="SessionFactory"
                 LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -13815,36 +13825,6 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="84bd9215-627e-4fd6-8af5-2875f384b0e5"
-            name="OperandOccurrenceSpecification6">
-            <covered>
-              <lifelineMoniker
-                Id="88d0fb2a-36df-4230-90b8-eb9261fd7f26"
-                LastKnownName="SessionFactory"
-                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="df9ada0f-be8c-4a12-b59b-fe91996c446a"
-            name="OperandOccurrenceSpecification23">
-            <covered>
-              <lifelineMoniker
-                Id="316c9fc6-6dca-4c16-8065-75204f0c85dd"
-                LastKnownName="this._logger : ILogger"
-                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="16ffb173-c0b0-43a2-a899-9afc7fe19277"
-            name="OperandOccurrenceSpecification17">
-            <covered>
-              <lifelineMoniker
-                Id="88d0fb2a-36df-4230-90b8-eb9261fd7f26"
-                LastKnownName="SessionFactory"
-                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="357c2376-c4b0-4949-bec2-5a67b719fa7c"
             name="OperandOccurrenceSpecification21">
             <covered>
@@ -13865,12 +13845,32 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
+            Id="df9ada0f-be8c-4a12-b59b-fe91996c446a"
+            name="OperandOccurrenceSpecification23">
+            <covered>
+              <lifelineMoniker
+                Id="316c9fc6-6dca-4c16-8065-75204f0c85dd"
+                LastKnownName="this._logger : ILogger"
+                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
             Id="8cd4b801-77e0-4adf-b497-98815d4f4155"
             name="OperandOccurrenceSpecification19">
             <covered>
               <lifelineMoniker
                 Id="2494c77b-6054-4cde-9ffe-11d72f194e39"
                 LastKnownName="executingAction : IAction"
+                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="16ffb173-c0b0-43a2-a899-9afc7fe19277"
+            name="OperandOccurrenceSpecification17">
+            <covered>
+              <lifelineMoniker
+                Id="88d0fb2a-36df-4230-90b8-eb9261fd7f26"
+                LastKnownName="SessionFactory"
                 LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -14051,22 +14051,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="aaa80764-55c2-4c5a-9060-b9a828bd6d5f"
-            name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker
-                Id="e01897c0-83b8-4209-82f8-0051f4a4e659"
-                LastKnownName="logObject : LogErrorEvent"
-                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="3cd1e349-7de3-4ee0-aca3-a5427781ea41"
             name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker
                 Id="23cef842-9bc7-49ee-ae55-36118fe0f484"
                 LastKnownName="this : ProjectRunner"
+                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="aaa80764-55c2-4c5a-9060-b9a828bd6d5f"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="e01897c0-83b8-4209-82f8-0051f4a4e659"
+                LastKnownName="logObject : LogErrorEvent"
                 LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -14197,32 +14197,12 @@
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="038d42b6-84f5-4704-87da-8f824bb738c5"
-            name="OperandOccurrenceSpecification18">
+            Id="5d354dd4-0dd1-4c00-bd36-a39de5b4b1c7"
+            name="OperandOccurrenceSpecification20">
             <covered>
               <lifelineMoniker
-                Id="88d0fb2a-36df-4230-90b8-eb9261fd7f26"
-                LastKnownName="SessionFactory"
-                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="1480a2c0-65e9-45a1-9716-ec81680884cf"
-            name="OperandOccurrenceSpecification14">
-            <covered>
-              <lifelineMoniker
-                Id="23cef842-9bc7-49ee-ae55-36118fe0f484"
-                LastKnownName="this : ProjectRunner"
-                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="d378b63a-2127-4382-813f-e99e3938445b"
-            name="OperandOccurrenceSpecification24">
-            <covered>
-              <lifelineMoniker
-                Id="316c9fc6-6dca-4c16-8065-75204f0c85dd"
-                LastKnownName="this._logger : ILogger"
+                Id="2494c77b-6054-4cde-9ffe-11d72f194e39"
+                LastKnownName="executingAction : IAction"
                 LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -14237,22 +14217,42 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="5d354dd4-0dd1-4c00-bd36-a39de5b4b1c7"
-            name="OperandOccurrenceSpecification20">
-            <covered>
-              <lifelineMoniker
-                Id="2494c77b-6054-4cde-9ffe-11d72f194e39"
-                LastKnownName="executingAction : IAction"
-                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="91db224a-ae1a-4ff0-81ed-c5007a538229"
             name="OperandOccurrenceSpecification22">
             <covered>
               <lifelineMoniker
                 Id="e01897c0-83b8-4209-82f8-0051f4a4e659"
                 LastKnownName="logObject : LogErrorEvent"
+                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="1480a2c0-65e9-45a1-9716-ec81680884cf"
+            name="OperandOccurrenceSpecification14">
+            <covered>
+              <lifelineMoniker
+                Id="23cef842-9bc7-49ee-ae55-36118fe0f484"
+                LastKnownName="this : ProjectRunner"
+                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="038d42b6-84f5-4704-87da-8f824bb738c5"
+            name="OperandOccurrenceSpecification18">
+            <covered>
+              <lifelineMoniker
+                Id="88d0fb2a-36df-4230-90b8-eb9261fd7f26"
+                LastKnownName="SessionFactory"
+                LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="d378b63a-2127-4382-813f-e99e3938445b"
+            name="OperandOccurrenceSpecification24">
+            <covered>
+              <lifelineMoniker
+                Id="316c9fc6-6dca-4c16-8065-75204f0c85dd"
+                LastKnownName="this._logger : ILogger"
                 LastKnownLocation="Adform.Academy.DataTransfer.Diagrams.uml" />
             </covered>
           </operandOccurrenceSpecification>

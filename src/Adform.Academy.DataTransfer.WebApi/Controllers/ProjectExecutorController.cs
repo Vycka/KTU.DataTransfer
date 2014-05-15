@@ -1,10 +1,12 @@
 ﻿using System.Web.Http;
+using Adform.Academy.DataTransfer.Core.DataTransfer;
 using Adform.Academy.DataTransfer.Core.DTO.Models;
 using Adform.Academy.DataTransfer.Core.DTO.NHibernate;
 using Adform.Academy.DataTransfer.Core.DTO.Types;
 using Adform.Academy.DataTransfer.Logger.Events;
 using Adform.Academy.DataTransfer.WebApi.Contracts.ProjectExecutor;
 using Adform.Academy.DataTransfer.WebApi.Contracts.Projects;
+using log4net.Repository;
 using ExecutionStepsTypes = Adform.Academy.DataTransfer.WebApi.Contracts.Projects.Types.ExecutionStepsTypes;
 
 namespace Adform.Academy.DataTransfer.WebApi.Controllers
@@ -21,6 +23,7 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
                 var project = session.Get<Project>(request.ProjectId);
 
                 ServiceRunner.StartProject(request.ProjectId);
+                Logger.Log(new LogEvent("Started project", request.ProjectId, request.InvokerUserId));
 
                 return new StartResponse
                 {
@@ -45,6 +48,7 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
                 var project = session.Get<Project>(request.ProjectId);
 
                 ServiceRunner.StartProject(request.ProjectId);
+                Logger.Log(new LogEvent("Resumed project", request.ProjectId, request.InvokerUserId));
 
                 return new ContinueResponse
                 {
@@ -60,6 +64,33 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
             }
         }
 
+        [Route("Pause")]
+        [HttpGet, HttpPost]
+        public PauseProjectResponse Pause(ContinueRequest request)
+        {
+                ServiceRunner.StopProject(request.ProjectId, CancelType.Pause);
+                Logger.Log(new LogEvent("Resumed project", request.ProjectId, request.InvokerUserId));
+
+                return new PauseProjectResponse();
+        }
+
+        [Route("Cancel")]
+        [HttpGet, HttpPost]
+        public CancelProjectResponse Cancel(ContinueRequest request)
+        {
+            ServiceRunner.StopProject(request.ProjectId, CancelType.Stop);
+            using (var session = SessionFactory.OpenSession())
+            {
+                var project = session.Get<Project>(request.ProjectId);
+                project.ProjectState = ProjectStateTypes.Stopped;
+                project.ExecutionState = Core.DTO.Types.ExecutionStepsTypes.Canceled;
+                session.Merge(project);
+                session.Flush();
+            }
+            Logger.Log(new LogEvent("Canceled project", request.ProjectId, request.InvokerUserId));
+
+            return new CancelProjectResponse();
+        }
 
         [Route("Archive")]
         [HttpGet, HttpPost]

@@ -61,7 +61,7 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer
             _activeProjects.Add(projectId, projectRunner);
         }
 
-        private void StopProject(int projectId, CancelType cancelType)
+        public bool StopProject(int projectId, CancelType cancelType)
         {
             if (_activeProjects.ContainsKey(projectId))
             {
@@ -70,7 +70,11 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer
                     project.StopExecution(cancelType);
 
                 _activeProjects.Remove(projectId);
+
+                return true;
             }
+
+            return false;
         }
     }
 }

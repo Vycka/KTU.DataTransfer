@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web.Http;
 using Adform.Academy.DataTransfer.Core.DTO.Models;
@@ -7,8 +8,10 @@ using Adform.Academy.DataTransfer.Core.DTO.Types;
 using Adform.Academy.DataTransfer.Logger.Events;
 using Adform.Academy.DataTransfer.WebApi.Contracts.Projects;
 using Newtonsoft.Json;
+using NHibernate;
 using NHibernate.Criterion;
 using NHibernate.Transform;
+using NHibernate.Type;
 
 namespace Adform.Academy.DataTransfer.WebApi.Controllers
 {
@@ -82,6 +85,42 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
             }
         }
 
+        [Route("GetProjectProgress")]
+        [HttpGet, HttpPost]
+        public GetProjectProgressResponse GetProjectProgress(GetProjectProgressRequest request)
+        {
+            using (var session = SessionFactory.OpenSession())
+            {
+                var project = session.Get<Project>(request.ProjectId);
+
+                IList<int> filterIds = session.CreateCriteria(typeof(Filter))
+                    .SetProjection(Projections.ProjectionList()
+                        .Add(Projections.Property("FilterId"), "ID_Filters")
+                    ).Add(Restrictions.Eq("Project", project)
+                ).List<int>();
+
+
+                //TODO TO HQL
+                var result = session.CreateSQLQuery(
+                    @"SELECT
+                        B.[ID_BatchState] AS StateId,COUNT(*) as Count
+                    FROM [DataTransfer].[Batches] AS B
+                    WHERE B.ID_Filters IN (:IDLIst)
+                    GROUP BY B.[ID_BatchState]"
+                )
+                .SetParameterList("IDLIst", filterIds)
+                .List<object[]>();
+
+                var resultParsed = result.Select(obj => new ProjectStateItem {StateId = (int) obj[0], Count = (int) obj[1]});
+
+                return new GetProjectProgressResponse
+                {
+                    StateItems = resultParsed.ToList()
+                };
+            }
+
+        }
+
         [Route("Save")]
         [HttpGet, HttpPost]
         public SaveProjectResponse Save(SaveProjectRequest request)
@@ -94,6 +133,15 @@ namespace Adform.Academy.DataTransfer.WebApi.Controllers
                         Filters = new List<Filter>()
                     }
                     : session.Get<Project>(request.ProjectId);
+
+                if (project.ProjectId != 0 &&
+                    (project.ProjectState == ProjectStateTypes.Running ||
+                     project.ProjectState == ProjectStateTypes.Paused))
+                    return new SaveProjectResponse
+                    {
+                        Success = false,
+                        Message = "Can't edit not fully stopped project"
+                    };
 
                 project.Name = request.ProjectName;
                 project.ExecutionState = ExecutionStepsTypes.NotStarted;

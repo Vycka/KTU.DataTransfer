@@ -59,6 +59,7 @@
       <HintPath>..\..\packages\Microsoft.AspNet.WebApi.SelfHost.5.1.2\lib\net45\System.Web.Http.SelfHost.dll</HintPath>
     </Reference>
     <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ControllerBase.cs" />

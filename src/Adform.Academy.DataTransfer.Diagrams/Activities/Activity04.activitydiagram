@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="df25d89a-648e-4f3e-b3d5-4d7b8a9d083d" name="Activity4" linkedPackageId="ed59c621-2796-4043-a454-3bbc3040c3e2" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="df25d89a-648e-4f3e-b3d5-4d7b8a9d083d" name="Activity4" linkedPackageId="ed59c621-2796-4043-a454-3bbc3040c3e2" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
   <packagedElements>
     <activityRootModelHasActivity>
       <activity Id="072f834e-32a9-489e-9307-7ac518e9125a" name="Activity4" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
@@ -9,12 +9,12 @@
             <elementDefinition Id="74d11e76-4198-4b17-aea0-42ac3965a629" />
             <flowNodeTargets>
               <controlFlow Id="5e85f45f-13f8-4ba4-842c-4b42fbfdb1cf" isLeaf="false">
-                <opaqueActionMoniker Id="d9bb1f56-4a2c-4286-8041-1a476661e85b" LastKnownName="Naujos užduoties kūrimas" />
+                <opaqueActionMoniker Id="d9bb1f56-4a2c-4286-8041-1a476661e85b" LastKnownName="Naujo projekto kūrimas" />
                 <elementDefinition Id="5c17a45b-5e5e-4274-a232-f943d2ea2212" />
               </controlFlow>
             </flowNodeTargets>
           </initialNode>
-          <opaqueAction Id="d9bb1f56-4a2c-4286-8041-1a476661e85b" name="Naujos užduoties kūrimas" isLeaf="false">
+          <opaqueAction Id="d9bb1f56-4a2c-4286-8041-1a476661e85b" name="Naujo projekto kūrimas" isLeaf="false">
             <elementDefinition Id="c1a94178-bc87-4201-8612-4c0518c4553c" />
             <flowNodeTargets>
               <controlFlow Id="fab16778-5680-4977-949f-017cb7c020c9" isLeaf="false">
@@ -27,12 +27,12 @@
             <elementDefinition Id="38d74eb0-5b70-444b-83d8-6bdc980d76e4" />
             <flowNodeTargets>
               <controlFlow Id="6e879ca8-5962-409d-b9a5-2e9930638223" isLeaf="false">
-                <opaqueActionMoniker Id="041ed165-0e50-42b9-9f6b-dffe5d4f044c" LastKnownName="Esamos užduoties redagavimas" />
+                <opaqueActionMoniker Id="041ed165-0e50-42b9-9f6b-dffe5d4f044c" LastKnownName="Esamo projekto redagavimas" />
                 <elementDefinition Id="2a04057a-da77-4926-a1fe-36f78a4cf633" />
               </controlFlow>
             </flowNodeTargets>
           </initialNode>
-          <opaqueAction Id="041ed165-0e50-42b9-9f6b-dffe5d4f044c" name="Esamos užduoties redagavimas" isLeaf="false">
+          <opaqueAction Id="041ed165-0e50-42b9-9f6b-dffe5d4f044c" name="Esamo projekto redagavimas" isLeaf="false">
             <elementDefinition Id="314e1c46-19f7-4e8a-bc3e-60dd28716fde" />
             <flowNodeTargets>
               <controlFlow Id="e7883116-a1eb-40ae-a228-df29dcb4e87c" isLeaf="false">
@@ -129,6 +129,18 @@
           <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
         </profileInstance>
         <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="1e52684d-a7dd-4316-acf6-c3402b148726">
+        <profileInstance Id="6b7a68da-52da-481a-b335-9f505eeb24af" name="CSharpProfile">
+          <elementDefinition Id="8a73b926-8be0-4047-b2d9-eb0431be2a6c" />
+        </profileInstance>
+        <elementDefinition Id="77775c9b-5685-4c25-8a44-35787140e765" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="bee82350-d21e-4b0d-be9c-fa9c694244e7">
+        <profileInstance Id="ee9b8ed0-aace-4161-9121-b7b5f448a02b" name="TextTemplateBindings">
+          <elementDefinition Id="bd7e95b5-e70d-451d-8e29-9c26f19b1c1f" />
+        </profileInstance>
+        <elementDefinition Id="197c8c43-4daf-4d7a-82c7-94e453d8fee2" />
       </packageHasProfileInstances>
     </profileInstances>
   </package>

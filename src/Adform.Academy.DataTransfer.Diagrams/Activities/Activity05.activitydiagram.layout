@@ -20,7 +20,7 @@
       </nodes>
     </commentConnector>
     <actionShape Id="dd671c5c-9e7d-4fa5-b81f-34e8970ef7c3" absoluteBounds="4.25, 3.625, 1.375, 0.75" customColor="161, 199, 231">
-      <opaqueActionMoniker Id="765907ad-4f84-41b0-8d46-cb7a87d959ef" LastKnownName="Pasirinkto veiksmo komandą išsiunčiamą užduotis vykdančiam serveriui" />
+      <opaqueActionMoniker Id="765907ad-4f84-41b0-8d46-cb7a87d959ef" LastKnownName="Pasirinkto veiksmo komandą išsiunčiamą projektus vykdančiam serveriui" />
     </actionShape>
     <controlFlowConnector edgePoints="[(4.9375 : 3); (4.9375 : 3.625)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
       <controlFlowMoniker Id="ea47e71e-b738-440d-bcf4-aa0acea17f87" />

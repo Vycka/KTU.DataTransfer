@@ -52,6 +52,13 @@ namespace Adform.Academy.DataTransfer.Web.Controllers
             return Json(response, JsonRequestBehavior.AllowGet);
         }
 
+        [Authorize]
+        public JsonResult GetProjectProgress(int id)
+        {
+            var response = ProjectRequests.GetProgress(id);
+            return Json(response, JsonRequestBehavior.AllowGet);
+        }
+
         private DataTransferUserIdentity Principal
         {
             get { return HttpContext.User.Identity as DataTransferUserIdentity; }

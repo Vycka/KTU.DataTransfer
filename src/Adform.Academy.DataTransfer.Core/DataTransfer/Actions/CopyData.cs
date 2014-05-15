@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using Adform.Academy.DataTransfer.Core.DataTransfer.ValueParsers;
 using Adform.Academy.DataTransfer.Core.DTO.Models;
 using Adform.Academy.DataTransfer.Core.DTO.Types;
+using Adform.Academy.DataTransfer.Logger.Events;
 
 namespace Adform.Academy.DataTransfer.Core.DataTransfer.Actions
 {
@@ -20,28 +22,43 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer.Actions
             {
                 var parsedFilter = new FilterValueParsed(filter);
 
+                //var command = data.DesConnection.CreateCommand();
+                //command.CommandText = "SET IDENTITY_INSERT ["+ filter.TableName +"] ON";
+                //command.ExecuteNonQuery();
+
                 foreach (var batch in filter.Batches)
                 {
                     if (data.ProjectRunner.CancelationPending)
                         return;
 
-                    bool copyFailed = false;
+                    if (batch.BatchState != BatchStateTypes.NotCopied)
+                        continue;
 
-                    try
-                    {
-                        CopyBatch(data, parsedFilter, batch);
-                    }
-                    catch (Exception)
-                    {
-                        copyFailed = true;
-                    }
+                    //bool copyFailed = false;
 
-                    if (copyFailed)
-                    {
-                        DelteBatchFromDestination(data, parsedFilter, batch);
-                        CopyBatch(data, parsedFilter, batch);
-                    }
+
+                    DelteBatchFromDestination(data, parsedFilter, batch);
+                    CopyBatch(data, parsedFilter, batch);
+                    //try
+                    //{
+                    //    DelteBatchFromDestination(data, parsedFilter, batch);
+                    //    CopyBatch(data, parsedFilter, batch);
+                    //}
+                    //catch (Exception)
+                    //{
+                    //    copyFailed = true;
+                    //}
+
+                    //if (copyFailed)
+                    //{
+                    //    data.Logger.Log(new LogEvent(string.Format("Unable to transfer batch ID:{0}, deleting data from destination table matching the batch and trying to copy again",batch.BatchId)));
+                    //    DelteBatchFromDestination(data, parsedFilter, batch);
+                    //    CopyBatch(data, parsedFilter, batch);
+                    //}
                 }
+
+                //command.CommandText = "SET IDENTITY_INSERT [" + filter.TableName + "] OFF";
+                //command.ExecuteNonQuery();
             }
 
             SetStep(data, ExecutionStepsTypes.AppendAnalyze);
@@ -54,11 +71,6 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer.Actions
 
         private void CopyBatch(ExecutingProjectData data, FilterValueParsed parsedFilter, Batch batch)
         {
-            if (batch.BatchState != BatchStateTypes.NotCopied)
-                return;
-
-            SqlTransaction transaction = null;
-
             try
             {
                 var srcReadCommand = data.SrcConnection.CreateCommand();
@@ -74,8 +86,14 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer.Actions
 
                 using (var srcReader = srcReadCommand.ExecuteReader())
                 {
-                    transaction = data.DesConnection.BeginTransaction();
-                    using (var bulkCopy = new SqlBulkCopy(data.DesConnection,SqlBulkCopyOptions.KeepIdentity | SqlBulkCopyOptions.KeepNulls | SqlBulkCopyOptions.TableLock, transaction))
+                    //transaction = data.DesConnection.BeginTransaction();
+                    using (var bulkCopy = new SqlBulkCopy(
+                        data.DesConnection,
+                        SqlBulkCopyOptions.KeepIdentity | 
+                        SqlBulkCopyOptions.KeepNulls |
+                        SqlBulkCopyOptions.TableLock | 
+                        SqlBulkCopyOptions.UseInternalTransaction
+                    , null))
                     {
                         bulkCopy.BatchSize = 50000;
                         bulkCopy.EnableStreaming = true;
@@ -85,18 +103,22 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer.Actions
 
                         bulkCopy.WriteToServer(srcReader);
 
-                        transaction.Commit();
+                        //transaction.Commit();
                         batch.BatchState = BatchStateTypes.Copied;
                         batch.Checksum = null;
+
+                        data.Session.Update(batch);
+                        data.Session.Flush();
                     }
                     
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                if (transaction != null)
-                    transaction.Rollback();
-                throw;
+                //if (transaction != null)
+                //    transaction.Rollback();
+                if (!(ex is OperationAbortedException))
+                    throw;
             }
         }
 

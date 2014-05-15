@@ -9,7 +9,7 @@
     <div class="round bFull" id="right-panel">
         <div class="bCenter" style="margin: auto; text-align: center">
             @using (Html.BeginForm("Save", "Users", FormMethod.Post, new { id = "save-form" }))
-            {    
+            {   
                 if (!ViewData.ModelState.IsValid)
                 {
                     <div class="bErr" style="display: inline-block">@Html.ValidationMessage("ErrorSummary")</div>
@@ -22,7 +22,7 @@
                 </div>
 
                 <div>
-                    @Html.LabelFor(x => x.Password) @(Model.UserId != 0 ? "<b>*</b>" : "")<br />
+                    @Html.LabelFor(x => x.Password) @(Model.UserId != 0 ? Html.Raw("<b>*</b>") : Html.Raw(""))<br />
                     @Html.PasswordFor(x => x.Password)
                     <div class="bValidationFloat" id="PasswordValidation">@Html.ValidationMessageFor(x => x.Password)</div>
                     @if (Model.UserId != 0)
@@ -57,7 +57,7 @@
                 </div>
                 @Html.HiddenFor(x => x.UserId)
                 <br /><br />
-                <div style="text-align: right; padding-right: 15px">@(Model.UserId != 0 ? "<b>*</b> Leave password field blank to keep current user password</div>" : "")
+                <div style="text-align: right; padding-right: 15px">@(Model.UserId != 0 ? Html.Raw("<b>*</b> Leave password field blank to keep current user password") : Html.Raw(""))</div>
             }
         </div>
     </div>

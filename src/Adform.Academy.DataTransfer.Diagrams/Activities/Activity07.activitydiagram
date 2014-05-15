@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="0350f643-9b1d-4aeb-940b-b1417c04c7a6" name="Activity7" linkedPackageId="74653505-6d54-4b75-a2e9-cdfdd4f4de99" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="0350f643-9b1d-4aeb-940b-b1417c04c7a6" name="Activity7" linkedPackageId="74653505-6d54-4b75-a2e9-cdfdd4f4de99" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
   <profileInstances>
-    <packageHasProfileInstances Id="eea2d33e-ccaa-4401-9158-8065227f30f4">
-      <profileInstance Id="fc40bcad-2b7f-4694-9bf5-107c972e89cf" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+    <packageHasProfileInstances Id="f06b159d-3831-44e6-8164-c69145dc8182">
+      <profileInstance Id="6cdb5c6d-f6d4-4374-937a-48c3d909abb1" name="CSharpProfile">
+        <elementDefinition Id="8a73b926-8be0-4047-b2d9-eb0431be2a6c" />
       </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      <elementDefinition Id="77775c9b-5685-4c25-8a44-35787140e765" />
     </packageHasProfileInstances>
-    <packageHasProfileInstances Id="0f06e523-a9c6-4b0d-9fa7-33786f68b025">
-      <profileInstance Id="9c3dcb3c-39ef-45d7-af07-a56ed2aeafe6" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+    <packageHasProfileInstances Id="02741117-6e9c-429e-a61d-7bdc800b3ae9">
+      <profileInstance Id="30d7fa69-593e-4b20-82d1-ad11649b0eba" name="TextTemplateBindings">
+        <elementDefinition Id="bd7e95b5-e70d-451d-8e29-9c26f19b1c1f" />
       </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      <elementDefinition Id="197c8c43-4daf-4d7a-82c7-94e453d8fee2" />
     </packageHasProfileInstances>
   </profileInstances>
   <packagedElements>
@@ -23,12 +23,12 @@
             <elementDefinition Id="ccf34f06-2470-41b9-aa1c-b649a2212c51" />
             <flowNodeTargets>
               <controlFlow Id="48baedb5-da6c-4ab1-9500-3ccd69736d8e" isLeaf="false">
-                <opaqueActionMoniker Id="920f05cb-67d5-4783-9171-508257b713ef" LastKnownName="Naujai sukurtos užduoties vykdymas" />
+                <opaqueActionMoniker Id="920f05cb-67d5-4783-9171-508257b713ef" LastKnownName="Naujai sukurto projekto vykdymas" />
                 <elementDefinition Id="7e1ba6f8-fcb0-4812-8c81-5cc41b1c3b7e" />
               </controlFlow>
             </flowNodeTargets>
           </initialNode>
-          <opaqueAction Id="920f05cb-67d5-4783-9171-508257b713ef" name="Naujai sukurtos užduoties vykdymas" isLeaf="false">
+          <opaqueAction Id="920f05cb-67d5-4783-9171-508257b713ef" name="Naujai sukurto projekto vykdymas" isLeaf="false">
             <elementDefinition Id="9bdd3d78-a7a6-4eac-ae57-e125cee8ae03" />
             <flowNodeTargets>
               <controlFlow Id="e6756e23-f0b6-400d-988e-6d85aabec088" isLeaf="false">
@@ -117,5 +117,19 @@
   </packagedElements>
   <package Id="74653505-6d54-4b75-a2e9-cdfdd4f4de99" name="Adform.Academy.DataTransfer.Diagrams">
     <elementDefinition Id="de71d15e-79ce-4e7a-945f-f4b93b58e455" />
+    <profileInstances>
+      <packageHasProfileInstances Id="eea2d33e-ccaa-4401-9158-8065227f30f4">
+        <profileInstance Id="fc40bcad-2b7f-4694-9bf5-107c972e89cf" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="0f06e523-a9c6-4b0d-9fa7-33786f68b025">
+        <profileInstance Id="9c3dcb3c-39ef-45d7-af07-a56ed2aeafe6" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </activityRootModel>
