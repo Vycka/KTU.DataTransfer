@@ -5,7 +5,6 @@ using System.Linq;
 using Adform.Academy.DataTransfer.Core.DataTransfer.ValueParsers;
 using Adform.Academy.DataTransfer.Core.DTO.Models;
 using Adform.Academy.DataTransfer.Core.DTO.Types;
-using Adform.Academy.DataTransfer.Logger.Events;
 
 namespace Adform.Academy.DataTransfer.Core.DataTransfer.Actions
 {

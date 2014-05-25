@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Web.Http;
 using Adform.Academy.DataTransfer.Core.DTO.Models;
@@ -8,10 +7,8 @@ using Adform.Academy.DataTransfer.Core.DTO.Types;
 using Adform.Academy.DataTransfer.Logger.Events;
 using Adform.Academy.DataTransfer.WebApi.Contracts.Projects;
 using Newtonsoft.Json;
-using NHibernate;
 using NHibernate.Criterion;
 using NHibernate.Transform;
-using NHibernate.Type;
 
 namespace Adform.Academy.DataTransfer.WebApi.Controllers
 {

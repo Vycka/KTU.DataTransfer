@@ -5,8 +5,7 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer.Actions
 {
     public class ActionBase
     {
-
-        public void SetStep(ExecutingProjectData data, ExecutionStepsTypes step)
+        protected void SetStep(ExecutingProjectData data, ExecutionStepsTypes step)
         {
             if (data.Project.ExecutionState == step)
                 return;

@@ -20,10 +20,14 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer.Actions
                 ClearChecksums(data);
                 data.Logger.Log(new LogEvent("Generating checksums for source database...",data.Project.ProjectId, null));
                 GenerateChecksumsForCurrentStateInSource(data);
+                if (data.ProjectRunner.CancelationPending)
+                    return;
                 data.Logger.Log(new LogEvent("Generating checksums for source database DONE", data.Project.ProjectId, null));
             }
             data.Logger.Log(new LogEvent("Verifying destination database data integrity...", data.Project.ProjectId, null));
             VerifyDestinationData(data);
+            if (data.ProjectRunner.CancelationPending)
+                return;
             data.Logger.Log(new LogEvent("Verifying destination database data integrity DONE", data.Project.ProjectId, null));
             SetStep(data, data.Project.Filters.All(f => f.Batches.All(b => b.BatchState == BatchStateTypes.Verified)) ? ExecutionStepsTypes.Completed : ExecutionStepsTypes.Copy);
         }
@@ -41,6 +45,9 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer.Actions
 
                 foreach (var batch in filter.Batches)
                 {
+                    if (data.ProjectRunner.CancelationPending)
+                        return;
+
                     batch.Checksum = CalculateBatchChecksum(data.SrcConnection, parsedFilter, batch);
                     data.Session.Update(batch);
                     data.Session.Flush();
@@ -58,6 +65,9 @@ namespace Adform.Academy.DataTransfer.Core.DataTransfer.Actions
                 {
                     if (batch.BatchState == BatchStateTypes.Verified)
                         continue;
+
+                    if (data.ProjectRunner.CancelationPending)
+                        return;
                     
                     int destinationChecksum = CalculateBatchChecksum(data.DesConnection, parsedFilter, batch);
                     batch.BatchState = batch.Checksum == destinationChecksum ? BatchStateTypes.Verified : BatchStateTypes.NotCopied;

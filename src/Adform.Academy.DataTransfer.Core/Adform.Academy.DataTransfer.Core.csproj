@@ -72,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataTransfer\Actions\ActionBase.cs" />
+    <Compile Include="DataTransfer\Actions\AnalyzeBase.cs" />
     <Compile Include="DataTransfer\Actions\AppendAnalyze.cs" />
     <Compile Include="DataTransfer\Actions\CopyData.cs" />
     <Compile Include="DataTransfer\Actions\CreateTables.cs" />
